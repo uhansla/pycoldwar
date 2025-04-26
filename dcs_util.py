@@ -274,7 +274,7 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                             cas_plane_type = random.choice(cas_planes)
                             cas_plane = random.choice(cas.planes[cas_plane_type])
                             # print(cas_plane)
-                            selected_type = cas_plane["type"].__name__
+                            selected_type = cas_plane.get("id")
                             selected_fuel = cas_plane.get("fuel")
                             selected_chaff = cas_plane.get("chaff")
                             selected_flare = cas_plane.get("flare")

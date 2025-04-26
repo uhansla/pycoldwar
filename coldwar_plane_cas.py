@@ -39,6 +39,7 @@ planes = {
     'F_A_18A': [
         {
             "type": planes.F_A_18A,
+            "id": planes.F_A_18A.id,
             "fuel": planes.F_A_18A.fuel_max,
             "chaff": planes.F_A_18A.chaff,
             "flare": planes.F_A_18A.flare,
@@ -61,6 +62,7 @@ planes = {
     'A_10A': [
         {
             "type": planes.A_10A,
+            "id": planes.A_10A.id,
             "fuel": planes.A_10A.fuel_max,
             "chaff": planes.A_10A.chaff,
             "flare": planes.A_10A.flare,
@@ -85,6 +87,7 @@ planes = {
     'AJS37': [
         {
             "type": planes.AJS37,
+            "id": planes.AJS37.id,
             "fuel": planes.AJS37.fuel_max,
             "chaff": planes.AJS37.chaff,
             "flare": planes.AJS37.flare,
@@ -105,6 +108,7 @@ planes = {
     'F_5E': [
         {
             "type": planes.F_5E,
+            "id": planes.F_5E.id,
             "fuel": planes.F_5E.fuel_max,
             "chaff": planes.F_5E.chaff,
             "flare": planes.F_5E.flare,
@@ -125,6 +129,7 @@ planes = {
     'F_5E_3': [
         {
             "type": planes.F_5E_3,
+            "id": planes.F_5E_3.id,
             "fuel": planes.F_5E_3.fuel_max,
             "chaff": planes.F_5E_3.chaff,
             "flare": planes.F_5E_3.flare,
@@ -146,6 +151,10 @@ planes = {
     'MiG_21Bis': [
         {
             "type": planes.MiG_21Bis,
+            "id": planes.MiG_21Bis.id,
+            "fuel": planes.MiG_21Bis.fuel_max,
+            "chaff": planes.MiG_21Bis.chaff,
+            "flare": planes.MiG_21Bis.flare,
             "payload": {
                 "pylons": [
                     planes.MiG_21Bis.Pylon1.R_60M,
@@ -162,6 +171,7 @@ planes = {
     'L_39ZA': [
         {
             "type": planes.L_39ZA,
+            "id": planes.L_39ZA.id,
             "fuel": planes.L_39ZA.fuel_max,
             "chaff": planes.L_39ZA.chaff,
             "flare": planes.L_39ZA.flare,
@@ -181,6 +191,7 @@ planes = {
     'MiG_15bis': [
         {
             "type": planes.MiG_15bis,
+            "id": planes.MiG_15bis.id,
             "fuel": planes.MiG_15bis.fuel_max,
             "chaff": planes.MiG_15bis.chaff,
             "flare": planes.MiG_15bis.flare,
@@ -196,6 +207,7 @@ planes = {
     'MiG_27K': [
         {
             "type": planes.MiG_27K,
+            "id": planes.MiG_27K.id,
             "fuel": planes.MiG_27K.fuel_max,
             "chaff": planes.MiG_27K.chaff,
             "flare": planes.MiG_27K.flare,
@@ -216,6 +228,7 @@ planes = {
     'MiG_23MLD': [
         {
             "type": planes.MiG_23MLD,
+            "id": planes.MiG_23MLD.id,
             "fuel": planes.MiG_23MLD.fuel_max,
             "chaff": planes.MiG_23MLD.chaff,
             "flare": planes.MiG_23MLD.flare,
@@ -234,6 +247,7 @@ planes = {
     'Su_25': [
         {
             "type": planes.Su_25,
+            "id": planes.Su_25.id,
             "fuel": planes.Su_25.fuel_max,
             "chaff": planes.Su_25.chaff,
             "flare": planes.Su_25.flare,
@@ -257,6 +271,7 @@ planes = {
     'Su_17M4': [
         {
             "type": planes.Su_17M4,
+            "id": planes.Su_17M4.id,
             "fuel": planes.Su_17M4.fuel_max,
             "chaff": planes.Su_17M4.chaff,
             "flare": planes.Su_17M4.flare,
@@ -279,6 +294,7 @@ planes = {
     'Su_24M': [
         {
             "type": planes.Su_24M,
+            "id": planes.Su_24M.id,
             "fuel": planes.Su_24M.fuel_max,
             "chaff": planes.Su_24M.chaff,
             "flare": planes.Su_24M.flare,
@@ -301,6 +317,7 @@ planes = {
     'MiG_19P': [
         {
             "type": planes.MiG_19P,
+            "id": planes.MiG_19P.id,
             "fuel": planes.MiG_19P.fuel_max,
             "chaff": planes.MiG_19P.chaff,
             "flare": planes.MiG_19P.flare,

@@ -6,9 +6,9 @@ import random
 from collections import defaultdict
 
 
-plane_mission_types = ['-sead-', '-patrol-', '-strike-', '-cas-']
-ground_mission_types = ['-supply-', '-assault-']
-heli_mission_types = ['-supply-', '-cas-']
+plane_mission_types = {'-sead-', '-patrol-', '-strike-', '-cas-'}
+ground_mission_types = {'-supply-', '-assault-'}
+heli_mission_types = {'-supply-', '-cas-'}
 
 # --- Step 1: Build CLSID → Weapon Info mapping ---
 clsid_to_weapon = {}
@@ -220,7 +220,7 @@ def save_modified_mission(mission_data, output_path):
     print(f"✅ Modified mission written to {output_path}")
 
 # Find sample unit
-def find_sample_plane_unit(mission_data, side, unit_type, group_contains = ['-sead-', '-patrol-', '-strike-', '-cas-']):
+def find_sample_plane_unit(mission_data, side, unit_type, group_contains = plane_mission_types):
     sample_unit = None
     #for side in ["blue", "red", "neutral"]:
     countries = mission_data.get("coalition", {}).get(side, {}).get("country", {})

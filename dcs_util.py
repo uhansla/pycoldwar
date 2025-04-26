@@ -6,6 +6,10 @@ import random
 from collections import defaultdict
 
 
+plane_mission_types = ['-sead-', '-patrol-', '-strike-', '-cas-']
+ground_mission_types = ['-supply-', '-assault-']
+heli_mission_types = ['-supply-', '-cas-']
+
 # --- Step 1: Build CLSID → Weapon Info mapping ---
 clsid_to_weapon = {}
 for attr in dir(Weapons):

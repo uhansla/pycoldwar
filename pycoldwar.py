@@ -1,6 +1,7 @@
 # pycoldwar.py
 import os
 import argparse
+import dcs_util
 from dcs_util import (
     load_mission,
     extract_plane_templates,
@@ -31,20 +32,16 @@ if __name__ == "__main__":
     mission_to_modify_data, mission_to_modify_lua = load_mission(args.mission_to_modify)
     coldwar_mission_data, _ = load_mission(args.coldwar_mission)
 
-    plane_mission_types = ['-sead-', '-patrol-', '-strike-', '-cas-']
-    ground_mission_types = ['-supply-', '-assault-']
-    heli_mission_types = ['-supply-', '-cas-']
-
     if not args.skip_planes:
         print("✈️ Extracting plane templates...")
-        blue_map = extract_plane_templates(coldwar_mission_data, plane_mission_types, "blue")
-        red_map = extract_plane_templates(coldwar_mission_data, plane_mission_types, "red")
+        blue_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "blue")
+        red_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "red")
     if not args.skip_ground:
         print("🚛 Extracting ground templates...")
-        ground_map = extract_ground_templates(coldwar_mission_data, ground_mission_types)
+        ground_map = extract_ground_templates(coldwar_mission_data, dcs_util.ground_mission_types)
     if not args.skip_heli:
         print("🚁 Extracting helicopter templates...")
-        heli_map = extract_helicopter_templates(coldwar_mission_data, heli_mission_types)
+        heli_map = extract_helicopter_templates(coldwar_mission_data, dcs_util.heli_mission_types)
 
     if not args.skip_planes:
         print("✈️ Applying plane templates...")

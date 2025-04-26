@@ -216,7 +216,7 @@ def save_modified_mission(mission_data, output_path):
     print(f"✅ Modified mission written to {output_path}")
 
 # Find sample unit
-def find_sample_unit(mission_data, side, unit_type, group_contains = None):
+def find_sample_plane_unit(mission_data, side, unit_type, group_contains = ['-sead-', '-patrol-', '-strike-', '-cas-']):
     sample_unit = None
     #for side in ["blue", "red", "neutral"]:
     countries = mission_data.get("coalition", {}).get(side, {}).get("country", {})
@@ -273,7 +273,7 @@ def apply_sample_templates(mission_data, blue_map, red_map):
 
 # Extract ground sample templates from mission
 
-def extract_ground_templates(mission_data, mission_types=["supply", "assault"]):
+def extract_ground_templates(mission_data, mission_types=["-supply-", "-assault-"]):
     ground_map = {"blue": {}, "red": {}}
     for side in ["blue", "red"]:
         ground_map[side] = {}
@@ -321,7 +321,7 @@ def apply_ground_templates(mission_data, ground_map):
     print(f"✅ Modified {mod_count} ground unit(s) based on group size and mission type.")
 
 # Extract helicopter templates by mission type
-def extract_helicopter_templates(mission_data, mission_types=['supply', 'cas']):
+def extract_helicopter_templates(mission_data, mission_types=['-supply-', '-cas-']):
     from collections import defaultdict
     heli_map = {"blue": defaultdict(list), "red": defaultdict(list)}
     for side in ["blue", "red"]:

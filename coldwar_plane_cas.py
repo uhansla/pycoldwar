@@ -54,6 +54,7 @@ planes = {
             }
         }
     ],
+
     'A_10A': [
         {
             "type": planes.A_10A,
@@ -74,6 +75,7 @@ planes = {
             }
         }
     ],
+
     'AJS37': [
         {
             "type": planes.AJS37,
@@ -90,6 +92,23 @@ planes = {
             }
         }
     ],
+
+    'F_5E': [
+            {
+                "type": planes.F_5E,
+                "payload": {
+                    "pylons": [
+                        planes.F_5E.Pylon1.AIM_9P_Sidewinder_IR_AAM,
+                        planes.F_5E.Pylon2.M117___750lb_GP_Bomb_LD,
+                        planes.F_5E.Pylon3.F_5_275Gal_Fuel_tank,
+                        planes.F_5E.Pylon4.M117___750lb_GP_Bomb_LD,
+                        planes.F_5E.Pylon5.F_5_275Gal_Fuel_tank,
+                        planes.F_5E.Pylon6.M117___750lb_GP_Bomb_LD,
+                        planes.F_5E.Pylon7.AIM_9P_Sidewinder_IR_AAM,
+                    ]
+                }
+            }
+        ],
 
     'F_5E_3': [
         {
@@ -154,38 +173,126 @@ planes = {
     ],
 
     'MiG_27K': [
-    {
-        "type": planes.MiG_27K,
-        "payload": {
-            "pylons": [
-                planes.MiG_27K.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
-                planes.MiG_27K.Pylon3.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                planes.MiG_27K.Pylon4.FAB_250_M62___250kg_GP_Bomb_LD,
-                planes.MiG_27K.Pylon5.Fuel_tank_800L,
-                planes.MiG_27K.Pylon6.FAB_250_M62___250kg_GP_Bomb_LD,
-                planes.MiG_27K.Pylon7.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                planes.MiG_27K.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
-            ]
+        {
+            "type": planes.MiG_27K,
+            "payload": {
+                "pylons": [
+                    planes.MiG_27K.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.MiG_27K.Pylon3.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
+                    planes.MiG_27K.Pylon4.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.MiG_27K.Pylon5.Fuel_tank_800L,
+                    planes.MiG_27K.Pylon6.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.MiG_27K.Pylon7.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
+                    planes.MiG_27K.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                ]
+            }
         }
-    }
-]
+    ],
 
+    'MiG_23MLD': [
+        {
+            "type": planes.MiG_23MLD,
+            "payload": {
+                "pylons": [
+                    planes.MiG_23MLD.Pylon2.R_24T__AA_7_Apex_IR____Infra_Red,
+                    planes.MiG_23MLD.Pylon3.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.MiG_23MLD.Pylon4.Fuel_tank_800L,
+                    planes.MiG_23MLD.Pylon5.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.MiG_23MLD.Pylon6.R_24T__AA_7_Apex_IR____Infra_Red,
+                ]
+            }
+        },
+    ],
+
+    'Su_25': [
+        {
+            "type": planes.Su_25,
+            "payload": {
+                "pylons": [
+                    planes.Su_25.Pylon1.R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_25.Pylon2.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_25.Pylon3.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon4.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon5.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon6.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon7.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon8.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon9.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_25.Pylon10.R_60M__AA_8_Aphid____Infra_Red,
+                ]
+            }
+        },
+    ],
+
+    'Su_17M4': [
+        {
+            "type": planes.Su_17M4,
+            "payload": {
+                "pylons": [
+                    planes.Su_17M4.Pylon1.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_17M4.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_17M4.Pylon3.FAB_500_M_62___500kg_GP_Bomb_LD,
+                    planes.Su_17M4.Pylon4.Fuel_tank_800L,
+                    planes.Su_17M4.Pylon5.Fuel_tank_800L,
+                    planes.Su_17M4.Pylon6.FAB_500_M_62___500kg_GP_Bomb_LD,
+                    planes.Su_17M4.Pylon7.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_17M4.Pylon8.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__
+
+                ]
+            }
+        },
+    ],
+
+    'Su_24M': [
+        {
+            "type": planes.Su_24M,
+            "payload": {
+                "pylons": [
+                    planes.Su_24M.Pylon1.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_24M.Pylon2.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_24M.Pylon3.FAB_500_M_62___500kg_GP_Bomb_LD,
+                    planes.Su_24M.Pylon4.KAB_1500Kr___1500kg_TV_Guided_Bomb,
+                    planes.Su_24M.Pylon5.Fuel_tank_2000L,
+                    planes.Su_24M.Pylon6.FAB_500_M_62___500kg_GP_Bomb_LD,
+                    planes.Su_24M.Pylon7.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_24M.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red
+
+                ]
+            }
+        },
+    ],
+    
+    'MiG_19P': [
+        {
+            "type": planes.MiG_19P,
+            "payload": {
+                "pylons": [
+                    planes.MiG_19P.Pylon1.K_13A,
+                    planes.MiG_19P.Pylon2.PTB760_MIG19,
+                    planes.MiG_19P.Pylon3.ORO_57K___S_5M_x_8,
+                    planes.MiG_19P.Pylon4.ORO_57K___S_5M_x_8,
+                    planes.MiG_19P.Pylon5.PTB760_MIG19,
+                    planes.MiG_19P.Pylon6.K_13A,
+                ]
+            }
+        },
+    ], 
 }
 
 BLUE = [
     'F_A_18A',
     'A_10A',
-    'F_4E',
-    'Mirage_F1C',
-    'Mirage_F1CE',
-    'Mirage_F1EE',
-    'Mirage_F1M_EE',
+    # 'F_4E',
+    # 'Mirage_F1C',
+    # 'Mirage_F1CE',
+    # 'Mirage_F1EE',
+    # 'Mirage_F1M_EE',
     'F_5E',
     'F_5E_3',
-    'F_86F_Sabre',
+    # 'F_86F_Sabre',
     'AJS37',
     'L_39ZA',
-    'M_2000C'
+    # 'M_2000C'
 ]
 
 RED = [

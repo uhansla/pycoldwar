@@ -31,9 +31,9 @@ if __name__ == "__main__":
     mission_to_modify_data, mission_to_modify_lua = load_mission(args.mission_to_modify)
     coldwar_mission_data, _ = load_mission(args.coldwar_mission)
 
-    plane_mission_types = ['sead', 'patrol', 'strike', 'cas']
-    ground_mission_types = ['supply', 'assault']
-    heli_mission_types = ['supply', 'cas']
+    plane_mission_types = ['-sead-', '-patrol-', '-strike-', '-cas-']
+    ground_mission_types = ['-supply-', '-assault-']
+    heli_mission_types = ['-supply-', '-cas-']
 
     if not args.skip_planes:
         print("✈️ Extracting plane templates...")

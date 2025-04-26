@@ -3,6 +3,7 @@ from dcs.weapons_data import Weapons
 from lupa import LuaRuntime
 import os
 import random
+import coldwar_plane_cas as cas
 from collections import defaultdict
 
 
@@ -262,16 +263,54 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                 group_name = group.get("name", "").lower()
                 for mission_type in side_map:
                     if mission_type in group_name:
-                        sample_units = side_map[mission_type]
-                        if not sample_units:
-                            continue
-                        sample = random.choice(sample_units)
-                        for _, unit in group.get("units", {}).items():
-                            unit["type"] = sample.get("type")
-                            unit["livery_id"] = sample.get("livery_id")
-                            unit["payload"] = sample.get("payload", {}).copy()
-                            unit.pop("pylons", None)
-                            mod_count += 1
+                        if "-cas-" in group_name:
+                            # Special CAS handling: select one CAS plane type + payload for whole group
+
+                            cas_planes = cas.BLUE
+                            if side == "red":
+                                cas_planes = cas.RED
+
+
+                            cas_plane_type = random.choice(cas_planes)
+                            cas_plane = random.choice(cas.planes[cas_plane_type])
+                            print(cas_plane)
+                            selected_type = cas_plane["type"].__name__
+                            selected_fuel = cas_plane.get("fuel")
+                            selected_chaff = cas_plane.get("chaff")
+                            selected_flare = cas_plane.get("flare")
+                            pylons = cas_plane["payload"]["pylons"]
+
+                            clsids = []
+                            for pylon in pylons:
+                                if pylon is None:
+                                    clsids.append("<CLEAN>")
+                                else:
+                                    clsids.append(pylon[1]["clsid"])
+
+                            for _, unit in group.get("units", {}).items():
+                                unit["type"] = selected_type
+                                unit["fuel"] = selected_fuel
+                                unit["chaff"] = selected_chaff
+                                unit["flare"] = selected_flare
+                                unit["payload"] = {
+                                    "pylons": {str(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)}
+                                }
+                                unit.pop("pylons", None)
+                                mod_count += 1
+                        else:
+                            # Normal handling for non-CAS groups
+                            sample_units = side_map[mission_type]
+                            if not sample_units:
+                                continue
+                            sample = random.choice(sample_units)
+
+                            for _, unit in group.get("units", {}).items():
+                                unit["type"] = sample.get("type")
+                                unit["livery_id"] = sample.get("livery_id")
+                                unit["payload"] = sample.get("payload", {}).copy()
+                                unit.pop("pylons", None)
+                                mod_count += 1
+
                         break  # only apply one template per group
     print(f"✅ Modified {mod_count} unit(s) based on sample maps.")
 

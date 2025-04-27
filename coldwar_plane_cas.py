@@ -69,14 +69,14 @@ planes_map = {
             "payload": {
                 "pylons": [
                     planes.F_86F_Sabre.Pylon1.Fuel_Tank_200_gallons,
-                    planes.F_86F_Sabre.Pylon2._2_x_HVAR__UnGd_Rkts,
+                    None, #planes.F_86F_Sabre.Pylon2._2_x_HVAR__UnGd_Rkts,
                     planes.F_86F_Sabre.Pylon3._2_x_HVAR__UnGd_Rkts,
                     planes.F_86F_Sabre.Pylon4.AN_M64___500lb_GP_Bomb_LD_,
                     planes.F_86F_Sabre.Pylon5.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
                     planes.F_86F_Sabre.Pylon6.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
                     planes.F_86F_Sabre.Pylon7.AN_M64___500lb_GP_Bomb_LD_,
                     planes.F_86F_Sabre.Pylon8._2_x_HVAR__UnGd_Rkts,
-                    planes.F_86F_Sabre.Pylon9._2_x_HVAR__UnGd_Rkts,
+                    None, #planes.F_86F_Sabre.Pylon9._2_x_HVAR__UnGd_Rkts,
                     planes.F_86F_Sabre.Pylon10.Fuel_Tank_200_gallons
                 ]
             }
@@ -265,13 +265,15 @@ planes_map = {
             "flare": planes.MiG_27K.flare,
             "payload": {
                 "pylons": [
-                    planes.MiG_27K.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
-                    planes.MiG_27K.Pylon3.UB_32A___32_x_UnGd_Rkts__57_mm_S_5M_HE,
+                    None,
+                    planes.MiG_27K.Pylon2.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag,
+                    planes.MiG_27K.Pylon3.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
                     planes.MiG_27K.Pylon4.FAB_250_M62___250_kg_GP_Bomb_LD,
                     planes.MiG_27K.Pylon5.Fuel_tank_800L,
                     planes.MiG_27K.Pylon6.FAB_250_M62___250_kg_GP_Bomb_LD,
-                    planes.MiG_27K.Pylon7.UB_32A___32_x_UnGd_Rkts__57_mm_S_5M_HE,
-                    planes.MiG_27K.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
+                    planes.MiG_27K.Pylon7.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
+                    planes.MiG_27K.Pylon8.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag,
+                    None,
                 ]
             }
         }
@@ -286,11 +288,13 @@ planes_map = {
             "flare": planes.MiG_23MLD.flare,
             "payload": {
                 "pylons": [
+                    None,
                     planes.MiG_23MLD.Pylon2.R_24T__AA_7_Apex_IR____Infra_Red,
                     planes.MiG_23MLD.Pylon3.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
                     planes.MiG_23MLD.Pylon4.Fuel_tank_800L,
                     planes.MiG_23MLD.Pylon5.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
                     planes.MiG_23MLD.Pylon6.R_24T__AA_7_Apex_IR____Infra_Red,
+                    None
                 ]
             }
         },
@@ -416,13 +420,14 @@ planes_map = {
             "fuel": planes.Mirage_F1CE.fuel_max,
             "chaff": planes.Mirage_F1CE.chaff,
             "flare": planes.Mirage_F1CE.flare,
+            "livery_id": "114th combat wing tanagra ab (fictional c version)",
             "payload": {
                 "pylons": [
                     planes.Mirage_F1CE.Pylon1.R550_Magic_2_IR_AAM,
                     planes.Mirage_F1CE.Pylon2.MATRA_F1___36_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd,
-                    planes.Mirage_F1CE.Pylon3.Mk_82___500lb_GP_Bomb_LD,
+                    planes.Mirage_F1CE.Pylon3.BR_500,
                     planes.Mirage_F1CE.Pylon4.PTB_1200_F1,
-                    planes.Mirage_F1CE.Pylon5.Mk_82___500lb_GP_Bomb_LD,
+                    planes.Mirage_F1CE.Pylon5.BR_500,
                     planes.Mirage_F1CE.Pylon6.MATRA_F1___36_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd,
                     planes.Mirage_F1CE.Pylon7.R550_Magic_2_IR_AAM,
                 ]
@@ -434,17 +439,17 @@ planes_map = {
 BLUE = [
     'F_A_18A',
     'A_10A',
-    'F-4E-45MC',
-    'Mirage_F1CE',
-    # 'Mirage_F1C',
-    # 'Mirage_F1EE',
-    # 'Mirage_F1M_EE',
+    'F_4E_45MC',
     'F_5E',
     'F_5E_3',
     'F_86F_Sabre',
     'AJS37',
     'L_39ZA',
-    'M_2000C'
+    'M_2000C',
+    'Mirage_F1CE',
+    # 'Mirage_F1C',
+    # 'Mirage_F1EE',
+    # 'Mirage_F1M_EE',
 ]
 
 RED = [

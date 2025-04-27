@@ -263,7 +263,7 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                 group_name = group.get("name", "").lower()
                 for mission_type in side_map:
                     if mission_type in group_name:
-                        if "-cas-" in group_name:
+                        if ("-cas-" in group_name) or ("-strike-" in group_name) or ("-sead-" in group_name):
                             # Special CAS handling: select one CAS plane type + payload for whole group
 
                             cas_planes = cas.BLUE
@@ -278,6 +278,7 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                             selected_fuel = cas_plane.get("fuel")
                             selected_chaff = cas_plane.get("chaff")
                             selected_flare = cas_plane.get("flare")
+                            selected_livery_id = cas_plane.get("livery_id")
                             pylons = cas_plane["payload"]["pylons"]
 
                             clsids = []
@@ -289,11 +290,16 @@ def apply_sample_templates(mission_data, blue_map, red_map):
 
                             for _, unit in group.get("units", {}).items():
                                 unit["type"] = selected_type
-                                unit["fuel"] = selected_fuel
-                                unit["chaff"] = selected_chaff
-                                unit["flare"] = selected_flare
+                                unit["livery_id"] = selected_livery_id
+                                # unit["fuel"] = selected_fuel
+                                # unit["chaff"] = selected_chaff
+                                # unit["flare"] = selected_flare
                                 unit["payload"] = {
-                                    "pylons": {str(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)}
+                                    "pylons": {(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)},
+                                    "fuel": selected_fuel,
+                                    "chaff": selected_chaff,
+                                    "flare": selected_flare,
+                                    "gun": 100
                                 }
                                 unit.pop("pylons", None)
                                 mod_count += 1

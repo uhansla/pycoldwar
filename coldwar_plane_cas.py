@@ -35,7 +35,7 @@ types = [
  'Mirage_F1BQ', 'Mirage_F1BD', 'Mirage_F1DDA'
 ]
 
-planes = {
+planes_map = {
     'F_A_18A': [
         {
             "type": planes.F_A_18A,
@@ -59,6 +59,58 @@ planes = {
         }
     ],
 
+    'F_86F_Sabre': [
+        {
+            "type": planes.F_86F_Sabre,
+            "id": planes.F_86F_Sabre.id,
+            "fuel": planes.F_86F_Sabre.fuel_max,
+            "chaff": planes.F_86F_Sabre.chaff,
+            "flare": planes.F_86F_Sabre.flare,
+            "payload": {
+                "pylons": [
+                    planes.F_86F_Sabre.Pylon1.Fuel_Tank_200_gallons,
+                    planes.F_86F_Sabre.Pylon2._2_x_HVAR__UnGd_Rkts,
+                    planes.F_86F_Sabre.Pylon3._2_x_HVAR__UnGd_Rkts,
+                    planes.F_86F_Sabre.Pylon4.AN_M64___500lb_GP_Bomb_LD_,
+                    planes.F_86F_Sabre.Pylon5.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
+                    planes.F_86F_Sabre.Pylon6.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
+                    planes.F_86F_Sabre.Pylon7.AN_M64___500lb_GP_Bomb_LD_,
+                    planes.F_86F_Sabre.Pylon8._2_x_HVAR__UnGd_Rkts,
+                    planes.F_86F_Sabre.Pylon9._2_x_HVAR__UnGd_Rkts,
+                    planes.F_86F_Sabre.Pylon10.Fuel_Tank_200_gallons
+                ]
+            }
+        }
+    ],
+
+    'F_4E_45MC': [
+            {
+                "type": planes.F_4E_45MC,
+                "id": planes.F_4E_45MC.id,
+                "fuel": planes.F_4E_45MC.fuel_max,
+                "chaff": planes.F_4E_45MC.chaff,
+                "flare": planes.F_4E_45MC.flare,
+                "payload": {
+                    "pylons": [
+                        planes.F_4E_45MC.Pylon1.Sargent_Fletcher_Fuel_Tank_370_gallons,
+                        planes.F_4E_45MC.Pylon2.AIM_9M,
+                        planes.F_4E_45MC.Pylon3._Special_Weapons_Adapter__AGM_65D___Maverick_D__IIR_ASM___LAU_117__Special_Weapons_Adapter__,
+                        planes.F_4E_45MC.Pylon4.AIM_9M,
+                        planes.F_4E_45MC.Pylon5.AIM_7M,
+                        planes.F_4E_45MC.Pylon6.AIM_7M,
+                        planes.F_4E_45MC.Pylon7._6x_Mk_82___500lb_GP_Bomb_LD__MER_,
+                        planes.F_4E_45MC.Pylon8.AIM_7M,
+                        planes.F_4E_45MC.Pylon9.AIM_7M,
+                        planes.F_4E_45MC.Pylon10.AIM_9M,
+                        planes.F_4E_45MC.Pylon11._Special_Weapons_Adapter__AGM_65D___Maverick_D__IIR_ASM___LAU_117__Special_Weapons_Adapter__,
+                        planes.F_4E_45MC.Pylon12.AIM_9M,
+                        planes.F_4E_45MC.Pylon13.Sargent_Fletcher_Fuel_Tank_370_gallons_,
+                        planes.F_4E_45MC.Pylon14.ALE_40_Dispensers__30_Flares__60_Chaff_
+                    ]
+                }
+            }
+        ],
+
     'A_10A': [
         {
             "type": planes.A_10A,
@@ -69,7 +121,7 @@ planes = {
             "payload": {
                 "pylons": [
                     planes.A_10A.Pylon1.ALQ_131___ECM_Pod,
-                    planes.A_10A.Pylon2.LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE,
+                    planes.A_10A.Pylon2.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE,
                     planes.A_10A.Pylon3.LAU_88_with_3_x_AGM_65D___Maverick_D__IIR_ASM_,
                     planes.A_10A.Pylon4.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD,
                     planes.A_10A.Pylon5.Mk_82___500lb_GP_Bomb_LD,
@@ -77,7 +129,7 @@ planes = {
                     planes.A_10A.Pylon7.Mk_82___500lb_GP_Bomb_LD,
                     planes.A_10A.Pylon8.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD,
                     planes.A_10A.Pylon9.LAU_88_with_3_x_AGM_65D___Maverick_D__IIR_ASM_,
-                    planes.A_10A.Pylon10.LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE,
+                    planes.A_10A.Pylon10.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE,
                     planes.A_10A.Pylon11.LAU_105_with_2_x_AIM_9M_Sidewinder_IR_AAM
                 ]
             }
@@ -93,13 +145,13 @@ planes = {
             "flare": planes.AJS37.flare,
             "payload": {
                 "pylons": [
-                    planes.AJS37.Pylon1.Rb_24J__AIM_9P__Sidewinder_IR_AAM,
+                    planes.AJS37.Pylon1.LAU_7_with_RB_24J__AIM_9P3__Sidewinder_IR_AAM,
                     planes.AJS37.Pylon2.Rb_75T__AGM_65A_Maverick___TV_ASM_Lg_HE_Whd_,
                     None,
                     planes.AJS37.Pylon4.AJS_External_tank_1013kg_fuel,
                     None,
                     planes.AJS37.Pylon6.Rb_75T__AGM_65A_Maverick___TV_ASM_Lg_HE_Whd_,
-                    planes.AJS37.Pylon7.Rb_24J__AIM_9P__Sidewinder_IR_AAM
+                    planes.AJS37.Pylon7.LAU_7_with_RB_24J__AIM_9P3__Sidewinder_IR_AAM
                 ]
             }
         }
@@ -157,11 +209,11 @@ planes = {
             "flare": planes.MiG_21Bis.flare,
             "payload": {
                 "pylons": [
-                    planes.MiG_21Bis.Pylon1.R_60M,
+                    planes.MiG_21Bis.Pylon1.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM,
                     planes.MiG_21Bis.Pylon2.FAB_500_M_62___500kg_GP_Bomb_LD,
                     planes.MiG_21Bis.Pylon3.Fuel_Tank_800_L__21_,
                     planes.MiG_21Bis.Pylon4.FAB_500_M_62___500kg_GP_Bomb_LD,
-                    planes.MiG_21Bis.Pylon5.R_60M,
+                    planes.MiG_21Bis.Pylon5.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM,
                     planes.MiG_21Bis.Pylon6.ASO_2___countermeasures_pod
                 ]
             }
@@ -177,11 +229,11 @@ planes = {
             "flare": planes.L_39ZA.flare,
             "payload": {
                 "pylons": [
-                    planes.L_39ZA.Pylon1.UB_16UM_pod___16_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                    planes.L_39ZA.Pylon2.UB_16UM_pod___16_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
+                    planes.L_39ZA.Pylon1.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag,
+                    planes.L_39ZA.Pylon2.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag,
                     None,
-                    planes.L_39ZA.Pylon4.UB_16UM_pod___16_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                    planes.L_39ZA.Pylon5.UB_16UM_pod___16_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
+                    planes.L_39ZA.Pylon4.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag,
+                    planes.L_39ZA.Pylon5.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag,
                 ]
             }
         }
@@ -213,13 +265,13 @@ planes = {
             "flare": planes.MiG_27K.flare,
             "payload": {
                 "pylons": [
-                    planes.MiG_27K.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
-                    planes.MiG_27K.Pylon3.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                    planes.MiG_27K.Pylon4.FAB_250_M62___250kg_GP_Bomb_LD,
+                    planes.MiG_27K.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
+                    planes.MiG_27K.Pylon3.UB_32A___32_x_UnGd_Rkts__57_mm_S_5M_HE,
+                    planes.MiG_27K.Pylon4.FAB_250_M62___250_kg_GP_Bomb_LD,
                     planes.MiG_27K.Pylon5.Fuel_tank_800L,
-                    planes.MiG_27K.Pylon6.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.MiG_27K.Pylon7.UB_32A_pod___32_x_S_5KO__57mm_UnGd_Rkts__HEAT_Frag,
-                    planes.MiG_27K.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.MiG_27K.Pylon6.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.MiG_27K.Pylon7.UB_32A___32_x_UnGd_Rkts__57_mm_S_5M_HE,
+                    planes.MiG_27K.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
                 ]
             }
         }
@@ -235,9 +287,9 @@ planes = {
             "payload": {
                 "pylons": [
                     planes.MiG_23MLD.Pylon2.R_24T__AA_7_Apex_IR____Infra_Red,
-                    planes.MiG_23MLD.Pylon3.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.MiG_23MLD.Pylon3.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
                     planes.MiG_23MLD.Pylon4.Fuel_tank_800L,
-                    planes.MiG_23MLD.Pylon5.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.MiG_23MLD.Pylon5.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
                     planes.MiG_23MLD.Pylon6.R_24T__AA_7_Apex_IR____Infra_Red,
                 ]
             }
@@ -253,16 +305,16 @@ planes = {
             "flare": planes.Su_25.flare,
             "payload": {
                 "pylons": [
-                    planes.Su_25.Pylon1.R_60M__AA_8_Aphid____Infra_Red,
-                    planes.Su_25.Pylon2.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
-                    planes.Su_25.Pylon3.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon4.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon5.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon6.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon7.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon8.FAB_250_M62___250kg_GP_Bomb_LD,
-                    planes.Su_25.Pylon9.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
-                    planes.Su_25.Pylon10.R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_25.Pylon1.R_60M__AA_8_Aphid_B____IR_AAM,
+                    planes.Su_25.Pylon2.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
+                    planes.Su_25.Pylon3.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon4.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon5.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon6.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon7.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon8.FAB_250_M62___250_kg_GP_Bomb_LD,
+                    planes.Su_25.Pylon9.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
+                    planes.Su_25.Pylon10.R_60M__AA_8_Aphid_B____IR_AAM,
                 ]
             }
         },
@@ -277,14 +329,14 @@ planes = {
             "flare": planes.Su_17M4.flare,
             "payload": {
                 "pylons": [
-                    planes.Su_17M4.Pylon1.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
-                    planes.Su_17M4.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
+                    planes.Su_17M4.Pylon1.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
+                    planes.Su_17M4.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
                     planes.Su_17M4.Pylon3.FAB_500_M_62___500kg_GP_Bomb_LD,
                     planes.Su_17M4.Pylon4.Fuel_tank_800L,
                     planes.Su_17M4.Pylon5.Fuel_tank_800L,
                     planes.Su_17M4.Pylon6.FAB_500_M_62___500kg_GP_Bomb_LD,
-                    planes.Su_17M4.Pylon7.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
-                    planes.Su_17M4.Pylon8.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__
+                    planes.Su_17M4.Pylon7.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
+                    planes.Su_17M4.Pylon8.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_
 
                 ]
             }
@@ -300,14 +352,14 @@ planes = {
             "flare": planes.Su_24M.flare,
             "payload": {
                 "pylons": [
-                    planes.Su_24M.Pylon1.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red,
-                    planes.Su_24M.Pylon2.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
+                    planes.Su_24M.Pylon1.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_,
+                    planes.Su_24M.Pylon2.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
                     planes.Su_24M.Pylon3.FAB_500_M_62___500kg_GP_Bomb_LD,
                     planes.Su_24M.Pylon4.KAB_1500Kr___1500kg_TV_Guided_Bomb,
                     planes.Su_24M.Pylon5.Fuel_tank_2000L,
                     planes.Su_24M.Pylon6.FAB_500_M_62___500kg_GP_Bomb_LD,
-                    planes.Su_24M.Pylon7.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk__,
-                    planes.Su_24M.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid____Infra_Red
+                    planes.Su_24M.Pylon7.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_,
+                    planes.Su_24M.Pylon8.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_
 
                 ]
             }
@@ -332,26 +384,72 @@ planes = {
                 ]
             }
         },
-    ], 
+    ],
+
+    'M_2000C': [
+        {
+            "type": planes.M_2000C,
+            "id": planes.M_2000C.id,
+            "fuel": planes.M_2000C.fuel_max,
+            "chaff": planes.M_2000C.chaff,
+            "flare": planes.M_2000C.flare,
+            "payload": {
+                "pylons": [
+                    planes.M_2000C.Pylon1.Matra_Magic_II,
+                    planes.M_2000C.Pylon2.AUF2_SAMP_250_HD_x_2,
+                    planes.M_2000C.Pylon3.BLG_66_AC_Belouga,
+                    planes.M_2000C.Pylon5.RPL_522_1300_liters_Fuel_Tank,
+                    planes.M_2000C.Pylon6.BLG_66_AC_Belouga,
+                    planes.M_2000C.Pylon8.AUF2_SAMP_250_HD_x_2,
+                    planes.M_2000C.Pylon9.Matra_Magic_II,
+                    planes.M_2000C.Pylon10.Eclair_M_4_2__32_flares_36_chaffs,
+                    None,
+                ]
+            }
+        },
+    ],
+
+    'Mirage_F1CE': [
+        {
+            "type": planes.Mirage_F1CE,
+            "id": planes.Mirage_F1CE.id,
+            "fuel": planes.Mirage_F1CE.fuel_max,
+            "chaff": planes.Mirage_F1CE.chaff,
+            "flare": planes.Mirage_F1CE.flare,
+            "payload": {
+                "pylons": [
+                    planes.Mirage_F1CE.Pylon1.R550_Magic_2_IR_AAM,
+                    planes.Mirage_F1CE.Pylon2.MATRA_F1___36_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd,
+                    planes.Mirage_F1CE.Pylon3.Mk_82___500lb_GP_Bomb_LD,
+                    planes.Mirage_F1CE.Pylon4.PTB_1200_F1,
+                    planes.Mirage_F1CE.Pylon5.Mk_82___500lb_GP_Bomb_LD,
+                    planes.Mirage_F1CE.Pylon6.MATRA_F1___36_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd,
+                    planes.Mirage_F1CE.Pylon7.R550_Magic_2_IR_AAM,
+                ]
+            }
+        },
+    ],
 }
 
 BLUE = [
     'F_A_18A',
     'A_10A',
-    # 'F_4E',
+    'F-4E-45MC',
+    'Mirage_F1CE',
     # 'Mirage_F1C',
-    # 'Mirage_F1CE',
     # 'Mirage_F1EE',
     # 'Mirage_F1M_EE',
     'F_5E',
     'F_5E_3',
-    # 'F_86F_Sabre',
+    'F_86F_Sabre',
     'AJS37',
     'L_39ZA',
-    # 'M_2000C'
+    'M_2000C'
 ]
 
 RED = [
+    'Mirage_F1CE',
+    'F_4E_45MC',
     'Su_17M4',
     'Su_24M',
     'MiG_23MLD',
@@ -359,14 +457,16 @@ RED = [
     'MiG_21Bis',
     'MiG_19P',
     'MiG_15bis',
-    'Su_25'
+    'Su_25',
+    'F_5E',
+    'F_5E_3',
 ]
 
 def get_random_payload(plane_name):
     """
     Returns a random payload dictionary for the given plane name.
     """
-    payload_options = planes.get(plane_name)
+    payload_options = planes_map.get(plane_name)
     if not payload_options:
         raise ValueError(f"Plane {plane_name} not found in planes dictionary.")
     return random.choice(payload_options)

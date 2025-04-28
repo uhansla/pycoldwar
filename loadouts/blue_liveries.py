@@ -1,0 +1,13 @@
+blue_liveries = {'A-10A': ['104th fs maryland ang, baltimore (md)'],
+ 'AH-1W': ['USA X Black'],
+ 'AJS37': ['37', 'f7 skaraborg'],
+ 'E-2C': ['E-2D Demo'],
+ 'F-14A-135-GR': ['vf-154 black knights 101'],
+ 'F-4E-45MC': ['default'],
+ 'F-5E-3': ['aggressor desert scheme'],
+ 'F-86F Sabre': ['us air force'],
+ 'MB-339A': ["mb339ad 'uae'"],
+ 'Mirage-F1CE': ['aerges blue'],
+ 'Mirage-F1CT': ['usa company'],
+ 'Mirage-F1EE': ['aerges blue', 'usa company skin 2 (m-ee)'],
+ 'UH-1H': ['Army Standard']}

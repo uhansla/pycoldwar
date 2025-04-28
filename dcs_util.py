@@ -10,6 +10,8 @@ from loadouts import plane_patrol
 from loadouts import plane_sead
 from loadouts import plane_strike
 from loadouts import plane_supply
+from loadouts import red_liveries
+from loadouts import blue_liveries
 
 from collections import defaultdict
 import pprint
@@ -312,8 +314,8 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                             if side == "red":
                                 miss_planes = plane_class.RED
 
-                            print(plane_class.planes_map)
-                            print(group_name)
+                            # print(plane_class.planes_map)
+                            # print(group_name)
                             miss_plane_type = random.choice(miss_planes)
                             miss_plane = random.choice(plane_class.planes_map[miss_plane_type])
                             # print(cas_plane)
@@ -321,7 +323,13 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                             selected_fuel = miss_plane.get("fuel")
                             selected_chaff = miss_plane.get("chaff")
                             selected_flare = miss_plane.get("flare")
-                            selected_livery_id = miss_plane.get("livery_id")
+
+                            selected_livery_id = ""
+                            if side == "blue":
+                                selected_livery_id = blue_liveries.blue_liveries.get(selected_type, "")
+                            else:
+                                selected_livery_id = red_liveries.red_liveries.get(selected_type, "")
+
                             pylons = miss_plane["payload"]["pylons"]
 
                             clsids = []

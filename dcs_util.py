@@ -12,12 +12,16 @@ from loadouts import plane_strike
 from loadouts import plane_supply
 from loadouts import red_liveries
 from loadouts import blue_liveries
+from loadouts import helo_cas
+from loadouts import helo_supply
+from loadouts import ground_supply
+from loadouts import ground_assault
 
 from collections import defaultdict
 import pprint
 
 
-plane_mission_types = {'-sead-', '-patrol-', '-strike-', '-cas-'}
+plane_mission_types = {'-sead-', '-patrol-', '-strike-', '-cas-', '-supply-'}
 ground_mission_types = {'-supply-', '-assault-'}
 heli_mission_types = {'-supply-', '-cas-'}
 
@@ -280,12 +284,13 @@ def find_sample_plane_unit(mission_data, side, unit_type, group_contains = plane
     return sample_unit
 
 # Modify mission using sample maps
-def apply_sample_templates(mission_data, blue_map, red_map):
+def apply_sample_templates(mission_data):
     mod_count = 0
     for side in ["blue", "red"]:
         coalition = mission_data.get("coalition", {}).get(side, {})
         countries = coalition.get("country", {})
-        side_map = blue_map if side == "blue" else red_map
+        # side_map = blue_map if side == "blue" else red_map
+        side_map = plane_mission_types
 
         for _, country in countries.items():
             groups = country.get("plane", {}).get("group", {})
@@ -326,9 +331,11 @@ def apply_sample_templates(mission_data, blue_map, red_map):
 
                             selected_livery_id = ""
                             if side == "blue":
-                                selected_livery_id = blue_liveries.blue_liveries.get(selected_type, "")
+                                if blue_liveries.blue_liveries.get(selected_type):
+                                    selected_livery_id = random.choice(blue_liveries.blue_liveries.get(selected_type))
                             else:
-                                selected_livery_id = red_liveries.red_liveries.get(selected_type, "")
+                                if red_liveries.red_liveries.get(selected_type):
+                                    selected_livery_id = random.choice(red_liveries.red_liveries.get(selected_type))
 
                             pylons = miss_plane["payload"]["pylons"]
 
@@ -354,19 +361,19 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                                 }
                                 unit.pop("pylons", None)
                                 mod_count += 1
-                        else:
-                            # Normal handling for unknown groups
-                            sample_units = side_map[mission_type]
-                            if not sample_units:
-                                continue
-                            sample = random.choice(sample_units)
-
-                            for _, unit in group.get("units", {}).items():
-                                unit["type"] = sample.get("type")
-                                unit["livery_id"] = sample.get("livery_id")
-                                unit["payload"] = sample.get("payload", {}).copy()
-                                unit.pop("pylons", None)
-                                mod_count += 1
+                        # else:
+                        #     # Normal handling for unknown groups
+                        #     sample_units = side_map[mission_type]
+                        #     if not sample_units:
+                        #         continue
+                        #     sample = random.choice(sample_units)
+                        #
+                        #     for _, unit in group.get("units", {}).items():
+                        #         unit["type"] = sample.get("type")
+                        #         unit["livery_id"] = sample.get("livery_id")
+                        #         unit["payload"] = sample.get("payload", {}).copy()
+                        #         unit.pop("pylons", None)
+                        #         mod_count += 1
 
                         break  # only apply one template per group
     print(f"✅ Modified {mod_count} unit(s) based on sample maps.")
@@ -392,33 +399,44 @@ def extract_ground_templates(mission_data, mission_types=["-supply-", "-assault-
 
 # Replace ground units with matching group size and mission type
 
-def apply_ground_templates(mission_data, ground_map):
+def apply_ground_templates(mission_data):
     mod_count = 0
+
     for side in ["blue", "red"]:
         countries = mission_data.get("coalition", {}).get(side, {}).get("country", {})
+
         for _, country in countries.items():
-            vehicle = country.get("vehicle", {})
-            groups = vehicle.get("group", {})
-            for group_key, group in groups.items():
+            groups = country.get("vehicle", {}).get("group", {})
+
+            for _, group in groups.items():
                 group_name = group.get("name", "").lower()
                 unit_count = len(group.get("units", {}))
-                for mission_type, templates in ground_map.get(side, {}).items():
-                    if mission_type in group_name:
-                        matching_templates = [t for t in templates if len(t) == unit_count]
-                        if matching_templates:
-                            selected = random.choice(matching_templates)
-                        elif templates:
-                            selected = random.choice(templates)[:unit_count]  # fallback: crop to size
-                        else:
-                            continue
 
-                        for unit_key, sample in zip(group.get("units", {}).keys(), selected):
-                            group["units"][unit_key]["type"] = sample.get("type")
-                            group["units"][unit_key]["skill"] = sample.get("skill")
-                            group["units"][unit_key]["name"] = sample.get("name")
-                            mod_count += 1
-                        break
-    print(f"✅ Modified {mod_count} ground unit(s) based on group size and mission type.")
+                # Determine mission type
+                if "-assault-" in group_name:
+                    templates = ground_assault.blue_ground_templates if side == "blue" else ground_assault.red_ground_templates
+                elif "-supply-" in group_name:
+                    templates = ground_supply.blue_ground_templates if side == "blue" else ground_supply.red_ground_templates
+                else:
+                    continue  # Skip non-matching groups
+
+                if not templates:
+                    continue
+
+                # Find templates matching unit count
+                matching_templates = [t for t in templates if len(t) == unit_count]
+
+                if matching_templates:
+                    selected_template = random.choice(matching_templates)
+                else:
+                    selected_template = random.choice(templates)[:unit_count]  # fallback: crop
+
+                for unit_key, sample_unit in zip(group.get("units", {}).keys(), selected_template):
+                    # Update unit type
+                    group["units"][unit_key]["type"] = sample_unit
+                    mod_count += 1
+
+    print(f"✅ Modified {mod_count} ground unit(s) based on CAS and Supply ground templates.")
 
 # Extract helicopter templates by mission type
 def extract_helicopter_templates(mission_data, mission_types=['-supply-', '-cas-']):
@@ -438,28 +456,57 @@ def extract_helicopter_templates(mission_data, mission_types=['-supply-', '-cas-
     return heli_map
 
 # Apply helicopter templates to mission
-def apply_helicopter_templates(mission_data, heli_map):
+def apply_helicopter_templates(mission_data):
     mod_count = 0
     for side in ["blue", "red"]:
         countries = mission_data.get("coalition", {}).get(side, {}).get("country", {})
         for _, country in countries.items():
             groups = country.get("helicopter", {}).get("group", {})
+
             for _, group in groups.items():
                 group_name = group.get("name", "").lower()
-                for mission_type in heli_map[side]:
-                    if mission_type in group_name:
-                        sample_units = heli_map[side][mission_type]
-                        if not sample_units:
-                            continue
-                        sample = random.choice(sample_units)
-                        for _, unit in group.get("units", {}).items():
-                            unit["type"] = sample.get("type")
-                            unit["livery_id"] = sample.get("livery_id")
-                            unit["payload"] = sample.get("payload", {}).copy()
-                            unit.pop("pylons", None)
-                            mod_count += 1
-                        break
-    print(f"✅ Modified {mod_count} helicopter unit(s) based on templates.")
+
+                # Determine mission type
+                if "-cas-" in group_name:
+                    heli_names = helo_cas.BLUE if side == "blue" else helo_cas.RED
+                    heli_map = helo_cas.helicopters_map
+                elif "-supply-" in group_name:
+                    heli_names = helo_supply.BLUE if side == "blue" else helo_supply.RED
+                    heli_map = helo_supply.helicopters_map
+                else:
+                    continue  # Skip non-matching groups
+
+                # Filter valid helicopter options
+                valid_templates = []
+                for heli_name in heli_names:
+                    templates = heli_map.get(heli_name, [])
+                    valid_templates.extend(templates)
+
+                if not valid_templates:
+                    continue
+
+                # Select one random template
+                heli_template = random.choice(valid_templates)
+
+                selected_type = heli_template["type"].__name__
+                selected_pylons = heli_template["payload"]["pylons"]
+
+                clsids = []
+                for pylon in selected_pylons:
+                    if pylon is None:
+                        clsids.append("<CLEAN>")
+                    else:
+                        clsids.append(pylon[1]["clsid"])
+
+                for _, unit in group.get("units", {}).items():
+                    unit["type"] = selected_type
+                    unit["payload"] = {
+                        "pylons": {(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)},
+                    }
+                    unit.pop("pylons", None)
+                    mod_count += 1
+
+    print(f"✅ Modified {mod_count} helicopter unit(s) using CAS and Supply templates.")
 
 def extract_plane_templates(mission_data, mission_types, side):
     plane_map = defaultdict(list)

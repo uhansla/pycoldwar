@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     parser.add_argument("--mission_to_modify", "--mm", type=str, required=True,
                         help="Path to mission to modify (modern mission)")
-    parser.add_argument("--coldwar_mission", "--cm", type=str, required=True,
-                        help="Path to Cold War mission to extract templates from")
+    # parser.add_argument("--coldwar_mission", "--cm", type=str, required=True,
+    #                     help="Path to Cold War mission to extract templates from")
     parser.add_argument("--output_folder", "--op", type=str, required=True,
                         help="Path to output folder to save modified mission")
 
@@ -30,28 +30,28 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     mission_to_modify_data, mission_to_modify_lua = load_mission(args.mission_to_modify)
-    coldwar_mission_data, _ = load_mission(args.coldwar_mission)
+    # coldwar_mission_data, _ = load_mission(args.coldwar_mission)
 
-    if not args.skip_planes:
-        print("✈️ Extracting plane templates...")
-        blue_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "blue")
-        red_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "red")
-    if not args.skip_ground:
-        print("🚛 Extracting ground templates...")
-        ground_map = extract_ground_templates(coldwar_mission_data, dcs_util.ground_mission_types)
-    if not args.skip_heli:
-        print("🚁 Extracting helicopter templates...")
-        heli_map = extract_helicopter_templates(coldwar_mission_data, dcs_util.heli_mission_types)
+    # if not args.skip_planes:
+    #     print("✈️ Extracting plane templates...")
+    #     blue_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "blue")
+    #     red_map = extract_plane_templates(coldwar_mission_data, dcs_util.plane_mission_types, "red")
+    # if not args.skip_ground:
+    #     print("🚛 Extracting ground templates...")
+    #     ground_map = extract_ground_templates(coldwar_mission_data, dcs_util.ground_mission_types)
+    # if not args.skip_heli:
+    #     print("🚁 Extracting helicopter templates...")
+    #     heli_map = extract_helicopter_templates(coldwar_mission_data, dcs_util.heli_mission_types)
 
     if not args.skip_planes:
         print("✈️ Applying plane templates...")
-        apply_sample_templates(mission_to_modify_data, blue_map, red_map)
+        apply_sample_templates(mission_to_modify_data)
     if not args.skip_ground:
         print("🚛 Applying ground templates...")
-        apply_ground_templates(mission_to_modify_data, ground_map)
+        apply_ground_templates(mission_to_modify_data)
     if not args.skip_heli:
         print("🚁 Applying helicopter templates...")
-        apply_helicopter_templates(mission_to_modify_data, heli_map)
+        apply_helicopter_templates(mission_to_modify_data)
 
     os.makedirs(args.output_folder, exist_ok=True)
     output_mission_path = os.path.join(args.output_folder, "mission")

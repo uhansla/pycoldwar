@@ -792,8 +792,12 @@ def generate_livery_maps_from_mission(mission_data, save_to_folder=None):
 
 # Ground Units
 
+import os
+import dcs.vehicles as vehicles
+
 def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "strike", "defense"], save_to_file=None):
-    ground_templates = {}
+    blue_templates = []
+    red_templates = []
 
     for side in ["blue", "red"]:
         coalition = mission_data.get("coalition", {}).get(side, {})
@@ -819,20 +823,24 @@ def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "
                         unit_list.append(unit_type)
 
                     if unit_list:  # only add if non-empty
-                        if matched_mission not in ground_templates:
-                            ground_templates[matched_mission] = []
-                        ground_templates[matched_mission].append(unit_list)
+                        if side == "blue":
+                            blue_templates.append(unit_list)
+                        else:
+                            red_templates.append(unit_list)
 
     # 🔥 Deduplicate
-    unique_groups = []
-    seen = set()
-
-    for groups in ground_templates.values():
+    def deduplicate(groups):
+        unique_groups = []
+        seen = set()
         for group_units in groups:
-            signature = tuple(group_units)  # Use tuple for hashing
+            signature = tuple(group_units)
             if signature not in seen:
                 seen.add(signature)
                 unique_groups.append(group_units)
+        return unique_groups
+
+    blue_templates = deduplicate(blue_templates)
+    red_templates = deduplicate(red_templates)
 
     # Saving
     if save_to_file:
@@ -842,15 +850,25 @@ def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "
 
         with open(save_to_file, "w", encoding="utf-8") as f:
             f.write("import dcs.vehicles as vehicles\n\n")
-            f.write("ground_templates = [\n")
-            for group_units in unique_groups:
+            f.write("blue_ground_templates = [\n")
+            for group_units in blue_templates:
+                f.write("    [\n")
+                for unit_type in group_units:
+                    f.write(f"        '{unit_type}',\n")
+                f.write("    ],\n")
+            f.write("]\n\n")
+
+            f.write("red_ground_templates = [\n")
+            for group_units in red_templates:
                 f.write("    [\n")
                 for unit_type in group_units:
                     f.write(f"        '{unit_type}',\n")
                 f.write("    ],\n")
             f.write("]\n")
+
         print(f"✅ Ground templates saved to {save_to_file}")
 
-    return unique_groups
+    return blue_templates, red_templates
+
 
 

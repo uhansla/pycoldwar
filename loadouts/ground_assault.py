@@ -1,6 +1,6 @@
 import dcs.vehicles as vehicles
 
-ground_templates = [
+blue_ground_templates = [
     [
         'M-113',
         'M1043 HMMWV Armament',
@@ -13,6 +13,9 @@ ground_templates = [
         'M-60',
         'M-113',
     ],
+]
+
+red_ground_templates = [
     [
         'BRDM-2',
         'BRDM-2',

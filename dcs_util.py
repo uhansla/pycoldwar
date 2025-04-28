@@ -477,9 +477,8 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
                         if not unit_type:
                             continue
 
-                        # Try finding plane class, fix hyphens if needed
+                        # Try finding plane class
                         plane_class = getattr(planes, unit_type, None)
-
                         if plane_class is None:
                             fixed_unit_type = unit_type.replace("-", "_")
                             plane_class = getattr(planes, fixed_unit_type, None)
@@ -508,7 +507,7 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
                             else:
                                 clsid = pylon_info.get("CLSID")
                                 if clsid:
-                                    # --- NEW WAY: Match inside PylonX only ---
+                                    # Match inside PylonX only
                                     pylon_attr = f"Pylon{pylon_index}"
                                     pylon_class = getattr(plane_class, pylon_attr, None)
 
@@ -519,7 +518,7 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
                                             if isinstance(weapon, tuple) and len(weapon) == 2:
                                                 weapon_data = weapon[1]
                                                 if weapon_data.get("clsid", "").strip() == clsid:
-                                                    matched_reference = f"planes.{unit_type}.{pylon_attr}.{weapon_attr}"
+                                                    matched_reference = f"planes.{plane_class.__name__}.{pylon_attr}.{weapon_attr}"
                                                     break
 
                                     if matched_reference:
@@ -536,7 +535,7 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
 
                         # Build the template
                         template = {
-                            "type": plane_class,
+                            "type": plane_class.__name__,  # Save as class name string
                             "payload": {
                                 "pylons": pylons_list
                             }
@@ -565,13 +564,40 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
 
         plane_templates[unit_type] = unique_templates
 
+    # Saving
     if save_to_file:
+        save_folder = os.path.dirname(save_to_file)
+        if save_folder:
+            os.makedirs(save_folder, exist_ok=True)
+
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("planes = ")
-            f.write(pprint.pformat(plane_templates, width=140))
+            f.write("import dcs.planes as planes\n\n")
+            f.write("planes_map = {\n")
+            for unit_type, templates in plane_templates.items():
+                f.write(f"    '{unit_type}': [\n")
+                for template in templates:
+                    f.write("        {\n")
+                    f.write(f"            'type': planes.{template['type']},\n")
+                    f.write(f"            'id': planes.{template['type']}.id,\n")
+                    f.write(f"            'fuel': planes.{template['type']}.fuel_max,\n")
+                    f.write(f"            'chaff': planes.{template['type']}.chaff,\n")
+                    f.write(f"            'flare': planes.{template['type']}.flare,\n")
+                    f.write("            'payload': {\n")
+                    f.write("                'pylons': [\n")
+                    for pylon in template["payload"]["pylons"]:
+                        if pylon is None:
+                            f.write("                    None,\n")
+                        else:
+                            f.write(f"                    {pylon},\n")
+                    f.write("                ]\n")
+                    f.write("            }\n")
+                    f.write("        },\n")
+                f.write("    ],\n")
+            f.write("}\n")
         print(f"✅ Plane templates saved to {save_to_file}")
 
     return plane_templates
+
 
 
 # Extracts helo loadouts from mission data

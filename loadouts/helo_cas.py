@@ -1,5 +1,13 @@
 import dcs.helicopters as helicopters
 
+BLUE = [
+    'AH-1W'
+]
+
+RED = [
+    'Mi-24V'
+]
+
 helicopters_map = {
     'AH-1W': [
         {

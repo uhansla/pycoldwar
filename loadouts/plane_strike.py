@@ -1,5 +1,37 @@
 import dcs.planes as planes
 
+BLUE = [
+    # 'MB-339A'
+    # 'F_A_18A',
+    # 'A_10A',
+    'F_4E_45MC',
+    'F_5E',
+    'F_5E_3',
+    # 'F_86F_Sabre',
+    'AJS37',
+    # 'L_39ZA',
+    # 'M_2000C',
+    'Mirage_F1CE',
+    'Mirage_F1CT',
+    # 'Mirage_F1EE',
+]
+
+RED = [
+    'Mirage_F1CE',
+    'Mirage_F1CT',
+    'F_4E_45MC',
+    # 'Su_17M4',
+    # 'Su_24M',
+    # 'MiG_23MLD',
+    # 'MiG_27K',
+    # 'MiG_21Bis',
+    # 'MiG_19P',
+    # 'MiG_15bis',
+    'Su_25',
+    'F_5E',
+    'F_5E_3',
+]
+
 planes_map = {
     'F-4E-45MC': [
         {

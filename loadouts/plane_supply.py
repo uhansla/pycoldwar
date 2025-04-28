@@ -1,5 +1,13 @@
 import dcs.planes as planes
 
+BLUE = [
+    'An-26B'
+]
+
+RED = [
+    'An-26B'
+]
+
 planes_map = {
     'An-26B': [
         {

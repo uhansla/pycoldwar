@@ -1,11 +1,13 @@
 import pandas as pd
 from dcs.weapons_data import Weapons
 import dcs.planes as planes
+import dcs.helicopters as helicopters
 from lupa import LuaRuntime
 import os
 import random
 import coldwar_plane_cas as cas
 from collections import defaultdict
+import pprint
 
 
 plane_mission_types = {'-sead-', '-patrol-', '-strike-', '-cas-'}
@@ -445,8 +447,9 @@ def extract_plane_templates(mission_data, mission_types, side):
                             plane_map[mission_type].append(unit)
     return plane_map
 
+# Extracts plane loadouts from mission data
 
-def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", "-sead-", "-strike-"], save_to_file=None):
+def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "sead", "strike"], save_to_file=None):
     plane_templates = {}
 
     for side in ["blue", "red"]:
@@ -458,6 +461,7 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
 
             for _, group in groups.items():
                 group_name = group.get("name", "").lower()
+
                 matched_mission = None
                 for mtype in mission_types:
                     if mtype in group_name:
@@ -465,17 +469,25 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
                         break
 
                 if matched_mission:
-                    # print("Matched mission type:", matched_mission)
                     for _, unit in group.get("units", {}).items():
-                        unit_type = unit.get("type")
-
                         if unit.get("skill", "").lower() == "client":
-                            continue  # skip client units
+                            continue  # skip client slots
 
+                        unit_type = unit.get("type")
                         if not unit_type:
                             continue
 
-                        # Get pylons payload
+                        # Try finding plane class, fix hyphens if needed
+                        plane_class = getattr(planes, unit_type, None)
+
+                        if plane_class is None:
+                            fixed_unit_type = unit_type.replace("-", "_")
+                            plane_class = getattr(planes, fixed_unit_type, None)
+
+                        if plane_class is None:
+                            continue  # skip unknown planes
+
+                        # Now extract pylons
                         pylons_data = unit.get("payload", {}).get("pylons", {})
                         pylons_list = []
 
@@ -496,11 +508,24 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
                             else:
                                 clsid = pylon_info.get("CLSID")
                                 if clsid:
-                                    reference = clsid_to_plane_reference.get(clsid)
-                                    if reference:
-                                        pylons_list.append(reference)
+                                    # --- NEW WAY: Match inside PylonX only ---
+                                    pylon_attr = f"Pylon{pylon_index}"
+                                    pylon_class = getattr(plane_class, pylon_attr, None)
+
+                                    matched_reference = None
+                                    if pylon_class and isinstance(pylon_class, type):
+                                        for weapon_attr in dir(pylon_class):
+                                            weapon = getattr(pylon_class, weapon_attr)
+                                            if isinstance(weapon, tuple) and len(weapon) == 2:
+                                                weapon_data = weapon[1]
+                                                if weapon_data.get("clsid", "").strip() == clsid:
+                                                    matched_reference = f"planes.{unit_type}.{pylon_attr}.{weapon_attr}"
+                                                    break
+
+                                    if matched_reference:
+                                        pylons_list.append(matched_reference)
                                     else:
-                                        pylons_list.append(None)  # If unknown CLSID, mark empty
+                                        pylons_list.append(None)
                                 else:
                                     pylons_list.append(None)
 
@@ -509,14 +534,13 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
                         chaff = unit.get("chaff", None)
                         flare = unit.get("flare", None)
 
-                        # Build plane template
+                        # Build the template
                         template = {
-                            "type": getattr(planes, unit_type, unit_type),  # fallback to str if missing
+                            "type": plane_class,
                             "payload": {
                                 "pylons": pylons_list
                             }
                         }
-
                         if fuel:
                             template["fuel"] = fuel
                         if chaff:
@@ -531,15 +555,12 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
     # De-duplicate templates
     for unit_type, templates in plane_templates.items():
         unique_templates = []
-        seen_payloads = set()
+        seen_signatures = set()
 
         for template in templates:
-            # Represent pylons list as a tuple (so it can be hashed)
-            pylons = template["payload"]["pylons"]
-            pylons_signature = tuple(pylons)
-
-            if pylons_signature not in seen_payloads:
-                seen_payloads.add(pylons_signature)
+            pylons_signature = tuple(template["payload"]["pylons"])
+            if pylons_signature not in seen_signatures:
+                seen_signatures.add(pylons_signature)
                 unique_templates.append(template)
 
         plane_templates[unit_type] = unique_templates
@@ -547,10 +568,185 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", 
     if save_to_file:
         with open(save_to_file, "w", encoding="utf-8") as f:
             f.write("planes = ")
-            import pprint
-            f.write(pprint.pformat(plane_templates, width=120))
+            f.write(pprint.pformat(plane_templates, width=140))
         print(f"✅ Plane templates saved to {save_to_file}")
 
     return plane_templates
 
 
+# Extracts helo loadouts from mission data
+
+def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas", "sead", "strike"], save_to_file=None):
+    helicopter_templates = {}
+
+    for side in ["blue", "red"]:
+        coalition = mission_data.get("coalition", {}).get(side, {})
+        countries = coalition.get("country", {})
+
+        for _, country in countries.items():
+            groups = country.get("helicopter", {}).get("group", {})
+
+            for _, group in groups.items():
+                group_name = group.get("name", "").lower()
+
+                matched_mission = None
+                for mtype in mission_types:
+                    if mtype in group_name:
+                        matched_mission = mtype
+                        break
+
+                if matched_mission:
+                    for _, unit in group.get("units", {}).items():
+                        if unit.get("skill", "").lower() == "client":
+                            continue  # skip client slots
+
+                        unit_type = unit.get("type")
+                        if not unit_type:
+                            continue
+
+                        # Try finding helicopter class
+                        heli_class = getattr(helicopters, unit_type, None)
+                        if heli_class is None:
+                            fixed_unit_type = unit_type.replace("-", "_")
+                            heli_class = getattr(helicopters, fixed_unit_type, None)
+
+                        if heli_class is None:
+                            continue  # skip unknown helis
+
+                        # Now extract pylons
+                        pylons_data = unit.get("payload", {}).get("pylons", {})
+                        pylons_list = []
+
+                        if pylons_data:
+                            sample_key = next(iter(pylons_data.keys()))
+                            key_is_str = isinstance(sample_key, str)
+                            max_pylon = max(int(k) if isinstance(k, str) else k for k in pylons_data.keys())
+                        else:
+                            key_is_str = True
+                            max_pylon = 0
+
+                        for pylon_index in range(1, max_pylon + 1):
+                            key = str(pylon_index) if key_is_str else pylon_index
+                            pylon_info = pylons_data.get(key)
+
+                            if pylon_info is None:
+                                pylons_list.append(None)
+                            else:
+                                clsid = pylon_info.get("CLSID")
+                                if clsid:
+                                    # Match inside PylonX only
+                                    pylon_attr = f"Pylon{pylon_index}"
+                                    pylon_class = getattr(heli_class, pylon_attr, None)
+
+                                    matched_reference = None
+                                    if pylon_class and isinstance(pylon_class, type):
+                                        for weapon_attr in dir(pylon_class):
+                                            weapon = getattr(pylon_class, weapon_attr)
+                                            if isinstance(weapon, tuple) and len(weapon) == 2:
+                                                weapon_data = weapon[1]
+                                                if weapon_data.get("clsid", "").strip() == clsid:
+                                                    matched_reference = f"helicopters.{unit_type}.{pylon_attr}.{weapon_attr}"
+                                                    break
+
+                                    if matched_reference:
+                                        pylons_list.append(matched_reference)
+                                    else:
+                                        pylons_list.append(None)
+                                else:
+                                    pylons_list.append(None)
+
+                        # Detect optional fields
+                        fuel = unit.get("fuel", None)
+                        chaff = unit.get("chaff", None)
+                        flare = unit.get("flare", None)
+
+                        # Build the template
+                        template = {
+                            "type": heli_class,
+                            "payload": {
+                                "pylons": pylons_list
+                            }
+                        }
+                        if fuel:
+                            template["fuel"] = fuel
+                        if chaff:
+                            template["chaff"] = chaff
+                        if flare:
+                            template["flare"] = flare
+
+                        if unit_type not in helicopter_templates:
+                            helicopter_templates[unit_type] = []
+                        helicopter_templates[unit_type].append(template)
+
+    # De-duplicate templates
+    for unit_type, templates in helicopter_templates.items():
+        unique_templates = []
+        seen_signatures = set()
+
+        for template in templates:
+            pylons_signature = tuple(template["payload"]["pylons"])
+            if pylons_signature not in seen_signatures:
+                seen_signatures.add(pylons_signature)
+                unique_templates.append(template)
+
+        helicopter_templates[unit_type] = unique_templates
+
+    if save_to_file:
+        with open(save_to_file, "w", encoding="utf-8") as f:
+            f.write("helicopters = ")
+            f.write(pprint.pformat(helicopter_templates, width=140))
+        print(f"✅ Helicopter templates saved to {save_to_file}")
+
+    return helicopter_templates
+
+# Extract liveries
+
+def generate_livery_maps_from_mission(mission_data, save_to_folder=None):
+    blue_map = {}
+    red_map = {}
+
+    for side in ["blue", "red"]:
+        coalition = mission_data.get("coalition", {}).get(side, {})
+        countries = coalition.get("country", {})
+
+        for _, country in countries.items():
+            for category in ["plane", "helicopter"]:
+                groups = country.get(category, {}).get("group", {})
+
+                for _, group in groups.items():
+                    for _, unit in group.get("units", {}).items():
+                        if unit.get("skill", "").lower() == "client":
+                            continue  # skip client slots
+
+                        unit_type = unit.get("type")
+                        livery_id = unit.get("livery_id")
+
+                        if not unit_type or not livery_id:
+                            continue
+
+                        target_map = blue_map if side == "blue" else red_map
+
+                        if unit_type not in target_map:
+                            target_map[unit_type] = []
+
+                        if livery_id not in target_map[unit_type]:
+                            target_map[unit_type].append(livery_id)
+
+    if save_to_folder:
+        os.makedirs(save_to_folder, exist_ok=True)
+
+        blue_file = os.path.join(save_to_folder, "blue_liveries.py")
+        red_file = os.path.join(save_to_folder, "red_liveries.py")
+
+        with open(blue_file, "w", encoding="utf-8") as f:
+            f.write("blue_liveries = ")
+            f.write(pprint.pformat(blue_map, width=140))
+
+        with open(red_file, "w", encoding="utf-8") as f:
+            f.write("red_liveries = ")
+            f.write(pprint.pformat(red_map, width=140))
+
+        print(f"✅ Blue liveries saved to {blue_file}")
+        print(f"✅ Red liveries saved to {red_file}")
+
+    return blue_map, red_map

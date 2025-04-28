@@ -600,8 +600,6 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
 
 
 
-# Extracts helo loadouts from mission data
-
 def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas", "sead", "strike"], save_to_file=None):
     helicopter_templates = {}
 
@@ -637,7 +635,7 @@ def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas
                             heli_class = getattr(helicopters, fixed_unit_type, None)
 
                         if heli_class is None:
-                            continue  # skip unknown helis
+                            continue  # skip unknown helicopters
 
                         # Now extract pylons
                         pylons_data = unit.get("payload", {}).get("pylons", {})
@@ -671,7 +669,7 @@ def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas
                                             if isinstance(weapon, tuple) and len(weapon) == 2:
                                                 weapon_data = weapon[1]
                                                 if weapon_data.get("clsid", "").strip() == clsid:
-                                                    matched_reference = f"helicopters.{unit_type}.{pylon_attr}.{weapon_attr}"
+                                                    matched_reference = f"helicopters.{heli_class.__name__}.{pylon_attr}.{weapon_attr}"
                                                     break
 
                                     if matched_reference:
@@ -681,24 +679,13 @@ def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas
                                 else:
                                     pylons_list.append(None)
 
-                        # Detect optional fields
-                        fuel = unit.get("fuel", None)
-                        chaff = unit.get("chaff", None)
-                        flare = unit.get("flare", None)
-
                         # Build the template
                         template = {
-                            "type": heli_class,
+                            "type": heli_class.__name__,  # Save class name only
                             "payload": {
                                 "pylons": pylons_list
                             }
                         }
-                        if fuel:
-                            template["fuel"] = fuel
-                        if chaff:
-                            template["chaff"] = chaff
-                        if flare:
-                            template["flare"] = flare
 
                         if unit_type not in helicopter_templates:
                             helicopter_templates[unit_type] = []
@@ -717,10 +704,36 @@ def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas
 
         helicopter_templates[unit_type] = unique_templates
 
+    # Saving
     if save_to_file:
+        save_folder = os.path.dirname(save_to_file)
+        if save_folder:
+            os.makedirs(save_folder, exist_ok=True)
+
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("helicopters = ")
-            f.write(pprint.pformat(helicopter_templates, width=140))
+            f.write("import dcs.helicopters as helicopters\n\n")
+            f.write("helicopters_map = {\n")
+            for unit_type, templates in helicopter_templates.items():
+                f.write(f"    '{unit_type}': [\n")
+                for template in templates:
+                    f.write("        {\n")
+                    f.write(f"            'type': helicopters.{template['type']},\n")
+                    f.write(f"            'id': helicopters.{template['type']}.id,\n")
+                    f.write(f"            'fuel': helicopters.{template['type']}.fuel_max,\n")
+                    f.write(f"            'chaff': helicopters.{template['type']}.chaff,\n")
+                    f.write(f"            'flare': helicopters.{template['type']}.flare,\n")
+                    f.write("            'payload': {\n")
+                    f.write("                'pylons': [\n")
+                    for pylon in template["payload"]["pylons"]:
+                        if pylon is None:
+                            f.write("                    None,\n")
+                        else:
+                            f.write(f"                    {pylon},\n")
+                    f.write("                ]\n")
+                    f.write("            }\n")
+                    f.write("        },\n")
+                f.write("    ],\n")
+            f.write("}\n")
         print(f"✅ Helicopter templates saved to {save_to_file}")
 
     return helicopter_templates
@@ -791,7 +804,6 @@ def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "
 
             for _, group in groups.items():
                 group_name = group.get("name", "").lower()
-
                 matched_mission = None
                 for mtype in mission_types:
                     if mtype in group_name:
@@ -811,13 +823,34 @@ def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "
                             ground_templates[matched_mission] = []
                         ground_templates[matched_mission].append(unit_list)
 
+    # 🔥 Deduplicate
+    unique_groups = []
+    seen = set()
+
+    for groups in ground_templates.values():
+        for group_units in groups:
+            signature = tuple(group_units)  # Use tuple for hashing
+            if signature not in seen:
+                seen.add(signature)
+                unique_groups.append(group_units)
+
+    # Saving
     if save_to_file:
-        import os
-        import pprint
-        os.makedirs(os.path.dirname(save_to_file), exist_ok=True)
+        save_folder = os.path.dirname(save_to_file)
+        if save_folder:
+            os.makedirs(save_folder, exist_ok=True)
+
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("ground_templates = ")
-            f.write(pprint.pformat(ground_templates, width=140))
+            f.write("import dcs.vehicles as vehicles\n\n")
+            f.write("ground_templates = [\n")
+            for group_units in unique_groups:
+                f.write("    [\n")
+                for unit_type in group_units:
+                    f.write(f"        '{unit_type}',\n")
+                f.write("    ],\n")
+            f.write("]\n")
         print(f"✅ Ground templates saved to {save_to_file}")
 
-    return ground_templates
+    return unique_groups
+
+

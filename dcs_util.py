@@ -1,5 +1,6 @@
 import pandas as pd
 from dcs.weapons_data import Weapons
+import dcs.planes as planes
 from lupa import LuaRuntime
 import os
 import random
@@ -10,6 +11,26 @@ from collections import defaultdict
 plane_mission_types = {'-sead-', '-patrol-', '-strike-', '-cas-'}
 ground_mission_types = {'-supply-', '-assault-'}
 heli_mission_types = {'-supply-', '-cas-'}
+
+#### STATIC ####
+
+clsid_to_plane_reference = {}
+
+for plane_name in dir(planes):
+    plane_class = getattr(planes, plane_name)
+    if isinstance(plane_class, type):
+        for attr_name in dir(plane_class):
+            if attr_name.startswith("Pylon"):
+                pylon = getattr(plane_class, attr_name)
+                if isinstance(pylon, type):
+                    for weapon_attr in dir(pylon):
+                        weapon = getattr(pylon, weapon_attr)
+                        if isinstance(weapon, tuple) and len(weapon) == 2:
+                            weapon_data = weapon[1]
+                            clsid = weapon_data.get("clsid", "").strip()
+                            if clsid:
+                                reference = f"planes.{plane_name}.{attr_name}.{weapon_attr}"
+                                clsid_to_plane_reference[clsid] = reference
 
 # --- Step 1: Build CLSID → Weapon Info mapping ---
 clsid_to_weapon = {}
@@ -423,3 +444,113 @@ def extract_plane_templates(mission_data, mission_types, side):
                         if unit.get("skill", "").lower() != "client":
                             plane_map[mission_type].append(unit)
     return plane_map
+
+
+def generate_plane_templates_from_mission(mission_data, mission_types=["-cas-", "-sead-", "-strike-"], save_to_file=None):
+    plane_templates = {}
+
+    for side in ["blue", "red"]:
+        coalition = mission_data.get("coalition", {}).get(side, {})
+        countries = coalition.get("country", {})
+
+        for _, country in countries.items():
+            groups = country.get("plane", {}).get("group", {})
+
+            for _, group in groups.items():
+                group_name = group.get("name", "").lower()
+                matched_mission = None
+                for mtype in mission_types:
+                    if mtype in group_name:
+                        matched_mission = mtype
+                        break
+
+                if matched_mission:
+                    # print("Matched mission type:", matched_mission)
+                    for _, unit in group.get("units", {}).items():
+                        unit_type = unit.get("type")
+
+                        if unit.get("skill", "").lower() == "client":
+                            continue  # skip client units
+
+                        if not unit_type:
+                            continue
+
+                        # Get pylons payload
+                        pylons_data = unit.get("payload", {}).get("pylons", {})
+                        pylons_list = []
+
+                        if pylons_data:
+                            sample_key = next(iter(pylons_data.keys()))
+                            key_is_str = isinstance(sample_key, str)
+                            max_pylon = max(int(k) if isinstance(k, str) else k for k in pylons_data.keys())
+                        else:
+                            key_is_str = True
+                            max_pylon = 0
+
+                        for pylon_index in range(1, max_pylon + 1):
+                            key = str(pylon_index) if key_is_str else pylon_index
+                            pylon_info = pylons_data.get(key)
+
+                            if pylon_info is None:
+                                pylons_list.append(None)
+                            else:
+                                clsid = pylon_info.get("CLSID")
+                                if clsid:
+                                    reference = clsid_to_plane_reference.get(clsid)
+                                    if reference:
+                                        pylons_list.append(reference)
+                                    else:
+                                        pylons_list.append(None)  # If unknown CLSID, mark empty
+                                else:
+                                    pylons_list.append(None)
+
+                        # Detect optional fields
+                        fuel = unit.get("fuel", None)
+                        chaff = unit.get("chaff", None)
+                        flare = unit.get("flare", None)
+
+                        # Build plane template
+                        template = {
+                            "type": getattr(planes, unit_type, unit_type),  # fallback to str if missing
+                            "payload": {
+                                "pylons": pylons_list
+                            }
+                        }
+
+                        if fuel:
+                            template["fuel"] = fuel
+                        if chaff:
+                            template["chaff"] = chaff
+                        if flare:
+                            template["flare"] = flare
+
+                        if unit_type not in plane_templates:
+                            plane_templates[unit_type] = []
+                        plane_templates[unit_type].append(template)
+
+    # De-duplicate templates
+    for unit_type, templates in plane_templates.items():
+        unique_templates = []
+        seen_payloads = set()
+
+        for template in templates:
+            # Represent pylons list as a tuple (so it can be hashed)
+            pylons = template["payload"]["pylons"]
+            pylons_signature = tuple(pylons)
+
+            if pylons_signature not in seen_payloads:
+                seen_payloads.add(pylons_signature)
+                unique_templates.append(template)
+
+        plane_templates[unit_type] = unique_templates
+
+    if save_to_file:
+        with open(save_to_file, "w", encoding="utf-8") as f:
+            f.write("planes = ")
+            import pprint
+            f.write(pprint.pformat(plane_templates, width=120))
+        print(f"✅ Plane templates saved to {save_to_file}")
+
+    return plane_templates
+
+

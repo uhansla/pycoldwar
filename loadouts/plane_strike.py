@@ -33,7 +33,7 @@ RED = [
 ]
 
 planes_map = {
-    'F-4E-45MC': [
+    'F_4E_45MC': [
         {
             'type': planes.F_4E_45MC,
             'id': planes.F_4E_45MC.id,
@@ -60,7 +60,7 @@ planes_map = {
             }
         },
     ],
-    'Mirage-F1CE': [
+    'Mirage_F1CE': [
         {
             'type': planes.Mirage_F1CE,
             'id': planes.Mirage_F1CE.id,
@@ -80,7 +80,7 @@ planes_map = {
             }
         },
     ],
-    'F-5E-3': [
+    'F_5E_3': [
         {
             'type': planes.F_5E_3,
             'id': planes.F_5E_3.id,
@@ -156,7 +156,7 @@ planes_map = {
             }
         },
     ],
-    'F-14A-135-GR': [
+    'F_14A_135_GR': [
         {
             'type': planes.F_14A_135_GR,
             'id': planes.F_14A_135_GR.id,
@@ -179,7 +179,7 @@ planes_map = {
             }
         },
     ],
-    'Mirage-F1CT': [
+    'Mirage_F1CT': [
         {
             'type': planes.Mirage_F1CT,
             'id': planes.Mirage_F1CT.id,
@@ -199,7 +199,7 @@ planes_map = {
             }
         },
     ],
-    'Su-25': [
+    'Su_25': [
         {
             'type': planes.Su_25,
             'id': planes.Su_25.id,
@@ -222,7 +222,7 @@ planes_map = {
             }
         },
     ],
-    'F-5E': [
+    'F_5E': [
         {
             'type': planes.F_5E,
             'id': planes.F_5E.id,

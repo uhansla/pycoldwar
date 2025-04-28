@@ -31,7 +31,7 @@ RED = [
 ]
 
 planes_map = {
-    'F-4E-45MC': [
+    'F_4E_45MC': [
         {
             'type': planes.F_4E_45MC,
             'id': planes.F_4E_45MC.id,
@@ -96,7 +96,7 @@ planes_map = {
             }
         },
     ],
-    'Su-17M4': [
+    'Su_17M4': [
         {
             'type': planes.Su_17M4,
             'id': planes.Su_17M4.id,
@@ -117,7 +117,7 @@ planes_map = {
             }
         },
     ],
-    'MiG-27K': [
+    'MiG_27K': [
         {
             'type': planes.MiG_27K,
             'id': planes.MiG_27K.id,
@@ -138,7 +138,7 @@ planes_map = {
             }
         },
     ],
-    'Su-24M': [
+    'Su_24M': [
         {
             'type': planes.Su_24M,
             'id': planes.Su_24M.id,

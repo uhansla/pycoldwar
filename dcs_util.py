@@ -5,7 +5,12 @@ import dcs.helicopters as helicopters
 from lupa import LuaRuntime
 import os
 import random
-import coldwar_plane_cas as cas
+from loadouts import plane_cas
+from loadouts import plane_patrol
+from loadouts import plane_sead
+from loadouts import plane_strike
+from loadouts import plane_supply
+
 from collections import defaultdict
 import pprint
 
@@ -286,23 +291,38 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                 group_name = group.get("name", "").lower()
                 for mission_type in side_map:
                     if mission_type in group_name:
-                        if ("-cas-" in group_name) or ("-strike-" in group_name) or ("-sead-" in group_name):
+
+                        if any(tag in group_name for tag in ["-cas-", "-strike-", "-sead-", "-patrol-", "-supply-"]):
+
                             # Special CAS handling: select one CAS plane type + payload for whole group
 
-                            cas_planes = cas.BLUE
+                            plane_class = None
+                            if "-cas-" in group_name:
+                                plane_class = plane_cas
+                            elif "-strike-" in group_name:
+                                plane_class = plane_strike
+                            elif "-sead-" in group_name:
+                                plane_class = plane_sead
+                            elif "-patrol-" in group_name:
+                                plane_class = plane_patrol
+                            elif "-supply-" in group_name:
+                                plane_class = plane_supply
+
+                            miss_planes = plane_class.BLUE
                             if side == "red":
-                                cas_planes = cas.RED
+                                miss_planes = plane_class.RED
 
-
-                            cas_plane_type = random.choice(cas_planes)
-                            cas_plane = random.choice(cas.planes_map[cas_plane_type])
+                            print(plane_class.planes_map)
+                            print(group_name)
+                            miss_plane_type = random.choice(miss_planes)
+                            miss_plane = random.choice(plane_class.planes_map[miss_plane_type])
                             # print(cas_plane)
-                            selected_type = cas_plane.get("id")
-                            selected_fuel = cas_plane.get("fuel")
-                            selected_chaff = cas_plane.get("chaff")
-                            selected_flare = cas_plane.get("flare")
-                            selected_livery_id = cas_plane.get("livery_id")
-                            pylons = cas_plane["payload"]["pylons"]
+                            selected_type = miss_plane.get("id")
+                            selected_fuel = miss_plane.get("fuel")
+                            selected_chaff = miss_plane.get("chaff")
+                            selected_flare = miss_plane.get("flare")
+                            selected_livery_id = miss_plane.get("livery_id")
+                            pylons = miss_plane["payload"]["pylons"]
 
                             clsids = []
                             for pylon in pylons:
@@ -327,7 +347,7 @@ def apply_sample_templates(mission_data, blue_map, red_map):
                                 unit.pop("pylons", None)
                                 mod_count += 1
                         else:
-                            # Normal handling for non-CAS groups
+                            # Normal handling for unknown groups
                             sample_units = side_map[mission_type]
                             if not sample_units:
                                 continue

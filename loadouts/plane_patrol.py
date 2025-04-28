@@ -1,7 +1,7 @@
 import dcs.planes as planes
 
 BLUE = [
-    'F-14A-135-GR',
+    'F_14A_135_GR',
     # 'MB-339A'
     # 'F_A_18A',
     # 'A_10A',
@@ -17,7 +17,7 @@ BLUE = [
 ]
 
 RED = [
-    'F-14A-135-GR',
+    'F_14A_135_GR',
     'Mirage_F1CE',
     'Mirage_F1EE',
     'F_4E_45MC',
@@ -34,7 +34,7 @@ RED = [
 ]
 
 planes_map = {
-    'F-14A-135-GR': [
+    'F_14A_135_GR': [
         {
             'type': planes.F_14A_135_GR,
             'id': planes.F_14A_135_GR.id,
@@ -57,7 +57,7 @@ planes_map = {
             }
         },
     ],
-    'Mirage-F1EE': [
+    'Mirage_F1EE': [
         {
             'type': planes.Mirage_F1EE,
             'id': planes.Mirage_F1EE.id,
@@ -77,7 +77,7 @@ planes_map = {
             }
         },
     ],
-    'Mirage-F1CE': [
+    'Mirage_F1CE': [
         {
             'type': planes.Mirage_F1CE,
             'id': planes.Mirage_F1CE.id,
@@ -97,7 +97,7 @@ planes_map = {
             }
         },
     ],
-    'F-4E-45MC': [
+    'F_4E_45MC': [
         {
             'type': planes.F_4E_45MC,
             'id': planes.F_4E_45MC.id,
@@ -124,7 +124,7 @@ planes_map = {
             }
         },
     ],
-    'MiG-19P': [
+    'MiG_19P': [
         {
             'type': planes.MiG_19P,
             'id': planes.MiG_19P.id,
@@ -143,7 +143,7 @@ planes_map = {
             }
         },
     ],
-    'MiG-21Bis': [
+    'MiG_21Bis': [
         {
             'type': planes.MiG_21Bis,
             'id': planes.MiG_21Bis.id,

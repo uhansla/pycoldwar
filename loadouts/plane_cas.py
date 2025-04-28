@@ -34,7 +34,7 @@ types = [
 ]
 
 BLUE = [
-    'MB-339A'
+    'MB_339A',
     'F_A_18A',
     'A_10A',
     'F_4E_45MC',
@@ -139,7 +139,7 @@ planes_map = {
         }
     ],
 
-    'MB-339A': [
+    'MB_339A': [
         {
             'type': planes.MB_339A,
             'id': planes.MB_339A.id,
@@ -204,7 +204,7 @@ planes_map = {
         }
     ],
 
-    'A-10A': [
+    'A_10A': [
         {
             'type': planes.A_10A,
             'id': planes.A_10A.id,
@@ -311,7 +311,7 @@ planes_map = {
         }
     ],
 
-    'Mirage-F1EE': [
+    'Mirage_F1EE': [
         {
             'type': planes.Mirage_F1EE,
             'id': planes.Mirage_F1EE.id,
@@ -447,7 +447,7 @@ planes_map = {
         },
     ],
 
-    'Su-17M4': [
+    'Su_17M4': [
         {
             'type': planes.Su_17M4,
             'id': planes.Su_17M4.id,
@@ -489,7 +489,7 @@ planes_map = {
         },
     ],
 
-    'Su-25': [
+    'Su_25': [
         {
             'type': planes.Su_25,
             'id': planes.Su_25.id,
@@ -535,7 +535,7 @@ planes_map = {
     ],
 
 
-    'Su-24M': [
+    'Su_24M': [
         {
             'type': planes.Su_24M,
             'id': planes.Su_24M.id,

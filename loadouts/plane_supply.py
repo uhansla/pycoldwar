@@ -1,15 +1,15 @@
 import dcs.planes as planes
 
 BLUE = [
-    'An-26B'
+    'An_26B'
 ]
 
 RED = [
-    'An-26B'
+    'An_26B'
 ]
 
 planes_map = {
-    'An-26B': [
+    'An_26B': [
         {
             'type': planes.An_26B,
             'id': planes.An_26B.id,

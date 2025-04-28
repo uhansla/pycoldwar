@@ -750,3 +750,48 @@ def generate_livery_maps_from_mission(mission_data, save_to_folder=None):
         print(f"✅ Red liveries saved to {red_file}")
 
     return blue_map, red_map
+
+# Ground Units
+
+def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "strike", "defense"], save_to_file=None):
+    ground_templates = {}
+
+    for side in ["blue", "red"]:
+        coalition = mission_data.get("coalition", {}).get(side, {})
+        countries = coalition.get("country", {})
+
+        for _, country in countries.items():
+            groups = country.get("vehicle", {}).get("group", {})
+
+            for _, group in groups.items():
+                group_name = group.get("name", "").lower()
+
+                matched_mission = None
+                for mtype in mission_types:
+                    if mtype in group_name:
+                        matched_mission = mtype
+                        break
+
+                if matched_mission:
+                    unit_list = []
+                    for _, unit in sorted(group.get("units", {}).items()):
+                        unit_type = unit.get("type")
+                        if not unit_type:
+                            continue
+                        unit_list.append(unit_type)
+
+                    if unit_list:  # only add if non-empty
+                        if matched_mission not in ground_templates:
+                            ground_templates[matched_mission] = []
+                        ground_templates[matched_mission].append(unit_list)
+
+    if save_to_file:
+        import os
+        import pprint
+        os.makedirs(os.path.dirname(save_to_file), exist_ok=True)
+        with open(save_to_file, "w", encoding="utf-8") as f:
+            f.write("ground_templates = ")
+            f.write(pprint.pformat(ground_templates, width=140))
+        print(f"✅ Ground templates saved to {save_to_file}")
+
+    return ground_templates

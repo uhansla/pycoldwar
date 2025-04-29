@@ -6,6 +6,10 @@
 
 The tool uses predefined Cold War unit templates (already built into the project) to overwrite the types, payloads, and liveries of modern units in a target mission — converting it into a Cold War-style mission.
 
+This project includes a snapshot of the `pydcs` library, integrated locally for convenience. Special thanks to [evgauser1](https://github.com/evgauser1/pydcs) for creating the pydcs project. 
+
+Additionally, a big thanks [Dzsek](https://github.com/Dzsek/pretense) for developing the outstanding Pretense missions, which served as inspiration.
+
 ---
 
 ## Features

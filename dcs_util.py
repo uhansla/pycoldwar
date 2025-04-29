@@ -1,7 +1,7 @@
 import pandas as pd
 from dcs.weapons_data import Weapons
-import dcs.planes as planes
-import dcs.helicopters as helicopters
+import dcs as planes
+import dcs as helicopters
 from lupa import LuaRuntime
 import os
 import random
@@ -655,7 +655,7 @@ def generate_plane_templates_from_mission(mission_data, mission_types=["cas", "s
             os.makedirs(save_folder, exist_ok=True)
 
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("import dcs.planes as planes\n\n")
+            f.write("import pydcs.planes as planes\n\n")
             f.write("planes_map = {\n")
             for unit_type, templates in plane_templates.items():
                 f.write(f"    '{unit_type}': [\n")
@@ -795,7 +795,7 @@ def generate_helicopter_templates_from_mission(mission_data, mission_types=["cas
             os.makedirs(save_folder, exist_ok=True)
 
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("import dcs.helicopters as helicopters\n\n")
+            f.write("import pydcs.helicopters as helicopters\n\n")
             f.write("helicopters_map = {\n")
             for unit_type, templates in helicopter_templates.items():
                 f.write(f"    '{unit_type}': [\n")
@@ -930,7 +930,7 @@ def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "
             os.makedirs(save_folder, exist_ok=True)
 
         with open(save_to_file, "w", encoding="utf-8") as f:
-            f.write("import dcs.vehicles as vehicles\n\n")
+            f.write("import pydcs.vehicles as vehicles\n\n")
             f.write("blue_ground_templates = [\n")
             for group_units in blue_templates:
                 f.write("    [\n")

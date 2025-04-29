@@ -92,3 +92,4 @@ python-json-logger~=3.3.0
 prometheus_client~=0.21.1
 jupyter_server_terminals~=0.5.3
 requests~=2.32.3
+pyproj

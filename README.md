@@ -2,28 +2,28 @@
 
 ## Overview
 
-**PyColdWar** is a command-line tool that allows you to automatically modify a DCS (Digital Combat Simulator) mission file by applying Cold War-era templates for aircraft, helicopters, and ground units.
+**PyColdWar** is a command-line tool that modifies a DCS (Digital Combat Simulator) mission file by applying Cold War-era templates for aircraft, helicopters, and ground units.
 
-The tool extracts sample units from a given Cold War mission and overwrites the types, payloads, and liveries of the units in a target mission, creating a Cold War-style variant.
+The tool uses predefined Cold War unit templates (already built into the project) to overwrite the types, payloads, and liveries of modern units in a target mission — converting it into a Cold War-style mission.
 
 ---
 
 ## Features
 
-- 🔄 Automatically replace modern units with Cold War units
-- ✈️ Plane, 🚁 Helicopter, 🚛 Ground unit support
-- 🎯 Match units based on mission roles (e.g., SEAD, CAS, Strike, Patrol)
-- 🛠️ Optional skipping of planes, ground units, or helicopters
-- 🗂️ Saves modified mission file to a specified output folder
-- ✅ Clean and informative console logging
+- ✈️ 🚁 🚛 Replace modern units with Cold War equivalents (planes, helicopters, ground units)
+- 🎯 Match groups based on mission roles (CAS, Strike, SEAD, Patrol, Supply)
+- 🔀 Random selection of loadouts/templates for each group
+- 🛠️ Skip modifying planes, ground units, or helicopters individually if needed
+- 🗂️ Saves the modified mission file into a specified output folder
+- ✅ Clean console logging for all steps
 
 ---
 
 ## Requirements
 
 - Python 3.8+
-- Pretense Syria Cold War mission file (it uses this mission file to copy the cold war units)
-- Access to `.miz` mission files extracted into folder structure (specifically the `mission` file inside)
+- Prebuilt Cold War templates (included in project)
+- Access to extracted `.miz` mission folders (specifically the `mission` file)
 
 ---
 
@@ -38,45 +38,110 @@ unzip pycoldwar_final.zip
 Then run the script:
 
 ```bash
-python pycoldwar.py --mm /path/to/modern_mission/mission --cm /path/to/coldwar_mission/mission --op /path/to/output_folder
+python pycoldwar.py --mm /path/to/modern_mission/mission --op /path/to/output_folder
 ```
 
 ### Command Line Arguments
 
-| Argument              | Short | Description |
-|:----------------------|:------|:-------------|
-| `--mission_to_modify`  | `--mm` | Path to the mission file you want to modify |
-| `--coldwar_mission`    | `--cm` | Path to the Cold War mission to extract samples from |
-| `--output_folder`      | `--op` | Path to folder where modified mission will be saved |
-| `--skip_planes`        | -      | Skip modifying plane units |
-| `--skip_ground`        | -      | Skip modifying ground units |
-| `--skip_heli`          | -      | Skip modifying helicopter units |
+| Argument                | Short | Description |
+|:-------------------------|:------|:------------|
+| `--mission_to_modify`     | `--mm` | Path to the mission file you want to modify |
+| `--output_folder`         | `--op` | Path to folder where modified mission will be saved |
+| `--skip_planes`           |        | Skip modifying planes |
+| `--skip_ground`           |        | Skip modifying ground vehicles |
+| `--skip_heli`             |        | Skip modifying helicopters |
 
-### Example
+✅ **Note**:  
+The `--cm` (coldwar_mission) argument is no longer required —  
+the system uses **built-in loadouts and liveries**.
 
-```bash
-python pycoldwar.py --mm ./modern/mission --cm ./coldwar/mission --op ./output_folder
-```
+---
 
-or with short flags:
+### Examples
 
-```bash
-python pycoldwar.py --mm ./modern/mission --cm ./coldwar/mission --op ./output_folder
-```
-
-Skip helicopters if needed:
+Modify everything:
 
 ```bash
-python pycoldwar.py --mm ./modern/mission --cm ./coldwar/mission --op ./output_folder --skip_heli
+python pycoldwar.py --mm ./modern/mission --op ./output_folder
 ```
+
+Skip helicopters:
+
+```bash
+python pycoldwar.py --mm ./modern/mission --op ./output_folder --skip_heli
+```
+
+Skip planes and ground vehicles (only modify helicopters):
+
+```bash
+python pycoldwar.py --mm ./modern/mission --op ./output_folder --skip_planes --skip_ground
+```
+
+---
+
+## How to Create or Modify Your Own Loadouts
+
+PyColdWar uses **prebuilt loadout templates** located in the `loadouts` folder.  
+You can customize or create new loadouts easily by editing or adding to these Python files.
+
+### Example: Adding a New Aircraft CAS Loadout
+
+Each loadout file (e.g., `plane_cas.py`) defines a `planes_map` dictionary.  
+Each aircraft has a structure like:
+
+```python
+planes_map = {
+    'F_A_18A': [
+        {
+            "type": planes.F_A_18A,
+            "id": planes.F_A_18A.id,
+            "fuel": planes.F_A_18A.fuel_max,
+            "chaff": planes.F_A_18A.chaff,
+            "flare": planes.F_A_18A.flare,
+            "payload": {
+                "pylons": [
+                    planes.F_A_18A.Pylon1.AIM_9P_Sidewinder_IR_AAM,
+                    planes.F_A_18A.Pylon2.LAU_117_with_AGM_65K___Maverick,
+                    None,
+                    ...
+                ]
+            }
+        }
+    ]
+}
+```
+
+**To add a new aircraft template**:
+1. Import the plane class from `dcs.planes`.
+2. Define its `fuel`, `chaff`, `flare`, and `pylons` according to available weapons.
+3. List each pylon's loadout. Use `None` for empty pylons.
+
+**Pylons must match the exact number and order** of the aircraft's available hardpoints.
+
+---
+
+### General Guidelines
+
+- **Type** must point to the correct aircraft class (e.g., `planes.F_5E`).
+- **Fuel**, **chaff**, and **flare** should match the plane’s defaults.
+- **Payload → Pylons** is an array of weapons, missiles, bombs, pods, etc.
+- Use `None` if no weapon is mounted on a pylon.
+- Weapon references must match the correct pylon classes.
+
+### Notes
+
+- You can add **multiple loadouts** for the same aircraft.
+- You can create variants by copying an existing entry and adjusting pylons.
+- Mistakes (e.g., wrong weapon CLSID) might cause mission generation to fail.
 
 ---
 
 ## Notes
 
-- The mission files should be extracted `.miz` archives, and you should point to the `mission` file inside.
-- This tool **does not repackage `.miz` files**; it modifies and saves the `mission` file only. You can manually zip the mission structure into a `.miz` if needed.
-- Make sure you have proper backups of your missions before modifying.
+- You must point to the extracted `mission` file inside a decompressed `.miz` folder.
+- This tool **does not repackage** `.miz` archives automatically.  
+  After modification, manually zip the mission folder if you want to restore it to `.miz`.
+- Always keep a backup of your original mission files!
 
 ---
 
@@ -86,4 +151,4 @@ MIT License
 
 ---
 
-Enjoy converting your DCS missions to Cold War era battles! ✈️🚁🚛
+Enjoy converting your DCS missions into Cold War scenarios! ✈️🚁🚛

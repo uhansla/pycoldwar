@@ -491,6 +491,14 @@ def apply_helicopter_templates(mission_data):
                 selected_type = heli_template["type"].__name__
                 selected_pylons = heli_template["payload"]["pylons"]
 
+                selected_livery_id = ""
+                if side == "blue":
+                    if blue_liveries.blue_liveries.get(selected_type):
+                        selected_livery_id = random.choice(blue_liveries.blue_liveries.get(selected_type))
+                else:
+                    if red_liveries.red_liveries.get(selected_type):
+                        selected_livery_id = random.choice(red_liveries.red_liveries.get(selected_type))
+
                 clsids = []
                 for pylon in selected_pylons:
                     if pylon is None:
@@ -500,6 +508,7 @@ def apply_helicopter_templates(mission_data):
 
                 for _, unit in group.get("units", {}).items():
                     unit["type"] = selected_type
+                    unit["livery_id"] = selected_livery_id
                     unit["payload"] = {
                         "pylons": {(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)},
                     }
@@ -866,9 +875,6 @@ def generate_livery_maps_from_mission(mission_data, save_to_folder=None):
     return blue_map, red_map
 
 # Ground Units
-
-import os
-import dcs.vehicles as vehicles
 
 def generate_ground_templates_from_mission(mission_data, mission_types=["cas", "strike", "defense"], save_to_file=None):
     blue_templates = []

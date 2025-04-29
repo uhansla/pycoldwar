@@ -1,4 +1,3 @@
-import dcs.vehicles as vehicles
 
 blue_ground_templates = [
     [

@@ -487,8 +487,7 @@ def apply_helicopter_templates(mission_data):
 
                 # Select one random template
                 heli_template = random.choice(valid_templates)
-
-                selected_type = heli_template["type"].__name__
+                selected_type = heli_template["id"]
                 selected_pylons = heli_template["payload"]["pylons"]
 
                 selected_livery_id = ""
@@ -499,6 +498,7 @@ def apply_helicopter_templates(mission_data):
                     if red_liveries.red_liveries.get(selected_type):
                         selected_livery_id = random.choice(red_liveries.red_liveries.get(selected_type))
 
+                print(f"Select livery {selected_livery_id} for type {selected_type}")
                 clsids = []
                 for pylon in selected_pylons:
                     if pylon is None:

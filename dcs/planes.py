@@ -2060,11 +2060,11 @@ class MiG_25PD(PlaneType):
     length = 23.82
     fuel_max = 15245
     max_speed = 3000
-    chaff = 64
-    flare = 64
-    charge_total = 128
-    chaff_charge_size = 1
-    flare_charge_size = 1
+    chaff = 0
+    flare = 0
+    charge_total = 0
+    chaff_charge_size = 0
+    flare_charge_size = 0
     category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
 
     livery_name = "MIG-25PD"  # from type
@@ -2736,6 +2736,7 @@ class Su_24M(PlaneType):
         SAB_100MN___100_kg_Illumination_Bomb = (3, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
 
     class Pylon4:
+        APK_9_Datalink_Pod = (4, Weapons.APK_9_Datalink_Pod)
         RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (4, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
         RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (4, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
         FAB_250___250kg_GP_Bomb_LD = (4, Weapons.FAB_250___250kg_GP_Bomb_LD)
@@ -4235,7 +4236,7 @@ class IL_78M(PlaneType):
     height = 14.76
     width = 50.5
     length = 46.59
-    fuel_max = 90000
+    fuel_max = 112000
     max_speed = 850
     chaff = 96
     flare = 96
@@ -4327,7 +4328,7 @@ class IL_76MD(PlaneType):
     height = 14.76
     width = 50.5
     length = 46.59
-    fuel_max = 80000
+    fuel_max = 87584
     max_speed = 850
     chaff = 96
     flare = 96
@@ -11671,6 +11672,7 @@ class F_4E_45MC(PlaneType):
         "Wear": 0,
         "UseReferenceAircraft": False,
         "INSAlignmentStored": True,
+        "IsModifiedJesterAllowed": True,
         "IsNvgAllowed": True,
         "TacanChannel": 0,
         "TacanBand": 0,
@@ -11701,6 +11703,9 @@ class F_4E_45MC(PlaneType):
 
         class INSAlignmentStored:
             id = "INSAlignmentStored"
+
+        class IsModifiedJesterAllowed:
+            id = "IsModifiedJesterAllowed"
 
         class IsNvgAllowed:
             id = "IsNvgAllowed"
@@ -11803,6 +11808,13 @@ class F_4E_45MC(PlaneType):
             identifier="INSAlignmentStored",
             control="checkbox",
             label="INS Reference Alignment Stored",
+            player_only=True,
+            default=True,
+        ),
+        "IsModifiedJesterAllowed": UnitPropertyDescription(
+            identifier="IsModifiedJesterAllowed",
+            control="checkbox",
+            label="Allow Jester Modifications",
             player_only=True,
             default=True,
         ),
@@ -11982,6 +11994,9 @@ class F_4E_45MC(PlaneType):
         _3x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (1, Weapons._3x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _2x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (1, Weapons._2x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _1x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (1, Weapons._1x_SAMP_250___250KG_GP_Bomb_LD__TER_)
+        _3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (1, Weapons._3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (1, Weapons._2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (1, Weapons._1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
         _2x_CBU_1A_A_x_27x19__513__BLU_4B_Bomblets__HE__MER_ = (1, Weapons._2x_CBU_1A_A_x_27x19__513__BLU_4B_Bomblets__HE__MER_)
         _2x_CBU_2_A_x_19x19__361__BLU_3_Bomblets__HE__MER_ = (1, Weapons._2x_CBU_2_A_x_19x19__361__BLU_3_Bomblets__HE__MER_)
         _2x_CBU_2B_A_x_22x19__418__BLU_3B_Bomblets__HE__MER_ = (1, Weapons._2x_CBU_2B_A_x_22x19__418__BLU_3B_Bomblets__HE__MER_)
@@ -12073,6 +12088,9 @@ class F_4E_45MC(PlaneType):
         _3x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (3, Weapons._3x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _2x_SAMP_250___250KG_GP_Bomb_LD__TER___ = (3, Weapons._2x_SAMP_250___250KG_GP_Bomb_LD__TER___)
         _1x_SAMP_250___250KG_GP_Bomb_LD__TER__ = (3, Weapons._1x_SAMP_250___250KG_GP_Bomb_LD__TER__)
+        _3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (3, Weapons._3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___ = (3, Weapons._2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___)
+        _1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__ = (3, Weapons._1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__)
         Mk_84_AIR__BSU_50____2000_lb_GP_Chute_Retarded_Bomb_HD = (3, Weapons.Mk_84_AIR__BSU_50____2000_lb_GP_Chute_Retarded_Bomb_HD)
         GBU_24A_B_Paveway_III___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_24A_B_Paveway_III___2000lb_Laser_Guided_Bomb)
         GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
@@ -12199,6 +12217,9 @@ class F_4E_45MC(PlaneType):
         _3x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (7, Weapons._3x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _2x_SAMP_250___250KG_GP_Bomb_LD__TER___ = (7, Weapons._2x_SAMP_250___250KG_GP_Bomb_LD__TER___)
         _1x_SAMP_250___250KG_GP_Bomb_LD__TER__ = (7, Weapons._1x_SAMP_250___250KG_GP_Bomb_LD__TER__)
+        _3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (7, Weapons._3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___ = (7, Weapons._2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___)
+        _1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__ = (7, Weapons._1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__)
         Mk_84___2000lb_GP_Bomb_LD = (7, Weapons.Mk_84___2000lb_GP_Bomb_LD)
         _3x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts_M156__Wht_Phos__MER_ = (7, Weapons._3x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts_M156__Wht_Phos__MER_)
         _3x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts_Mk1__HE__MER_ = (7, Weapons._3x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts_Mk1__HE__MER_)
@@ -12275,6 +12296,9 @@ class F_4E_45MC(PlaneType):
         _3x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (11, Weapons._3x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _2x_SAMP_250___250KG_GP_Bomb_LD__TER___ = (11, Weapons._2x_SAMP_250___250KG_GP_Bomb_LD__TER___)
         _1x_SAMP_250___250KG_GP_Bomb_LD__TER__ = (11, Weapons._1x_SAMP_250___250KG_GP_Bomb_LD__TER__)
+        _3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (11, Weapons._3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___ = (11, Weapons._2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER___)
+        _1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__ = (11, Weapons._1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__)
         Mk_84_AIR__BSU_50____2000_lb_GP_Chute_Retarded_Bomb_HD = (11, Weapons.Mk_84_AIR__BSU_50____2000_lb_GP_Chute_Retarded_Bomb_HD)
         GBU_24A_B_Paveway_III___2000lb_Laser_Guided_Bomb = (11, Weapons.GBU_24A_B_Paveway_III___2000lb_Laser_Guided_Bomb)
         GBU_10___2000lb_Laser_Guided_Bomb = (11, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
@@ -12376,6 +12400,9 @@ class F_4E_45MC(PlaneType):
         _3x_SAMP_250___250KG_GP_Bomb_LD__TER_ = (13, Weapons._3x_SAMP_250___250KG_GP_Bomb_LD__TER_)
         _2x_SAMP_250___250KG_GP_Bomb_LD__TER__ = (13, Weapons._2x_SAMP_250___250KG_GP_Bomb_LD__TER__)
         _1x_SAMP_250___250KG_GP_Bomb_LD__TER__ = (13, Weapons._1x_SAMP_250___250KG_GP_Bomb_LD__TER__)
+        _3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_ = (13, Weapons._3x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER_)
+        _2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__ = (13, Weapons._2x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__)
+        _1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__ = (13, Weapons._1x_SAMP_250___250KG_GP_Chute_Retarded_Bomb_HD__TER__)
         _2x_CBU_1A_A_x_27x19__513__BLU_4B_Bomblets__HE__MER__ = (13, Weapons._2x_CBU_1A_A_x_27x19__513__BLU_4B_Bomblets__HE__MER__)
         _2x_CBU_2_A_x_19x19__361__BLU_3_Bomblets__HE__MER__ = (13, Weapons._2x_CBU_2_A_x_19x19__361__BLU_3_Bomblets__HE__MER__)
         _2x_CBU_2B_A_x_22x19__418__BLU_3B_Bomblets__HE__MER__ = (13, Weapons._2x_CBU_2B_A_x_22x19__418__BLU_3B_Bomblets__HE__MER__)
@@ -12887,7 +12914,7 @@ class F_5E_3(PlaneType):
         ),
     }
 
-    livery_name = "F-5E-3"  # from livery_entry
+    livery_name = "F-5E3_2024"  # from livery_entry
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -17294,8 +17321,8 @@ class Mirage_F1C(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -17387,16 +17414,16 @@ class Mirage_F1C(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -17539,10 +17566,10 @@ class Mirage_F1C(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -17552,10 +17579,10 @@ class Mirage_F1C(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -17576,10 +17603,12 @@ class Mirage_F1C(PlaneType):
     }
 
     livery_name = "MIRAGE-F1C"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -17608,6 +17637,7 @@ class Mirage_F1C(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -17647,6 +17677,7 @@ class Mirage_F1C(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -17670,6 +17701,7 @@ class Mirage_F1C(PlaneType):
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (4, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -17709,6 +17741,7 @@ class Mirage_F1C(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -17737,6 +17770,7 @@ class Mirage_F1C(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -17825,8 +17859,8 @@ class Mirage_F1CE(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "IFFMode4Disabled": 1,
     }
@@ -17919,16 +17953,16 @@ class Mirage_F1CE(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -18079,10 +18113,10 @@ class Mirage_F1CE(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -18092,10 +18126,10 @@ class Mirage_F1CE(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -18129,6 +18163,7 @@ class Mirage_F1CE(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CE"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -18138,6 +18173,7 @@ class Mirage_F1CE(PlaneType):
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18171,6 +18207,7 @@ class Mirage_F1CE(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18220,6 +18257,7 @@ class Mirage_F1CE(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -18258,6 +18296,7 @@ class Mirage_F1CE(PlaneType):
         R530F_IR = (4, Weapons.R530F_IR)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18307,6 +18346,7 @@ class Mirage_F1CE(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18340,6 +18380,7 @@ class Mirage_F1CE(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -18433,8 +18474,8 @@ class Mirage_F1EE(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "IFFMode4Disabled": 1,
         "INSStartMode": 1,
@@ -18529,16 +18570,16 @@ class Mirage_F1EE(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -18703,10 +18744,10 @@ class Mirage_F1EE(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -18716,10 +18757,10 @@ class Mirage_F1EE(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -18777,6 +18818,7 @@ class Mirage_F1EE(PlaneType):
     }
 
     livery_name = "MIRAGE-F1EE"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -18786,6 +18828,7 @@ class Mirage_F1EE(PlaneType):
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18820,6 +18863,7 @@ class Mirage_F1EE(PlaneType):
         BR_500 = (2, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18869,6 +18913,7 @@ class Mirage_F1EE(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -18907,6 +18952,7 @@ class Mirage_F1EE(PlaneType):
         R530F_IR = (4, Weapons.R530F_IR)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18956,6 +19002,7 @@ class Mirage_F1EE(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -18990,6 +19037,7 @@ class Mirage_F1EE(PlaneType):
         BR_500 = (6, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -19082,8 +19130,8 @@ class Mirage_F1M_EE(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -19175,16 +19223,16 @@ class Mirage_F1M_EE(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -19327,10 +19375,10 @@ class Mirage_F1M_EE(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -19340,10 +19388,10 @@ class Mirage_F1M_EE(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -19364,6 +19412,7 @@ class Mirage_F1M_EE(PlaneType):
     }
 
     livery_name = "MIRAGE-F1M-EE"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -19373,6 +19422,7 @@ class Mirage_F1M_EE(PlaneType):
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -19407,6 +19457,7 @@ class Mirage_F1M_EE(PlaneType):
         BR_500 = (2, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -19456,6 +19507,7 @@ class Mirage_F1M_EE(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -19494,6 +19546,7 @@ class Mirage_F1M_EE(PlaneType):
         R530F_IR = (4, Weapons.R530F_IR)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -19543,6 +19596,7 @@ class Mirage_F1M_EE(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -19577,6 +19631,7 @@ class Mirage_F1M_EE(PlaneType):
         BR_500 = (6, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -19669,8 +19724,8 @@ class Mirage_F1M_CE(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -19762,16 +19817,16 @@ class Mirage_F1M_CE(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -19914,10 +19969,10 @@ class Mirage_F1M_CE(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -19927,10 +19982,10 @@ class Mirage_F1M_CE(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -19951,6 +20006,7 @@ class Mirage_F1M_CE(PlaneType):
     }
 
     livery_name = "MIRAGE-F1M-CE"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -19960,6 +20016,7 @@ class Mirage_F1M_CE(PlaneType):
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -19993,6 +20050,7 @@ class Mirage_F1M_CE(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20042,6 +20100,7 @@ class Mirage_F1M_CE(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -20080,6 +20139,7 @@ class Mirage_F1M_CE(PlaneType):
         R530F_IR = (4, Weapons.R530F_IR)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20129,6 +20189,7 @@ class Mirage_F1M_CE(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20162,6 +20223,7 @@ class Mirage_F1M_CE(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -20254,8 +20316,8 @@ class Mirage_F1C_200(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -20347,16 +20409,16 @@ class Mirage_F1C_200(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -20499,10 +20561,10 @@ class Mirage_F1C_200(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -20512,10 +20574,10 @@ class Mirage_F1C_200(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -20536,9 +20598,11 @@ class Mirage_F1C_200(PlaneType):
     }
 
     livery_name = "MIRAGE-F1C-200"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20568,6 +20632,7 @@ class Mirage_F1C_200(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20607,6 +20672,7 @@ class Mirage_F1C_200(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -20634,6 +20700,7 @@ class Mirage_F1C_200(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20673,6 +20740,7 @@ class Mirage_F1C_200(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -20702,6 +20770,7 @@ class Mirage_F1C_200(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -20788,8 +20857,8 @@ class Mirage_F1EH(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -20881,16 +20950,16 @@ class Mirage_F1EH(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -21033,10 +21102,10 @@ class Mirage_F1EH(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -21046,10 +21115,10 @@ class Mirage_F1EH(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -21070,9 +21139,11 @@ class Mirage_F1EH(PlaneType):
     }
 
     livery_name = "MIRAGE-F1EH"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21102,6 +21173,7 @@ class Mirage_F1EH(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21141,6 +21213,7 @@ class Mirage_F1EH(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -21168,6 +21241,7 @@ class Mirage_F1EH(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21207,6 +21281,7 @@ class Mirage_F1EH(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21236,6 +21311,7 @@ class Mirage_F1EH(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -21322,8 +21398,8 @@ class Mirage_F1CH(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -21415,16 +21491,16 @@ class Mirage_F1CH(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -21567,10 +21643,10 @@ class Mirage_F1CH(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -21580,10 +21656,10 @@ class Mirage_F1CH(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -21604,9 +21680,11 @@ class Mirage_F1CH(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CH"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21636,6 +21714,7 @@ class Mirage_F1CH(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21675,6 +21754,7 @@ class Mirage_F1CH(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -21702,6 +21782,7 @@ class Mirage_F1CH(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21741,6 +21822,7 @@ class Mirage_F1CH(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -21770,6 +21852,7 @@ class Mirage_F1CH(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -21856,8 +21939,8 @@ class Mirage_F1JA(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -21949,16 +22032,16 @@ class Mirage_F1JA(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -22101,10 +22184,10 @@ class Mirage_F1JA(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -22114,10 +22197,10 @@ class Mirage_F1JA(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -22138,6 +22221,8 @@ class Mirage_F1JA(PlaneType):
     }
 
     livery_name = "MIRAGE-F1JA"  # from type
+#ERRR <CLEAN>
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22167,6 +22252,7 @@ class Mirage_F1JA(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         DIS_PL_8B = (2, Weapons.DIS_PL_8B)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22203,6 +22289,7 @@ class Mirage_F1JA(PlaneType):
         PTB_1200_F1 = (3, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (3, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (3, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -22224,6 +22311,7 @@ class Mirage_F1JA(PlaneType):
         PTB_1200_F1 = (4, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (4, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (4, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22260,6 +22348,7 @@ class Mirage_F1JA(PlaneType):
         PTB_1200_F1 = (5, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (5, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (5, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22289,8 +22378,9 @@ class Mirage_F1JA(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         DIS_PL_8B = (6, Weapons.DIS_PL_8B)
+#ERRR <CLEAN>
 
-    pylons: Set[int] = {2, 3, 4, 5, 6}
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7}
 
     tasks = [task.GroundAttack, task.RunwayAttack, task.PinpointStrike, task.CAS, task.AFAC, task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.AntishipStrike]
     task_default = task.CAP
@@ -22372,8 +22462,8 @@ class Mirage_F1CG(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -22465,16 +22555,16 @@ class Mirage_F1CG(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -22617,10 +22707,10 @@ class Mirage_F1CG(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -22630,10 +22720,10 @@ class Mirage_F1CG(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -22654,11 +22744,13 @@ class Mirage_F1CG(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CG"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
         AIM_9J_Sidewinder_IR_AAM = (1, Weapons.AIM_9J_Sidewinder_IR_AAM)
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22690,6 +22782,7 @@ class Mirage_F1CG(PlaneType):
         AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
         AIM_9J_Sidewinder_IR_AAM = (2, Weapons.AIM_9J_Sidewinder_IR_AAM)
         AIM_9JULI_Sidewinder_IR_AAM = (2, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22729,6 +22822,7 @@ class Mirage_F1CG(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -22756,6 +22850,7 @@ class Mirage_F1CG(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22795,6 +22890,7 @@ class Mirage_F1CG(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -22826,6 +22922,7 @@ class Mirage_F1CG(PlaneType):
         AIM_9B_Sidewinder_IR_AAM = (6, Weapons.AIM_9B_Sidewinder_IR_AAM)
         AIM_9J_Sidewinder_IR_AAM = (6, Weapons.AIM_9J_Sidewinder_IR_AAM)
         AIM_9JULI_Sidewinder_IR_AAM = (6, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -22914,8 +23011,8 @@ class Mirage_F1CZ(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -23007,16 +23104,16 @@ class Mirage_F1CZ(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -23159,10 +23256,10 @@ class Mirage_F1CZ(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -23172,10 +23269,10 @@ class Mirage_F1CZ(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -23196,9 +23293,11 @@ class Mirage_F1CZ(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CZ"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23228,6 +23327,7 @@ class Mirage_F1CZ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23267,6 +23367,7 @@ class Mirage_F1CZ(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -23294,6 +23395,7 @@ class Mirage_F1CZ(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23333,6 +23435,7 @@ class Mirage_F1CZ(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23362,6 +23465,7 @@ class Mirage_F1CZ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -23448,8 +23552,8 @@ class Mirage_F1CJ(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -23541,16 +23645,16 @@ class Mirage_F1CJ(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -23693,10 +23797,10 @@ class Mirage_F1CJ(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -23706,10 +23810,10 @@ class Mirage_F1CJ(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -23730,9 +23834,11 @@ class Mirage_F1CJ(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CJ"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23762,6 +23868,7 @@ class Mirage_F1CJ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23801,6 +23908,7 @@ class Mirage_F1CJ(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -23828,6 +23936,7 @@ class Mirage_F1CJ(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23867,6 +23976,7 @@ class Mirage_F1CJ(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -23896,6 +24006,7 @@ class Mirage_F1CJ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -23982,8 +24093,8 @@ class Mirage_F1CK(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -24075,16 +24186,16 @@ class Mirage_F1CK(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -24227,10 +24338,10 @@ class Mirage_F1CK(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -24240,10 +24351,10 @@ class Mirage_F1CK(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -24264,9 +24375,11 @@ class Mirage_F1CK(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CK"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24296,6 +24409,7 @@ class Mirage_F1CK(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24335,6 +24449,7 @@ class Mirage_F1CK(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -24362,6 +24477,7 @@ class Mirage_F1CK(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24401,6 +24517,7 @@ class Mirage_F1CK(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24430,6 +24547,7 @@ class Mirage_F1CK(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -24516,8 +24634,8 @@ class Mirage_F1EQ(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -24609,16 +24727,16 @@ class Mirage_F1EQ(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -24761,10 +24879,10 @@ class Mirage_F1EQ(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -24774,10 +24892,10 @@ class Mirage_F1EQ(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -24798,10 +24916,12 @@ class Mirage_F1EQ(PlaneType):
     }
 
     livery_name = "MIRAGE-F1EQ"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24835,6 +24955,7 @@ class Mirage_F1EQ(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24880,6 +25001,7 @@ class Mirage_F1EQ(PlaneType):
         S530F = (3, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (3, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (3, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -24910,6 +25032,7 @@ class Mirage_F1EQ(PlaneType):
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24955,6 +25078,7 @@ class Mirage_F1EQ(PlaneType):
         S530F = (5, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (5, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (5, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -24988,6 +25112,7 @@ class Mirage_F1EQ(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -25075,8 +25200,8 @@ class Mirage_F1ED(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -25168,16 +25293,16 @@ class Mirage_F1ED(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -25320,10 +25445,10 @@ class Mirage_F1ED(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -25333,10 +25458,10 @@ class Mirage_F1ED(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -25357,10 +25482,12 @@ class Mirage_F1ED(PlaneType):
     }
 
     livery_name = "MIRAGE-F1ED"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25394,6 +25521,7 @@ class Mirage_F1ED(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25439,6 +25567,7 @@ class Mirage_F1ED(PlaneType):
         S530F = (3, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (3, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (3, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -25469,6 +25598,7 @@ class Mirage_F1ED(PlaneType):
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25514,6 +25644,7 @@ class Mirage_F1ED(PlaneType):
         S530F = (5, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (5, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (5, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25547,6 +25678,7 @@ class Mirage_F1ED(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -25634,8 +25766,8 @@ class Mirage_F1EDA(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -25727,16 +25859,16 @@ class Mirage_F1EDA(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -25879,10 +26011,10 @@ class Mirage_F1EDA(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -25892,10 +26024,10 @@ class Mirage_F1EDA(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -25916,9 +26048,11 @@ class Mirage_F1EDA(PlaneType):
     }
 
     livery_name = "MIRAGE-F1EDA"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25951,6 +26085,7 @@ class Mirage_F1EDA(PlaneType):
         Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -25994,6 +26129,7 @@ class Mirage_F1EDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (3, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -26022,6 +26158,7 @@ class Mirage_F1EDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (4, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26065,6 +26202,7 @@ class Mirage_F1EDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (5, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (5, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26097,6 +26235,7 @@ class Mirage_F1EDA(PlaneType):
         Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -26183,8 +26322,8 @@ class Mirage_F1CR(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -26276,16 +26415,16 @@ class Mirage_F1CR(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -26428,10 +26567,10 @@ class Mirage_F1CR(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -26441,10 +26580,10 @@ class Mirage_F1CR(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -26465,10 +26604,12 @@ class Mirage_F1CR(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CR"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26499,6 +26640,7 @@ class Mirage_F1CR(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26537,6 +26679,7 @@ class Mirage_F1CR(PlaneType):
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (3, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
         GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (3, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -26564,6 +26707,7 @@ class Mirage_F1CR(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26602,6 +26746,7 @@ class Mirage_F1CR(PlaneType):
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (5, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
         GBU_10___2000lb_Laser_Guided_Bomb = (5, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (5, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -26632,6 +26777,7 @@ class Mirage_F1CR(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -26719,8 +26865,8 @@ class Mirage_F1CT(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -26812,16 +26958,16 @@ class Mirage_F1CT(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -26964,10 +27110,10 @@ class Mirage_F1CT(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -26977,10 +27123,10 @@ class Mirage_F1CT(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -27001,10 +27147,12 @@ class Mirage_F1CT(PlaneType):
     }
 
     livery_name = "MIRAGE-F1CT"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27035,6 +27183,7 @@ class Mirage_F1CT(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (2, Weapons.BARAX_ECM)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27074,6 +27223,7 @@ class Mirage_F1CT(PlaneType):
         S530F = (3, Weapons.S530F)
         GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (3, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -27099,6 +27249,7 @@ class Mirage_F1CT(PlaneType):
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27138,6 +27289,7 @@ class Mirage_F1CT(PlaneType):
         S530F = (5, Weapons.S530F)
         GBU_10___2000lb_Laser_Guided_Bomb = (5, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (5, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27168,6 +27320,7 @@ class Mirage_F1CT(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
         BARAX_ECM = (6, Weapons.BARAX_ECM)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -27255,8 +27408,8 @@ class Mirage_F1AD(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -27348,16 +27501,16 @@ class Mirage_F1AD(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -27500,10 +27653,10 @@ class Mirage_F1AD(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -27513,10 +27666,10 @@ class Mirage_F1AD(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -27537,10 +27690,12 @@ class Mirage_F1AD(PlaneType):
     }
 
     livery_name = "MIRAGE-F1AD"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27569,6 +27724,7 @@ class Mirage_F1AD(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27605,6 +27761,7 @@ class Mirage_F1AD(PlaneType):
         PTB_1200_F1 = (3, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (3, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (3, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -27626,6 +27783,7 @@ class Mirage_F1AD(PlaneType):
         PTB_1200_F1 = (4, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (4, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (4, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27662,6 +27820,7 @@ class Mirage_F1AD(PlaneType):
         PTB_1200_F1 = (5, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (5, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (5, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -27690,6 +27849,7 @@ class Mirage_F1AD(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -27777,8 +27937,8 @@ class Mirage_F1AZ(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
     }
 
@@ -27870,16 +28030,16 @@ class Mirage_F1AZ(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -28022,10 +28182,10 @@ class Mirage_F1AZ(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -28035,10 +28195,10 @@ class Mirage_F1AZ(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -28059,9 +28219,11 @@ class Mirage_F1AZ(PlaneType):
     }
 
     livery_name = "MIRAGE-F1AZ"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28090,6 +28252,7 @@ class Mirage_F1AZ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28126,6 +28289,7 @@ class Mirage_F1AZ(PlaneType):
         PTB_1200_F1 = (3, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (3, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (3, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -28147,6 +28311,7 @@ class Mirage_F1AZ(PlaneType):
         PTB_1200_F1 = (4, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (4, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (4, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28183,6 +28348,7 @@ class Mirage_F1AZ(PlaneType):
         PTB_1200_F1 = (5, Weapons.PTB_1200_F1)
         PTB_1200_F1_EMPTY = (5, Weapons.PTB_1200_F1_EMPTY)
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (5, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28211,6 +28377,7 @@ class Mirage_F1AZ(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -28297,8 +28464,8 @@ class Mirage_F1B(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "SoloFlight": False,
         "NetCrewControlPriority": 1,
@@ -28392,16 +28559,16 @@ class Mirage_F1B(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -28556,10 +28723,10 @@ class Mirage_F1B(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -28569,10 +28736,10 @@ class Mirage_F1B(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -28614,10 +28781,12 @@ class Mirage_F1B(PlaneType):
     }
 
     livery_name = "MIRAGE-F1B"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28646,6 +28815,7 @@ class Mirage_F1B(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (2, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28685,6 +28855,7 @@ class Mirage_F1B(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -28708,6 +28879,7 @@ class Mirage_F1B(PlaneType):
         CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon = (4, Weapons.CC420_DEFA_550_gun_pod___30mm_Revolver_Cannon)
         R530F_EM = (4, Weapons.R530F_EM)
         R530F_IR = (4, Weapons.R530F_IR)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28747,6 +28919,7 @@ class Mirage_F1B(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -28775,6 +28948,7 @@ class Mirage_F1B(PlaneType):
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_254_F1B_SM_Green)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_256_F1B_HE_Frag)
         MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd = (6, Weapons.MATRA_F4___18_x_UnGd_Rkts__68_mm_SNEB_Type_257_F1B_HE_Frag_Lg_Whd)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -28863,8 +29037,8 @@ class Mirage_F1BE(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "IFFMode4Disabled": 1,
         "SoloFlight": False,
@@ -28959,16 +29133,16 @@ class Mirage_F1BE(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -29131,10 +29305,10 @@ class Mirage_F1BE(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -29144,10 +29318,10 @@ class Mirage_F1BE(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -29202,6 +29376,7 @@ class Mirage_F1BE(PlaneType):
     }
 
     livery_name = "MIRAGE-F1BE"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         AIM_9B_Sidewinder_IR_AAM = (1, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -29211,6 +29386,7 @@ class Mirage_F1BE(PlaneType):
         AIM_9JULI_Sidewinder_IR_AAM = (1, Weapons.AIM_9JULI_Sidewinder_IR_AAM)
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29244,6 +29420,7 @@ class Mirage_F1BE(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29293,6 +29470,7 @@ class Mirage_F1BE(PlaneType):
         R530F_EM = (3, Weapons.R530F_EM)
         R530F_IR = (3, Weapons.R530F_IR)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -29331,6 +29509,7 @@ class Mirage_F1BE(PlaneType):
         R530F_IR = (4, Weapons.R530F_IR)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29380,6 +29559,7 @@ class Mirage_F1BE(PlaneType):
         R530F_EM = (5, Weapons.R530F_EM)
         R530F_IR = (5, Weapons.R530F_IR)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29413,6 +29593,7 @@ class Mirage_F1BE(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+#ERRR <CLEAN>
 
     class Pylon7:
         AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
@@ -29505,8 +29686,8 @@ class Mirage_F1BQ(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "SoloFlight": False,
         "NetCrewControlPriority": 1,
@@ -29600,16 +29781,16 @@ class Mirage_F1BQ(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -29764,10 +29945,10 @@ class Mirage_F1BQ(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -29777,10 +29958,10 @@ class Mirage_F1BQ(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -29822,10 +30003,12 @@ class Mirage_F1BQ(PlaneType):
     }
 
     livery_name = "MIRAGE-F1BQ"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29859,6 +30042,7 @@ class Mirage_F1BQ(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29904,6 +30088,7 @@ class Mirage_F1BQ(PlaneType):
         S530F = (3, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (3, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (3, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -29934,6 +30119,7 @@ class Mirage_F1BQ(PlaneType):
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -29979,6 +30165,7 @@ class Mirage_F1BQ(PlaneType):
         S530F = (5, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (5, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (5, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -30012,6 +30199,7 @@ class Mirage_F1BQ(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -30099,8 +30287,8 @@ class Mirage_F1BD(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "SoloFlight": False,
         "NetCrewControlPriority": 1,
@@ -30194,16 +30382,16 @@ class Mirage_F1BD(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -30358,10 +30546,10 @@ class Mirage_F1BD(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -30371,10 +30559,10 @@ class Mirage_F1BD(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -30416,10 +30604,12 @@ class Mirage_F1BD(PlaneType):
     }
 
     livery_name = "MIRAGE-F1BD"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
         R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -30453,6 +30643,7 @@ class Mirage_F1BD(PlaneType):
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
         PHIMAT_CM = (2, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -30498,6 +30689,7 @@ class Mirage_F1BD(PlaneType):
         S530F = (3, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (3, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (3, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -30528,6 +30720,7 @@ class Mirage_F1BD(PlaneType):
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
         PTB_580G_F1 = (4, Weapons.PTB_580G_F1)
         PTB_580G_F1_EMPTY = (4, Weapons.PTB_580G_F1_EMPTY)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -30573,6 +30766,7 @@ class Mirage_F1BD(PlaneType):
         S530F = (5, Weapons.S530F)
         Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (5, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
         Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (5, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -30606,6 +30800,7 @@ class Mirage_F1BD(PlaneType):
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
         PHIMAT_CM = (6, Weapons.PHIMAT_CM)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -30693,8 +30888,8 @@ class Mirage_F1DDA(PlaneType):
         "FlareMultiNumber": 1,
         "FlareMultiTime": 1,
         "GunBurstSettings": 1,
-        "RocketSalvoF1": 1,
-        "RocketSalvoF4": 1,
+        "RocketBurstF1": 1,
+        "RocketBurstF4": 1,
         "IFFMode2Code": None,
         "SoloFlight": False,
         "NetCrewControlPriority": 1,
@@ -30788,16 +30983,16 @@ class Mirage_F1DDA(PlaneType):
                 x_0_5_s = 2
                 x_1_s = 3
 
-        class RocketSalvoF1:
-            id = "RocketSalvoF1"
+        class RocketBurstF1:
+            id = "RocketBurstF1"
 
             class Values:
                 x_6 = 1
                 x_12 = 2
                 x_18 = 3
 
-        class RocketSalvoF4:
-            id = "RocketSalvoF4"
+        class RocketBurstF4:
+            id = "RocketBurstF4"
 
             class Values:
                 x_1 = 1
@@ -30952,10 +31147,10 @@ class Mirage_F1DDA(PlaneType):
                 3: "1 s",
             },
         ),
-        "RocketSalvoF1": UnitPropertyDescription(
-            identifier="RocketSalvoF1",
+        "RocketBurstF1": UnitPropertyDescription(
+            identifier="RocketBurstF1",
             control="comboList",
-            label="F1 Rocket Launcher Salvo Count",
+            label="F1 Rocket Launcher Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -30965,10 +31160,10 @@ class Mirage_F1DDA(PlaneType):
                 3: "18",
             },
         ),
-        "RocketSalvoF4": UnitPropertyDescription(
-            identifier="RocketSalvoF4",
+        "RocketBurstF4": UnitPropertyDescription(
+            identifier="RocketBurstF4",
             control="comboList",
-            label="F4/JL100 Rocket Launchers Salvo Count",
+            label="F4/JL100 Rocket Launchers Burst Count",
             player_only=True,
             default=1,
             w_ctrl=75,
@@ -31010,9 +31205,11 @@ class Mirage_F1DDA(PlaneType):
     }
 
     livery_name = "MIRAGE-F1DDA"  # from type
+#ERRR <CLEAN>
 
     class Pylon1:
         R550_Magic_1_IR_AAM = (1, Weapons.R550_Magic_1_IR_AAM)
+#ERRR <CLEAN>
 
     class Pylon2:
         SAMP_125___125_kg_GP_Bomb_LD = (2, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -31045,6 +31242,7 @@ class Mirage_F1DDA(PlaneType):
         Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
         BR_250 = (2, Weapons.BR_250)
         BR_500 = (2, Weapons.BR_500)
+#ERRR <CLEAN>
 
     class Pylon3:
         SAMP_125___125_kg_GP_Bomb_LD = (3, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -31088,6 +31286,7 @@ class Mirage_F1DDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (3, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         S530F = (3, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon4:
         SAMP_250___250_kg_GP_Bomb_LD = (4, Weapons.SAMP_250___250_kg_GP_Bomb_LD)
@@ -31116,6 +31315,7 @@ class Mirage_F1DDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (4, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (4, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.CLB_4___4_x_Mk_82___500lb_GP_Bomb_LD)
+#ERRR <CLEAN>
 
     class Pylon5:
         SAMP_125___125_kg_GP_Bomb_LD = (5, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -31159,6 +31359,7 @@ class Mirage_F1DDA(PlaneType):
         GBU_10___2000lb_Laser_Guided_Bomb = (5, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
         GBU_12___500lb_Laser_Guided_Bomb = (5, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
         S530F = (5, Weapons.S530F)
+#ERRR <CLEAN>
 
     class Pylon6:
         SAMP_125___125_kg_GP_Bomb_LD = (6, Weapons.SAMP_125___125_kg_GP_Bomb_LD)
@@ -31191,6 +31392,7 @@ class Mirage_F1DDA(PlaneType):
         Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
         BR_250 = (6, Weapons.BR_250)
         BR_500 = (6, Weapons.BR_500)
+#ERRR <CLEAN>
 
     class Pylon7:
         R550_Magic_1_IR_AAM = (7, Weapons.R550_Magic_1_IR_AAM)
@@ -31746,6 +31948,3590 @@ class C_47(PlaneType):
     task_default = task.Transport
 
 
+class A_4E_C(PlaneType):
+    id = "A-4E-C"
+    flyable = True
+    height = 4.57
+    width = 8.38
+    length = 12.22
+    fuel_max = 2467.5454273299
+    max_speed = 1082.88
+    chaff = 30
+    flare = 30
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 254
+
+    panel_radio = {
+        1: {
+            "channels": {
+                1: 264,
+                2: 265,
+                4: 254,
+                8: 258,
+                16: 267,
+                17: 251,
+                9: 262,
+                18: 253,
+                5: 250,
+                10: 259,
+                20: 252,
+                11: 268,
+                3: 256,
+                6: 270,
+                12: 269,
+                13: 260,
+                7: 257,
+                14: 263,
+                19: 266,
+                15: 261
+            },
+        },
+    }
+
+    property_defaults: Dict[str, Any] = {
+        "HideECMPanel": False,
+        "Auto_Catapult_Power": False,
+        "Night_Vision": False,
+        "CBU2ATPP": 0,
+        "CBU2BATPP": 0,
+        "CMS_BURSTS": 1,
+        "CMS_BURST_INTERVAL": 1,
+        "CMS_SALVOS": 1,
+        "CMS_SALVO_INTERVAL": 1,
+    }
+
+    class Properties:
+
+        class HideECMPanel:
+            id = "HideECMPanel"
+
+        class Auto_Catapult_Power:
+            id = "Auto_Catapult_Power"
+
+        class Night_Vision:
+            id = "Night_Vision"
+
+        class CBU2ATPP:
+            id = "CBU2ATPP"
+
+            class Values:
+                x_1_tube = 0
+                x_2_tubes = 1
+                x_3_tubes = 2
+                x_4_tubes = 3
+                x_6_tubes = 4
+                x_17_tubes__salvo = 5
+
+        class CBU2BATPP:
+            id = "CBU2BATPP"
+
+            class Values:
+                x_2_tubes = 0
+                x_4_tubes = 1
+                x_6_tubes = 2
+
+        class CMS_BURSTS:
+            id = "CMS_BURSTS"
+
+            class Values:
+                x_1 = 1
+                x_2 = 2
+                x_3 = 3
+                x_4 = 4
+
+        class CMS_BURST_INTERVAL:
+            id = "CMS_BURST_INTERVAL"
+
+            class Values:
+                x_0_2_seconds = 1
+                x_0_3_seconds = 2
+                x_0_4_seconds = 3
+                x_0_5_seconds = 4
+
+        class CMS_SALVOS:
+            id = "CMS_SALVOS"
+
+            class Values:
+                x_8 = 1
+                x_12 = 2
+                x_16 = 3
+                x_20 = 4
+                x_24 = 5
+                x_28 = 6
+                x_32 = 7
+
+        class CMS_SALVO_INTERVAL:
+            id = "CMS_SALVO_INTERVAL"
+
+            class Values:
+                x_2_seconds = 1
+                x_4_seconds = 2
+                x_6_seconds = 3
+                x_8_seconds = 4
+                x_10_seconds = 5
+                x_12_seconds = 6
+                x_14_seconds = 7
+
+    properties = {
+        "HideECMPanel": UnitPropertyDescription(
+            identifier="HideECMPanel",
+            control="checkbox",
+            label="Remove ECM control panel",
+            default=False,
+            weight_when_on=-80,
+        ),
+        "Auto_Catapult_Power": UnitPropertyDescription(
+            identifier="Auto_Catapult_Power",
+            control="checkbox",
+            label="Automatic Catapult Power Mode (for modded aircraft carriers)",
+            default=False,
+            weight_when_on=-80,
+        ),
+        "Night_Vision": UnitPropertyDescription(
+            identifier="Night_Vision",
+            control="checkbox",
+            label="Enable Nightvision",
+            default=False,
+            weight_when_on=-80,
+        ),
+        "CBU2ATPP": UnitPropertyDescription(
+            identifier="CBU2ATPP",
+            control="comboList",
+            label="CBU-2/A Tubes Per Pulse",
+            player_only=True,
+            default=0,
+            w_ctrl=150,
+            values={
+                0: "1 tube",
+                1: "2 tubes",
+                2: "3 tubes",
+                3: "4 tubes",
+                4: "6 tubes",
+                5: "17 tubes (salvo)",
+            },
+        ),
+        "CBU2BATPP": UnitPropertyDescription(
+            identifier="CBU2BATPP",
+            control="comboList",
+            label="CBU-2B/A Tubes Per Pulse",
+            player_only=True,
+            default=0,
+            w_ctrl=150,
+            values={
+                0: "2 tubes",
+                1: "4 tubes",
+                2: "6 tubes",
+            },
+        ),
+        "CMS_BURSTS": UnitPropertyDescription(
+            identifier="CMS_BURSTS",
+            control="comboList",
+            label="CMS BURSTS",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                1: "1",
+                2: "2",
+                3: "3",
+                4: "4",
+            },
+        ),
+        "CMS_BURST_INTERVAL": UnitPropertyDescription(
+            identifier="CMS_BURST_INTERVAL",
+            control="comboList",
+            label="CMS BURST INTERVAL",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                1: "0.2 seconds",
+                2: "0.3 seconds",
+                3: "0.4 seconds",
+                4: "0.5 seconds",
+            },
+        ),
+        "CMS_SALVOS": UnitPropertyDescription(
+            identifier="CMS_SALVOS",
+            control="comboList",
+            label="CMS SALVOS",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                1: "8",
+                2: "12",
+                3: "16",
+                4: "20",
+                5: "24",
+                6: "28",
+                7: "32",
+            },
+        ),
+        "CMS_SALVO_INTERVAL": UnitPropertyDescription(
+            identifier="CMS_SALVO_INTERVAL",
+            control="comboList",
+            label="CMS SALVO INTERVAL",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                1: "2 seconds",
+                2: "4 seconds",
+                3: "6 seconds",
+                4: "8 seconds",
+                5: "10 seconds",
+                6: "12 seconds",
+                7: "14 seconds",
+            },
+        ),
+    }
+
+    livery_name = "A-4E-C"  # from type
+
+    class Pylon1:
+        LAU_7_with_AIM_9B_Sidewinder_IR_AAM = (1, Weapons.LAU_7_with_AIM_9B_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P_Sidewinder_IR_AAM = (1, Weapons.LAU_7_with_AIM_9P_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P5_Sidewinder_IR_AAM = (1, Weapons.LAU_7_with_AIM_9P5_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_ = (1, Weapons.LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_)
+        LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_ = (1, Weapons.LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_)
+        LAU_7_with_AIM_9J_Sidewinder_IR_AAM = (1, Weapons.LAU_7_with_AIM_9J_Sidewinder_IR_AAM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (1, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (1, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (1, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (1, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU3_WP61 = (1, Weapons.LAU3_WP61)
+        LAU3_WP1B = (1, Weapons.LAU3_WP1B)
+        LAU3_HE5 = (1, Weapons.LAU3_HE5)
+        LAU3_WP156 = (1, Weapons.LAU3_WP156)
+        LAU3_HE151 = (1, Weapons.LAU3_HE151)
+        AGM_45A_Shrike_ARM = (1, Weapons.AGM_45A_Shrike_ARM)
+#ERRR {3E6B632D-65EB-44D2-9501-1C2D04515404}
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (1, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        Mk_81___250lb_GP_Bomb_LD = (1, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_81_Snakeye___250lb_GP_Bomb_HD = (1, Weapons.Mk_81_Snakeye___250lb_GP_Bomb_HD)
+        Mk_82___500lb_GP_Bomb_LD = (1, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (1, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_77_mod_1___500lb_Fire_Bomb_LD = (1, Weapons.Mk_77_mod_1___500lb_Fire_Bomb_LD)
+        AN_M30A1___100lb_GP_Bomb_LD = (1, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (1, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (1, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M81___260lb_GP_Bomb_LD = (1, Weapons.AN_M81___260lb_GP_Bomb_LD)
+        AN_M88___220lb_GP_Bomb_LD = (1, Weapons.AN_M88___220lb_GP_Bomb_LD)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (1, Weapons.Smokewinder___orange)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (1, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        Fuel_Tank_300_gallons_ = (2, Weapons.Fuel_Tank_300_gallons_)
+        Fuel_Tank_300_gallons__EMPTY__ = (2, Weapons.Fuel_Tank_300_gallons__EMPTY__)
+        Fuel_Tank_150_gallons = (2, Weapons.Fuel_Tank_150_gallons)
+        Fuel_Tank_150_gallons__EMPTY_ = (2, Weapons.Fuel_Tank_150_gallons__EMPTY_)
+        LAU_7_with_AIM_9B_Sidewinder_IR_AAM = (2, Weapons.LAU_7_with_AIM_9B_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P_Sidewinder_IR_AAM = (2, Weapons.LAU_7_with_AIM_9P_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P5_Sidewinder_IR_AAM = (2, Weapons.LAU_7_with_AIM_9P5_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_ = (2, Weapons.LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_)
+        LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_ = (2, Weapons.LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_)
+        LAU_7_with_AIM_9J_Sidewinder_IR_AAM = (2, Weapons.LAU_7_with_AIM_9J_Sidewinder_IR_AAM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER__)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER__)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER__)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER__ = (2, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER__)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (2, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        _2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER__ = (2, Weapons._2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER__)
+        LAU3_WP61 = (2, Weapons.LAU3_WP61)
+        LAU3_WP1B = (2, Weapons.LAU3_WP1B)
+        LAU3_HE5 = (2, Weapons.LAU3_HE5)
+        LAU3_WP156 = (2, Weapons.LAU3_WP156)
+        LAU3_HE151 = (2, Weapons.LAU3_HE151)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER__)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER__ = (2, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER__)
+        AGM_45A_Shrike_ARM = (2, Weapons.AGM_45A_Shrike_ARM)
+#ERRR {3E6B632D-65EB-44D2-9501-1C2D04515404}
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (2, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        Mk_81___250lb_GP_Bomb_LD = (2, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_81_Snakeye___250lb_GP_Bomb_HD = (2, Weapons.Mk_81_Snakeye___250lb_GP_Bomb_HD)
+        Mk_82___500lb_GP_Bomb_LD = (2, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (2, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (2, Weapons.M117___750lb_GP_Bomb_LD)
+        Mk_77_mod_0___750lb_Fire_Bomb_LD = (2, Weapons.Mk_77_mod_0___750lb_Fire_Bomb_LD)
+        Mk_77_mod_1___500lb_Fire_Bomb_LD = (2, Weapons.Mk_77_mod_1___500lb_Fire_Bomb_LD)
+        AN_M30A1___100lb_GP_Bomb_LD = (2, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (2, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (2, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M65___1000lb_GP_Bomb_LD = (2, Weapons.AN_M65___1000lb_GP_Bomb_LD)
+        AN_M81___260lb_GP_Bomb_LD = (2, Weapons.AN_M81___260lb_GP_Bomb_LD)
+        AN_M88___220lb_GP_Bomb_LD = (2, Weapons.AN_M88___220lb_GP_Bomb_LD)
+        CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE = (2, Weapons.CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE)
+        CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE = (2, Weapons.CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE)
+        CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE = (2, Weapons.CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE)
+        _2_x_CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE__TER_ = (2, Weapons._2_x_CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE__TER_)
+        _2_x_CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER_ = (2, Weapons._2_x_CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER_)
+        _2_x_CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER_ = (2, Weapons._2_x_CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER_)
+        _2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER_ = (2, Weapons._2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER_)
+        _5_x_Mk_81___250lb_GP_Bomb_LD__MER_ = (2, Weapons._5_x_Mk_81___250lb_GP_Bomb_LD__MER_)
+        _5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_ = (2, Weapons._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_)
+        _2_x_Mk_82___500lb_GP_Bomb_LD__TER_ = (2, Weapons._2_x_Mk_82___500lb_GP_Bomb_LD__TER_)
+        _2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER_ = (2, Weapons._2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER_)
+        _5_x_AN_M57___250lb_GP_Bomb_LD__MER_ = (2, Weapons._5_x_AN_M57___250lb_GP_Bomb_LD__MER_)
+        _2_x_AN_M57___250lb_GP_Bomb_LD__TER_ = (2, Weapons._2_x_AN_M57___250lb_GP_Bomb_LD__TER_)
+        _5_x_AN_M81___260lb_GP_Bomb_LD__MER_ = (2, Weapons._5_x_AN_M81___260lb_GP_Bomb_LD__MER_)
+        _5_x_AN_M88___220lb_GP_Bomb_LD__MER_ = (2, Weapons._5_x_AN_M88___220lb_GP_Bomb_LD__MER_)
+        _5_x_BDU_33___25lb_Practice_Bomb_LD__MER_ = (2, Weapons._5_x_BDU_33___25lb_Practice_Bomb_LD__MER_)
+        Mk4_HIPEG___Gunpod = (2, Weapons.Mk4_HIPEG___Gunpod)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (2, Weapons.Smokewinder___orange)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (2, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+#ERRR <CLEAN>
+
+    class Pylon3:
+        Fuel_Tank_400_gallons = (3, Weapons.Fuel_Tank_400_gallons)
+        Fuel_Tank_300_gallons = (3, Weapons.Fuel_Tank_300_gallons)
+        Fuel_Tank_150_gallons = (3, Weapons.Fuel_Tank_150_gallons)
+        Fuel_Tank_400_gallons__EMPTY_ = (3, Weapons.Fuel_Tank_400_gallons__EMPTY_)
+        Fuel_Tank_300_gallons__EMPTY_ = (3, Weapons.Fuel_Tank_300_gallons__EMPTY_)
+        Fuel_Tank_150_gallons__EMPTY_ = (3, Weapons.Fuel_Tank_150_gallons__EMPTY_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER_)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER_)
+        LAU3_WP156 = (3, Weapons.LAU3_WP156)
+        LAU3_HE5 = (3, Weapons.LAU3_HE5)
+        LAU3_WP61 = (3, Weapons.LAU3_WP61)
+        LAU3_WP1B = (3, Weapons.LAU3_WP1B)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (3, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_ = (3, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_)
+        _3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_ = (3, Weapons._3_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (3, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        _2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER_ = (3, Weapons._2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER_)
+        _3_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER_ = (3, Weapons._3_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER_)
+        LAU3_WP61 = (3, Weapons.LAU3_WP61)
+        LAU3_WP1B = (3, Weapons.LAU3_WP1B)
+        LAU3_HE5 = (3, Weapons.LAU3_HE5)
+        LAU3_WP156 = (3, Weapons.LAU3_WP156)
+        LAU3_HE151 = (3, Weapons.LAU3_HE151)
+        _3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_)
+        _3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_ = (3, Weapons._3_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER_)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_ = (3, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER_)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (3, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        Mk_81___250lb_GP_Bomb_LD = (3, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_81_Snakeye___250lb_GP_Bomb_HD = (3, Weapons.Mk_81_Snakeye___250lb_GP_Bomb_HD)
+        Mk_82___500lb_GP_Bomb_LD = (3, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (3, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (3, Weapons.M117___750lb_GP_Bomb_LD)
+        Mk_77_mod_0___750lb_Fire_Bomb_LD = (3, Weapons.Mk_77_mod_0___750lb_Fire_Bomb_LD)
+        Mk_77_mod_1___500lb_Fire_Bomb_LD = (3, Weapons.Mk_77_mod_1___500lb_Fire_Bomb_LD)
+        AN_M30A1___100lb_GP_Bomb_LD = (3, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (3, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (3, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M65___1000lb_GP_Bomb_LD = (3, Weapons.AN_M65___1000lb_GP_Bomb_LD)
+        AN_M66A2___2000lb_GP_Bomb_LD = (3, Weapons.AN_M66A2___2000lb_GP_Bomb_LD)
+        AN_M81___260lb_GP_Bomb_LD = (3, Weapons.AN_M81___260lb_GP_Bomb_LD)
+        AN_M88___220lb_GP_Bomb_LD = (3, Weapons.AN_M88___220lb_GP_Bomb_LD)
+        _3_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER_ = (3, Weapons._3_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER_)
+        _2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER___ = (3, Weapons._2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER___)
+        _6_x_Mk_81___250lb_GP_Bomb_LD__MER_ = (3, Weapons._6_x_Mk_81___250lb_GP_Bomb_LD__MER_)
+        _6_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_ = (3, Weapons._6_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_)
+        _6_x_Mk_82___500lb_GP_Bomb_LD__MER_ = (3, Weapons._6_x_Mk_82___500lb_GP_Bomb_LD__MER_)
+        _4_x_Mk_82___500lb_GP_Bomb_LD__MER_ = (3, Weapons._4_x_Mk_82___500lb_GP_Bomb_LD__MER_)
+        _3_x_Mk_82___500lb_GP_Bomb_LD__TER_ = (3, Weapons._3_x_Mk_82___500lb_GP_Bomb_LD__TER_)
+        _6_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__MER_ = (3, Weapons._6_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__MER_)
+        _4_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__MER_ = (3, Weapons._4_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__MER_)
+        _3_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER_ = (3, Weapons._3_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER_)
+        _3_x_Mk_83___1000lb_GP_Bomb_LD__TER_ = (3, Weapons._3_x_Mk_83___1000lb_GP_Bomb_LD__TER_)
+        _2_x_Mk_83___1000lb_GP_Bomb_LD__TER_ = (3, Weapons._2_x_Mk_83___1000lb_GP_Bomb_LD__TER_)
+        _2_x_Mk_77_mod_1___500lb_Fire_Bomb_LD__TER___ = (3, Weapons._2_x_Mk_77_mod_1___500lb_Fire_Bomb_LD__TER___)
+        _6_x_AN_M57___250lb_GP_Bomb_LD__MER_ = (3, Weapons._6_x_AN_M57___250lb_GP_Bomb_LD__MER_)
+        _3_x_AN_M57___250lb_GP_Bomb_LD__TER_ = (3, Weapons._3_x_AN_M57___250lb_GP_Bomb_LD__TER_)
+        _6_x_AN_M81___260lb_GP_Bomb_LD__MER_ = (3, Weapons._6_x_AN_M81___260lb_GP_Bomb_LD__MER_)
+        _6_x_AN_M88___220lb_GP_Bomb_LD__MER_ = (3, Weapons._6_x_AN_M88___220lb_GP_Bomb_LD__MER_)
+        _6_x_BDU_33___25lb_Practice_Bomb_LD__MER_ = (3, Weapons._6_x_BDU_33___25lb_Practice_Bomb_LD__MER_)
+        Mk4_HIPEG___Gunpod = (3, Weapons.Mk4_HIPEG___Gunpod)
+        Smokewinder___red = (3, Weapons.Smokewinder___red)
+        Smokewinder___green = (3, Weapons.Smokewinder___green)
+        Smokewinder___blue = (3, Weapons.Smokewinder___blue)
+        Smokewinder___white = (3, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (3, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (3, Weapons.Smokewinder___orange)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (3, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+#ERRR <CLEAN>
+
+    class Pylon4:
+        Fuel_Tank_300_gallons_ = (4, Weapons.Fuel_Tank_300_gallons_)
+        Fuel_Tank_300_gallons__EMPTY__ = (4, Weapons.Fuel_Tank_300_gallons__EMPTY__)
+        Fuel_Tank_150_gallons = (4, Weapons.Fuel_Tank_150_gallons)
+        Fuel_Tank_150_gallons__EMPTY_ = (4, Weapons.Fuel_Tank_150_gallons__EMPTY_)
+        LAU_7_with_AIM_9B_Sidewinder_IR_AAM = (4, Weapons.LAU_7_with_AIM_9B_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P_Sidewinder_IR_AAM = (4, Weapons.LAU_7_with_AIM_9P_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P5_Sidewinder_IR_AAM = (4, Weapons.LAU_7_with_AIM_9P5_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_ = (4, Weapons.LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_)
+        LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_ = (4, Weapons.LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_)
+        LAU_7_with_AIM_9J_Sidewinder_IR_AAM = (4, Weapons.LAU_7_with_AIM_9J_Sidewinder_IR_AAM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (4, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (4, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (4, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_FFAR__UnGd_Rkts__Mk5__HEAT__TER___)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__M156__Wht_Phos__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts__Mk1__HE__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_FFAR__UnGd_Rkts_Mk5__HEAT__TER___)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M257__Para_Illum__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_M274__Practice_Smk__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk1__Practice__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER___)
+        _2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER___ = (4, Weapons._2_x_LAU_68_pod___7_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER___)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        _2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER___ = (4, Weapons._2_x_LAU_10_pod___4_x_127mm_ZUNI__UnGd_Rkts_MK_71__HE_FRAG__TER___)
+        LAU3_WP61 = (4, Weapons.LAU3_WP61)
+        LAU3_WP1B = (4, Weapons.LAU3_WP1B)
+        LAU3_HE5 = (4, Weapons.LAU3_HE5)
+        LAU3_WP156 = (4, Weapons.LAU3_WP156)
+        LAU3_HE151 = (4, Weapons.LAU3_HE151)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M151__HE__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_M156__Wht_Phos__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk5__HEAT__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_Mk61__Practice__TER___)
+        _2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER___ = (4, Weapons._2_x_LAU_3_pod___19_x_2_75_Hydra__UnGd_Rkts_WTU_1_B__Practice__TER___)
+        AGM_45A_Shrike_ARM = (4, Weapons.AGM_45A_Shrike_ARM)
+#ERRR {3E6B632D-65EB-44D2-9501-1C2D04515404}
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        Mk_81___250lb_GP_Bomb_LD = (4, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_81_Snakeye___250lb_GP_Bomb_HD = (4, Weapons.Mk_81_Snakeye___250lb_GP_Bomb_HD)
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (4, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (4, Weapons.M117___750lb_GP_Bomb_LD)
+        Mk_77_mod_0___750lb_Fire_Bomb_LD = (4, Weapons.Mk_77_mod_0___750lb_Fire_Bomb_LD)
+        Mk_77_mod_1___500lb_Fire_Bomb_LD = (4, Weapons.Mk_77_mod_1___500lb_Fire_Bomb_LD)
+        AN_M30A1___100lb_GP_Bomb_LD = (4, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (4, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (4, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M65___1000lb_GP_Bomb_LD = (4, Weapons.AN_M65___1000lb_GP_Bomb_LD)
+        AN_M81___260lb_GP_Bomb_LD = (4, Weapons.AN_M81___260lb_GP_Bomb_LD)
+        AN_M88___220lb_GP_Bomb_LD = (4, Weapons.AN_M88___220lb_GP_Bomb_LD)
+        CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE = (4, Weapons.CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE)
+        CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE = (4, Weapons.CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE)
+        CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE = (4, Weapons.CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE)
+        _2_x_CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE__TER__ = (4, Weapons._2_x_CBU_1_A_pod___19_x_tubes_of_Bomblets_BLU_4B_x_27__HE__TER__)
+        _2_x_CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER__ = (4, Weapons._2_x_CBU_2_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER__)
+        _2_x_CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER__ = (4, Weapons._2_x_CBU_2B_A_pod___19_x_tubes_of_Bomblets_BLU_3B_x_19__HE__TER__)
+        _2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER__ = (4, Weapons._2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets__TER__)
+        _5_x_Mk_81___250lb_GP_Bomb_LD__MER__ = (4, Weapons._5_x_Mk_81___250lb_GP_Bomb_LD__MER__)
+        _5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER__ = (4, Weapons._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER__)
+        _2_x_Mk_82___500lb_GP_Bomb_LD__TER__ = (4, Weapons._2_x_Mk_82___500lb_GP_Bomb_LD__TER__)
+        _2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER__ = (4, Weapons._2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD__TER__)
+        _5_x_AN_M57___250lb_GP_Bomb_LD__MER__ = (4, Weapons._5_x_AN_M57___250lb_GP_Bomb_LD__MER__)
+        _2_x_AN_M57___250lb_GP_Bomb_LD__TER__ = (4, Weapons._2_x_AN_M57___250lb_GP_Bomb_LD__TER__)
+        _5_x_AN_M81___260lb_GP_Bomb_LD__MER__ = (4, Weapons._5_x_AN_M81___260lb_GP_Bomb_LD__MER__)
+        _5_x_AN_M88___220lb_GP_Bomb_LD__MER__ = (4, Weapons._5_x_AN_M88___220lb_GP_Bomb_LD__MER__)
+        _5_x_BDU_33___25lb_Practice_Bomb_LD__MER__ = (4, Weapons._5_x_BDU_33___25lb_Practice_Bomb_LD__MER__)
+        Mk4_HIPEG___Gunpod = (4, Weapons.Mk4_HIPEG___Gunpod)
+        Smokewinder___red = (4, Weapons.Smokewinder___red)
+        Smokewinder___green = (4, Weapons.Smokewinder___green)
+        Smokewinder___blue = (4, Weapons.Smokewinder___blue)
+        Smokewinder___white = (4, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (4, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (4, Weapons.Smokewinder___orange)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (4, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+#ERRR <CLEAN>
+
+    class Pylon5:
+        LAU_7_with_AIM_9B_Sidewinder_IR_AAM = (5, Weapons.LAU_7_with_AIM_9B_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P_Sidewinder_IR_AAM = (5, Weapons.LAU_7_with_AIM_9P_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P5_Sidewinder_IR_AAM = (5, Weapons.LAU_7_with_AIM_9P5_Sidewinder_IR_AAM)
+        LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_ = (5, Weapons.LAU_7_with_AIM_9P3_Sidewinder_IR_AAM_)
+        LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_ = (5, Weapons.LAU_7_with_AN_ASQ_T50_TCTS_Pod___ACMI_Pod_)
+        LAU_7_with_AIM_9J_Sidewinder_IR_AAM = (5, Weapons.LAU_7_with_AIM_9J_Sidewinder_IR_AAM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (5, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU3_WP61 = (5, Weapons.LAU3_WP61)
+        LAU3_WP1B = (5, Weapons.LAU3_WP1B)
+        LAU3_HE5 = (5, Weapons.LAU3_HE5)
+        LAU3_WP156 = (5, Weapons.LAU3_WP156)
+        LAU3_HE151 = (5, Weapons.LAU3_HE151)
+        AGM_45A_Shrike_ARM = (5, Weapons.AGM_45A_Shrike_ARM)
+#ERRR {3E6B632D-65EB-44D2-9501-1C2D04515404}
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (5, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        Mk_81___250lb_GP_Bomb_LD = (5, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_81_Snakeye___250lb_GP_Bomb_HD = (5, Weapons.Mk_81_Snakeye___250lb_GP_Bomb_HD)
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (5, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_77_mod_1___500lb_Fire_Bomb_LD = (5, Weapons.Mk_77_mod_1___500lb_Fire_Bomb_LD)
+        AN_M30A1___100lb_GP_Bomb_LD = (5, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (5, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (5, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M81___260lb_GP_Bomb_LD = (5, Weapons.AN_M81___260lb_GP_Bomb_LD)
+        AN_M88___220lb_GP_Bomb_LD = (5, Weapons.AN_M88___220lb_GP_Bomb_LD)
+        Smokewinder___red = (5, Weapons.Smokewinder___red)
+        Smokewinder___green = (5, Weapons.Smokewinder___green)
+        Smokewinder___blue = (5, Weapons.Smokewinder___blue)
+        Smokewinder___white = (5, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (5, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (5, Weapons.Smokewinder___orange)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (5, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 4, 5}
+
+    tasks = [task.CAP, task.CAS, task.SEAD, task.Reconnaissance, task.GroundAttack, task.AFAC, task.RunwayAttack, task.AntishipStrike, task.Refueling, task.Escort]
+    task_default = task.CAS
+
+
+class Hercules(PlaneType):
+    id = "Hercules"
+    flyable = True
+    height = 11.84
+    width = 40.41
+    length = 34.36
+    fuel_max = 19759
+    max_speed = 669.6
+    chaff = 840
+    flare = 840
+    charge_total = 1680
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    radio_frequency = 305
+
+    panel_radio = {
+        1: {
+            "channels": {
+                1: 305,
+                2: 264,
+                4: 256,
+                8: 257,
+                16: 261,
+                17: 267,
+                9: 255,
+                18: 251,
+                5: 254,
+                10: 262,
+                20: 266,
+                11: 259,
+                3: 265,
+                6: 250,
+                12: 252,
+                13: 269,
+                7: 270,
+                14: 260,
+                19: 253,
+                15: 263
+            },
+        },
+    }
+
+    livery_name = "HERCULES"  # from type
+
+    class Pylon1:
+        Herc_JATO = (1, Weapons.Herc_JATO)
+
+    class Pylon2:
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (2, Weapons.Smokewinder___orange)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        Herc_Ext_Fuel_Tank = (2, Weapons.Herc_Ext_Fuel_Tank)
+
+    class Pylon3:
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        Smokewinder___red = (3, Weapons.Smokewinder___red)
+        Smokewinder___green = (3, Weapons.Smokewinder___green)
+        Smokewinder___blue = (3, Weapons.Smokewinder___blue)
+        Smokewinder___white = (3, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (3, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (3, Weapons.Smokewinder___orange)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        Herc_Ext_Fuel_Tank = (3, Weapons.Herc_Ext_Fuel_Tank)
+
+    class Pylon4:
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        Smokewinder___red = (4, Weapons.Smokewinder___red)
+        Smokewinder___green = (4, Weapons.Smokewinder___green)
+        Smokewinder___blue = (4, Weapons.Smokewinder___blue)
+        Smokewinder___white = (4, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (4, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (4, Weapons.Smokewinder___orange)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        Herc_Ext_Fuel_Tank = (4, Weapons.Herc_Ext_Fuel_Tank)
+
+    class Pylon5:
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        Smokewinder___red = (5, Weapons.Smokewinder___red)
+        Smokewinder___green = (5, Weapons.Smokewinder___green)
+        Smokewinder___blue = (5, Weapons.Smokewinder___blue)
+        Smokewinder___white = (5, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (5, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (5, Weapons.Smokewinder___orange)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (5, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        Herc_Ext_Fuel_Tank = (5, Weapons.Herc_Ext_Fuel_Tank)
+
+    class Pylon6:
+        M61_Vulcan_Rotary_Cannon__20mm_ = (6, Weapons.M61_Vulcan_Rotary_Cannon__20mm_)
+
+    class Pylon7:
+        GAU_23A_Chain_Gun__30mm_ = (7, Weapons.GAU_23A_Chain_Gun__30mm_)
+
+    class Pylon8:
+        _105mm_Howitzer = (8, Weapons._105mm_Howitzer)
+
+    class Pylon9:
+        Herc_BattleStation = (9, Weapons.Herc_BattleStation)
+        Herc_BattleStation_TGP = (9, Weapons.Herc_BattleStation_TGP)
+
+    class Pylon10:
+        Herc_Ammo_AGM_65D_missiles = (10, Weapons.Herc_Ammo_AGM_65D_missiles)
+        Herc_Ammo_AGM_65H_missiles = (10, Weapons.Herc_Ammo_AGM_65H_missiles)
+        Herc_Ammo_AGM_65G_missiles = (10, Weapons.Herc_Ammo_AGM_65G_missiles)
+        Herc_Ammo_AGM_65E_missiles = (10, Weapons.Herc_Ammo_AGM_65E_missiles)
+        Herc_Ammo_AGM_88C_missiles = (10, Weapons.Herc_Ammo_AGM_88C_missiles)
+        Herc_Ammo_AGM_65K_missiles = (10, Weapons.Herc_Ammo_AGM_65K_missiles)
+        Herc_Ammo_Vikhr_missiles = (10, Weapons.Herc_Ammo_Vikhr_missiles)
+        Herc_Ammo_AGM_84A_missiles = (10, Weapons.Herc_Ammo_AGM_84A_missiles)
+        Herc_Ammo_AGM_84E_missiles = (10, Weapons.Herc_Ammo_AGM_84E_missiles)
+        Herc_Ammo_KH25ML_missiles = (10, Weapons.Herc_Ammo_KH25ML_missiles)
+        Herc_Ammo_KH25MPU_missiles = (10, Weapons.Herc_Ammo_KH25MPU_missiles)
+        Herc_Ammo_KH29T_missiles = (10, Weapons.Herc_Ammo_KH29T_missiles)
+        Herc_Ammo_KH29L_missiles = (10, Weapons.Herc_Ammo_KH29L_missiles)
+        Herc_Ammo_KH58U_missiles = (10, Weapons.Herc_Ammo_KH58U_missiles)
+        Herc_Ammo_S24B_missiles = (10, Weapons.Herc_Ammo_S24B_missiles)
+        Herc_Ammo_S25OFM_missiles = (10, Weapons.Herc_Ammo_S25OFM_missiles)
+        Herc_Ammo_S25L_missiles = (10, Weapons.Herc_Ammo_S25L_missiles)
+        Herc_Ammo_TOW_missiles = (10, Weapons.Herc_Ammo_TOW_missiles)
+        Herc_Ammo_GBU_10_bombs = (10, Weapons.Herc_Ammo_GBU_10_bombs)
+        Herc_Ammo_GBU_12_bombs = (10, Weapons.Herc_Ammo_GBU_12_bombs)
+        Herc_Ammo_GBU_16_bombs = (10, Weapons.Herc_Ammo_GBU_16_bombs)
+        Herc_Ammo_GBU_31_VB_bombs = (10, Weapons.Herc_Ammo_GBU_31_VB_bombs)
+        Herc_Ammo_GBU_31_V3B_bombs = (10, Weapons.Herc_Ammo_GBU_31_V3B_bombs)
+        Herc_Ammo_GBU_38_bombs = (10, Weapons.Herc_Ammo_GBU_38_bombs)
+        Herc_Ammo_CBU_87_bombs = (10, Weapons.Herc_Ammo_CBU_87_bombs)
+        Herc_Ammo_CBU_97_bombs = (10, Weapons.Herc_Ammo_CBU_97_bombs)
+        Herc_Ammo_CBU_103_bombs = (10, Weapons.Herc_Ammo_CBU_103_bombs)
+        Herc_Ammo_CBU_105_bombs = (10, Weapons.Herc_Ammo_CBU_105_bombs)
+        Herc_Ammo_Mk_82_bombs = (10, Weapons.Herc_Ammo_Mk_82_bombs)
+        Herc_Ammo_Mk_82AIR_bombs = (10, Weapons.Herc_Ammo_Mk_82AIR_bombs)
+        Herc_Ammo_Mk_82Snake_bombs = (10, Weapons.Herc_Ammo_Mk_82Snake_bombs)
+        Herc_Ammo_Mk_83_bombs = (10, Weapons.Herc_Ammo_Mk_83_bombs)
+        Herc_Ammo_Mk_84_bombs = (10, Weapons.Herc_Ammo_Mk_84_bombs)
+        Herc_Ammo_FAB100_bombs = (10, Weapons.Herc_Ammo_FAB100_bombs)
+        Herc_Ammo_FAB250_bombs = (10, Weapons.Herc_Ammo_FAB250_bombs)
+        Herc_Ammo_FAB500_bombs = (10, Weapons.Herc_Ammo_FAB500_bombs)
+        Herc_Ammo_BETAB500_bombs = (10, Weapons.Herc_Ammo_BETAB500_bombs)
+        Herc_Ammo_BETAB500SP_bombs = (10, Weapons.Herc_Ammo_BETAB500SP_bombs)
+        Herc_Ammo_KAB500KR_bombs = (10, Weapons.Herc_Ammo_KAB500KR_bombs)
+        Herc_Ammo_RBK250PTAB25M_bombs = (10, Weapons.Herc_Ammo_RBK250PTAB25M_bombs)
+        Herc_Ammo_RBK500255PTAB105_bombs = (10, Weapons.Herc_Ammo_RBK500255PTAB105_bombs)
+        Herc_Ammo_RBK500PTAB1M_bombs = (10, Weapons.Herc_Ammo_RBK500PTAB1M_bombs)
+#ERRR Herc_Ammo_Herc_Ammo_M117_bombs_bombs
+        Herc_Ammo_KMGU296AO25RT_bombs = (10, Weapons.Herc_Ammo_KMGU296AO25RT_bombs)
+        Herc_Ammo_KMGU296AO25KO_bombs = (10, Weapons.Herc_Ammo_KMGU296AO25KO_bombs)
+        Herc_Ammo_MK20_bombs = (10, Weapons.Herc_Ammo_MK20_bombs)
+        Herc_Ammo_SAB100_bombs = (10, Weapons.Herc_Ammo_SAB100_bombs)
+        Herc_Ammo_hydra_HE_rockets = (10, Weapons.Herc_Ammo_hydra_HE_rockets)
+        Herc_Ammo_hydra_WP_rockets = (10, Weapons.Herc_Ammo_hydra_WP_rockets)
+        Herc_Ammo_AIM9M_missiles = (10, Weapons.Herc_Ammo_AIM9M_missiles)
+        Herc_Ammo_AIM9P5_missiles = (10, Weapons.Herc_Ammo_AIM9P5_missiles)
+        Herc_Ammo_AIM9X_missiles = (10, Weapons.Herc_Ammo_AIM9X_missiles)
+        Herc_Ammo_AIM7M_missiles = (10, Weapons.Herc_Ammo_AIM7M_missiles)
+        Herc_Ammo_AIM120B_missiles = (10, Weapons.Herc_Ammo_AIM120B_missiles)
+        Herc_Ammo_AIM120C_missiles = (10, Weapons.Herc_Ammo_AIM120C_missiles)
+        Herc_Ammo_R60M_missiles = (10, Weapons.Herc_Ammo_R60M_missiles)
+        Herc_Ammo_MAGIC2_missiles = (10, Weapons.Herc_Ammo_MAGIC2_missiles)
+        Herc_Ammo_R27R_missiles = (10, Weapons.Herc_Ammo_R27R_missiles)
+        Herc_Ammo_R27ER_missiles = (10, Weapons.Herc_Ammo_R27ER_missiles)
+        Herc_Ammo_R27T_missiles = (10, Weapons.Herc_Ammo_R27T_missiles)
+        Herc_Ammo_R27ET_missiles = (10, Weapons.Herc_Ammo_R27ET_missiles)
+#ERRR Herc_Ammo_R27_missiles
+        Herc_Ammo_S530D_missiles = (10, Weapons.Herc_Ammo_S530D_missiles)
+        Herc_Ammo_AIM54C_missiles = (10, Weapons.Herc_Ammo_AIM54C_missiles)
+        Herc_APC_M1043_HMMWV_Armament_Air = (10, Weapons.Herc_APC_M1043_HMMWV_Armament_Air)
+        Herc_ATGM_M1045_HMMWV_TOW_Air = (10, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Air)
+        Herc_APC_M1025_HMMWV_Air = (10, Weapons.Herc_APC_M1025_HMMWV_Air)
+        Herc_SAM_M1097_HMMWV_Air = (10, Weapons.Herc_SAM_M1097_HMMWV_Air)
+        Herc_APC_COBRA_Air = (10, Weapons.Herc_APC_COBRA_Air)
+        Herc_APC_COBRA_Skid = (10, Weapons.Herc_APC_COBRA_Skid)
+        Herc_ARV_BRDM_2_Air = (10, Weapons.Herc_ARV_BRDM_2_Air)
+        Herc_TIGR_233036_Air = (10, Weapons.Herc_TIGR_233036_Air)
+        Herc_IFV_BMD1_Air = (10, Weapons.Herc_IFV_BMD1_Air)
+        Herc_IFV_BTRD_Air = (10, Weapons.Herc_IFV_BTRD_Air)
+        Herc_ART_NONA_Air = (10, Weapons.Herc_ART_NONA_Air)
+        Herc_APC_M1043_HMMWV_Armament_Skid = (10, Weapons.Herc_APC_M1043_HMMWV_Armament_Skid)
+        Herc_ATGM_M1045_HMMWV_TOW_Skid = (10, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Skid)
+        Herc_APC_M1025_HMMWV_Skid = (10, Weapons.Herc_APC_M1025_HMMWV_Skid)
+        Herc_SAM_M1097_HMMWV_Skid = (10, Weapons.Herc_SAM_M1097_HMMWV_Skid)
+        Herc_ARV_BRDM_2_Skid = (10, Weapons.Herc_ARV_BRDM_2_Skid)
+        Herc_TIGR_233036_Skid = (10, Weapons.Herc_TIGR_233036_Skid)
+        Herc_IFV_BMD1_Skid = (10, Weapons.Herc_IFV_BMD1_Skid)
+        Herc_IFV_BTRD_Skid = (10, Weapons.Herc_IFV_BTRD_Skid)
+        Herc_ART_NONA_Skid = (10, Weapons.Herc_ART_NONA_Skid)
+        Herc_GEN_CRATE = (10, Weapons.Herc_GEN_CRATE)
+        Herc_UAZ_469_Air = (10, Weapons.Herc_UAZ_469_Air)
+        Herc_UAZ_469_Skid = (10, Weapons.Herc_UAZ_469_Skid)
+
+    class Pylon11:
+        Herc_Ammo_AGM_65D_missiles = (11, Weapons.Herc_Ammo_AGM_65D_missiles)
+        Herc_Ammo_AGM_65H_missiles = (11, Weapons.Herc_Ammo_AGM_65H_missiles)
+        Herc_Ammo_AGM_65G_missiles = (11, Weapons.Herc_Ammo_AGM_65G_missiles)
+        Herc_Ammo_AGM_65E_missiles = (11, Weapons.Herc_Ammo_AGM_65E_missiles)
+        Herc_Ammo_AGM_88C_missiles = (11, Weapons.Herc_Ammo_AGM_88C_missiles)
+        Herc_Ammo_AGM_65K_missiles = (11, Weapons.Herc_Ammo_AGM_65K_missiles)
+        Herc_Ammo_Vikhr_missiles = (11, Weapons.Herc_Ammo_Vikhr_missiles)
+        Herc_Ammo_AGM_84A_missiles = (11, Weapons.Herc_Ammo_AGM_84A_missiles)
+        Herc_Ammo_AGM_84E_missiles = (11, Weapons.Herc_Ammo_AGM_84E_missiles)
+        Herc_Ammo_KH25ML_missiles = (11, Weapons.Herc_Ammo_KH25ML_missiles)
+        Herc_Ammo_KH25MPU_missiles = (11, Weapons.Herc_Ammo_KH25MPU_missiles)
+        Herc_Ammo_KH29T_missiles = (11, Weapons.Herc_Ammo_KH29T_missiles)
+        Herc_Ammo_KH29L_missiles = (11, Weapons.Herc_Ammo_KH29L_missiles)
+        Herc_Ammo_KH58U_missiles = (11, Weapons.Herc_Ammo_KH58U_missiles)
+        Herc_Ammo_S24B_missiles = (11, Weapons.Herc_Ammo_S24B_missiles)
+        Herc_Ammo_S25OFM_missiles = (11, Weapons.Herc_Ammo_S25OFM_missiles)
+        Herc_Ammo_S25L_missiles = (11, Weapons.Herc_Ammo_S25L_missiles)
+        Herc_Ammo_TOW_missiles = (11, Weapons.Herc_Ammo_TOW_missiles)
+        Herc_GBU_43_B_MOAB_ = (11, Weapons.Herc_GBU_43_B_MOAB_)
+        Herc_Ammo_GBU_10_bombs = (11, Weapons.Herc_Ammo_GBU_10_bombs)
+        Herc_Ammo_GBU_12_bombs = (11, Weapons.Herc_Ammo_GBU_12_bombs)
+        Herc_Ammo_GBU_16_bombs = (11, Weapons.Herc_Ammo_GBU_16_bombs)
+        Herc_Ammo_GBU_31_VB_bombs = (11, Weapons.Herc_Ammo_GBU_31_VB_bombs)
+        Herc_Ammo_GBU_31_V3B_bombs = (11, Weapons.Herc_Ammo_GBU_31_V3B_bombs)
+        Herc_Ammo_GBU_38_bombs = (11, Weapons.Herc_Ammo_GBU_38_bombs)
+        Herc_Ammo_CBU_87_bombs = (11, Weapons.Herc_Ammo_CBU_87_bombs)
+        Herc_Ammo_CBU_97_bombs = (11, Weapons.Herc_Ammo_CBU_97_bombs)
+        Herc_Ammo_CBU_103_bombs = (11, Weapons.Herc_Ammo_CBU_103_bombs)
+        Herc_Ammo_CBU_105_bombs = (11, Weapons.Herc_Ammo_CBU_105_bombs)
+        Herc_Ammo_Mk_82_bombs = (11, Weapons.Herc_Ammo_Mk_82_bombs)
+        Herc_Ammo_Mk_82AIR_bombs = (11, Weapons.Herc_Ammo_Mk_82AIR_bombs)
+        Herc_Ammo_Mk_82Snake_bombs = (11, Weapons.Herc_Ammo_Mk_82Snake_bombs)
+        Herc_Ammo_Mk_83_bombs = (11, Weapons.Herc_Ammo_Mk_83_bombs)
+        Herc_Ammo_Mk_84_bombs = (11, Weapons.Herc_Ammo_Mk_84_bombs)
+        Herc_Ammo_FAB100_bombs = (11, Weapons.Herc_Ammo_FAB100_bombs)
+        Herc_Ammo_FAB250_bombs = (11, Weapons.Herc_Ammo_FAB250_bombs)
+        Herc_Ammo_FAB500_bombs = (11, Weapons.Herc_Ammo_FAB500_bombs)
+        Herc_Ammo_BETAB500_bombs = (11, Weapons.Herc_Ammo_BETAB500_bombs)
+        Herc_Ammo_BETAB500SP_bombs = (11, Weapons.Herc_Ammo_BETAB500SP_bombs)
+        Herc_Ammo_KAB500KR_bombs = (11, Weapons.Herc_Ammo_KAB500KR_bombs)
+        Herc_Ammo_RBK250PTAB25M_bombs = (11, Weapons.Herc_Ammo_RBK250PTAB25M_bombs)
+        Herc_Ammo_RBK500255PTAB105_bombs = (11, Weapons.Herc_Ammo_RBK500255PTAB105_bombs)
+        Herc_Ammo_RBK500PTAB1M_bombs = (11, Weapons.Herc_Ammo_RBK500PTAB1M_bombs)
+#ERRR Herc_Ammo_Herc_Ammo_M117_bombs_bombs
+        Herc_Ammo_KMGU296AO25RT_bombs = (11, Weapons.Herc_Ammo_KMGU296AO25RT_bombs)
+        Herc_Ammo_KMGU296AO25KO_bombs = (11, Weapons.Herc_Ammo_KMGU296AO25KO_bombs)
+        Herc_Ammo_MK20_bombs = (11, Weapons.Herc_Ammo_MK20_bombs)
+        Herc_Ammo_SAB100_bombs = (11, Weapons.Herc_Ammo_SAB100_bombs)
+        Herc_Ammo_hydra_HE_rockets = (11, Weapons.Herc_Ammo_hydra_HE_rockets)
+        Herc_Ammo_hydra_WP_rockets = (11, Weapons.Herc_Ammo_hydra_WP_rockets)
+        Herc_Ammo_AIM9M_missiles = (11, Weapons.Herc_Ammo_AIM9M_missiles)
+        Herc_Ammo_AIM9P5_missiles = (11, Weapons.Herc_Ammo_AIM9P5_missiles)
+        Herc_Ammo_AIM9X_missiles = (11, Weapons.Herc_Ammo_AIM9X_missiles)
+        Herc_Ammo_AIM7M_missiles = (11, Weapons.Herc_Ammo_AIM7M_missiles)
+        Herc_Ammo_AIM120B_missiles = (11, Weapons.Herc_Ammo_AIM120B_missiles)
+        Herc_Ammo_AIM120C_missiles = (11, Weapons.Herc_Ammo_AIM120C_missiles)
+        Herc_Ammo_R60M_missiles = (11, Weapons.Herc_Ammo_R60M_missiles)
+        Herc_Ammo_MAGIC2_missiles = (11, Weapons.Herc_Ammo_MAGIC2_missiles)
+        Herc_Ammo_R27R_missiles = (11, Weapons.Herc_Ammo_R27R_missiles)
+        Herc_Ammo_R27ER_missiles = (11, Weapons.Herc_Ammo_R27ER_missiles)
+        Herc_Ammo_R27T_missiles = (11, Weapons.Herc_Ammo_R27T_missiles)
+        Herc_Ammo_R27ET_missiles = (11, Weapons.Herc_Ammo_R27ET_missiles)
+#ERRR Herc_Ammo_R27_missiles
+        Herc_Ammo_S530D_missiles = (11, Weapons.Herc_Ammo_S530D_missiles)
+        Herc_Ammo_AIM54C_missiles = (11, Weapons.Herc_Ammo_AIM54C_missiles)
+        Herc_APC_M1043_HMMWV_Armament_Air = (11, Weapons.Herc_APC_M1043_HMMWV_Armament_Air)
+        Herc_APC_M1043_HMMWV_Armament_Skid = (11, Weapons.Herc_APC_M1043_HMMWV_Armament_Skid)
+        Herc_ATGM_M1045_HMMWV_TOW_Air = (11, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Air)
+        Herc_ATGM_M1045_HMMWV_TOW_Skid = (11, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Skid)
+        Herc_AAA_Vulcan_M163_Air = (11, Weapons.Herc_AAA_Vulcan_M163_Air)
+        Herc_AAA_Vulcan_M163_Skid = (11, Weapons.Herc_AAA_Vulcan_M163_Skid)
+        Herc_SPG_M1126_Stryker_ICV = (11, Weapons.Herc_SPG_M1126_Stryker_ICV)
+        Herc_SPG_M1128_Stryker_MGS = (11, Weapons.Herc_SPG_M1128_Stryker_MGS)
+        Herc_ATGM_M1134_Stryker = (11, Weapons.Herc_ATGM_M1134_Stryker)
+        Herc_APC_LAV_25_Air = (11, Weapons.Herc_APC_LAV_25_Air)
+        Herc_APC_LAV_25_Skid = (11, Weapons.Herc_APC_LAV_25_Skid)
+        Herc_SAM_M1097_HMMWV_Air = (11, Weapons.Herc_SAM_M1097_HMMWV_Air)
+        Herc_SAM_M1097_HMMWV_Skid = (11, Weapons.Herc_SAM_M1097_HMMWV_Skid)
+        Herc_APC_COBRA_Air = (11, Weapons.Herc_APC_COBRA_Air)
+        Herc_APC_COBRA_Skid = (11, Weapons.Herc_APC_COBRA_Skid)
+        Herc_APC_M113_Air = (11, Weapons.Herc_APC_M113_Air)
+        Herc_APC_M113_Skid = (11, Weapons.Herc_APC_M113_Skid)
+        Herc_Tanker_HEMTT = (11, Weapons.Herc_Tanker_HEMTT)
+        Herc_HEMTT_TFFT = (11, Weapons.Herc_HEMTT_TFFT)
+        Herc_IFV_M2A2_Bradley = (11, Weapons.Herc_IFV_M2A2_Bradley)
+        Herc_IFV_MCV80_Warrior = (11, Weapons.Herc_IFV_MCV80_Warrior)
+        Herc_IFV_BMP_1 = (11, Weapons.Herc_IFV_BMP_1)
+        Herc_IFV_BMP_2 = (11, Weapons.Herc_IFV_BMP_2)
+        Herc_IFV_BMP_3 = (11, Weapons.Herc_IFV_BMP_3)
+        Herc_ARV_BRDM_2_Air = (11, Weapons.Herc_ARV_BRDM_2_Air)
+        Herc_ARV_BRDM_2_Skid = (11, Weapons.Herc_ARV_BRDM_2_Skid)
+        Herc_APC_BTR_80_Air = (11, Weapons.Herc_APC_BTR_80_Air)
+        Herc_APC_BTR_80_Skid = (11, Weapons.Herc_APC_BTR_80_Skid)
+        Herc_SAM_ROLAND_ADS = (11, Weapons.Herc_SAM_ROLAND_ADS)
+        Herc_SAM_ROLAND_LN = (11, Weapons.Herc_SAM_ROLAND_LN)
+        Herc_SAM_13 = (11, Weapons.Herc_SAM_13)
+        Herc_ZSU_23_4 = (11, Weapons.Herc_ZSU_23_4)
+        Herc_SAM_19 = (11, Weapons.Herc_SAM_19)
+        Herc_URAL_375 = (11, Weapons.Herc_URAL_375)
+        Herc_M_818 = (11, Weapons.Herc_M_818)
+        Herc_SAM_CHAPARRAL_Air = (11, Weapons.Herc_SAM_CHAPARRAL_Air)
+        Herc_SAM_CHAPARRAL_Skid = (11, Weapons.Herc_SAM_CHAPARRAL_Skid)
+        Herc_SAM_LINEBACKER = (11, Weapons.Herc_SAM_LINEBACKER)
+        Herc_IFV_MARDER = (11, Weapons.Herc_IFV_MARDER)
+        Herc_IFV_TPZ = (11, Weapons.Herc_IFV_TPZ)
+        Herc_IFV_BMD1_Air = (11, Weapons.Herc_IFV_BMD1_Air)
+        Herc_IFV_BMD1_Skid = (11, Weapons.Herc_IFV_BMD1_Skid)
+        Herc_IFV_BTRD_Air = (11, Weapons.Herc_IFV_BTRD_Air)
+        Herc_IFV_BTRD_Skid = (11, Weapons.Herc_IFV_BTRD_Skid)
+        Herc_ART_GVOZDIKA = (11, Weapons.Herc_ART_GVOZDIKA)
+        Herc_ART_NONA_Air = (11, Weapons.Herc_ART_NONA_Air)
+        Herc_ART_NONA_Skid = (11, Weapons.Herc_ART_NONA_Skid)
+        Herc_APC_MTLB_Air = (11, Weapons.Herc_APC_MTLB_Air)
+        Herc_APC_MTLB_Skid = (11, Weapons.Herc_APC_MTLB_Skid)
+        Herc_GEN_CRATE = (11, Weapons.Herc_GEN_CRATE)
+        Herc_EWR_SBORKA_Air = (11, Weapons.Herc_EWR_SBORKA_Air)
+        Herc_EWR_SBORKA_Skid = (11, Weapons.Herc_EWR_SBORKA_Skid)
+        Herc_APC_BTR_82A_Air = (11, Weapons.Herc_APC_BTR_82A_Air)
+        Herc_APC_BTR_82A_Skid = (11, Weapons.Herc_APC_BTR_82A_Skid)
+
+    class Pylon12:
+        Herc_Soldier_Squad = (12, Weapons.Herc_Soldier_Squad)
+        Herc_Ammo_AGM_65D_missiles = (12, Weapons.Herc_Ammo_AGM_65D_missiles)
+        Herc_Ammo_AGM_65H_missiles = (12, Weapons.Herc_Ammo_AGM_65H_missiles)
+        Herc_Ammo_AGM_65G_missiles = (12, Weapons.Herc_Ammo_AGM_65G_missiles)
+        Herc_Ammo_AGM_65E_missiles = (12, Weapons.Herc_Ammo_AGM_65E_missiles)
+        Herc_Ammo_AGM_88C_missiles = (12, Weapons.Herc_Ammo_AGM_88C_missiles)
+        Herc_Ammo_AGM_65K_missiles = (12, Weapons.Herc_Ammo_AGM_65K_missiles)
+        Herc_Ammo_Vikhr_missiles = (12, Weapons.Herc_Ammo_Vikhr_missiles)
+        Herc_Ammo_AGM_84A_missiles = (12, Weapons.Herc_Ammo_AGM_84A_missiles)
+        Herc_Ammo_AGM_84E_missiles = (12, Weapons.Herc_Ammo_AGM_84E_missiles)
+        Herc_Ammo_KH25ML_missiles = (12, Weapons.Herc_Ammo_KH25ML_missiles)
+        Herc_Ammo_KH25MPU_missiles = (12, Weapons.Herc_Ammo_KH25MPU_missiles)
+        Herc_Ammo_KH29T_missiles = (12, Weapons.Herc_Ammo_KH29T_missiles)
+        Herc_Ammo_KH29L_missiles = (12, Weapons.Herc_Ammo_KH29L_missiles)
+        Herc_Ammo_KH58U_missiles = (12, Weapons.Herc_Ammo_KH58U_missiles)
+        Herc_Ammo_S24B_missiles = (12, Weapons.Herc_Ammo_S24B_missiles)
+        Herc_Ammo_S25OFM_missiles = (12, Weapons.Herc_Ammo_S25OFM_missiles)
+        Herc_Ammo_S25L_missiles = (12, Weapons.Herc_Ammo_S25L_missiles)
+        Herc_Ammo_TOW_missiles = (12, Weapons.Herc_Ammo_TOW_missiles)
+        Herc_Ammo_GBU_10_bombs = (12, Weapons.Herc_Ammo_GBU_10_bombs)
+        Herc_Ammo_GBU_12_bombs = (12, Weapons.Herc_Ammo_GBU_12_bombs)
+        Herc_Ammo_GBU_16_bombs = (12, Weapons.Herc_Ammo_GBU_16_bombs)
+        Herc_Ammo_GBU_31_VB_bombs = (12, Weapons.Herc_Ammo_GBU_31_VB_bombs)
+        Herc_Ammo_GBU_31_V3B_bombs = (12, Weapons.Herc_Ammo_GBU_31_V3B_bombs)
+        Herc_Ammo_GBU_38_bombs = (12, Weapons.Herc_Ammo_GBU_38_bombs)
+        Herc_Ammo_CBU_87_bombs = (12, Weapons.Herc_Ammo_CBU_87_bombs)
+        Herc_Ammo_CBU_97_bombs = (12, Weapons.Herc_Ammo_CBU_97_bombs)
+        Herc_Ammo_CBU_103_bombs = (12, Weapons.Herc_Ammo_CBU_103_bombs)
+        Herc_Ammo_CBU_105_bombs = (12, Weapons.Herc_Ammo_CBU_105_bombs)
+        Herc_Ammo_Mk_82_bombs = (12, Weapons.Herc_Ammo_Mk_82_bombs)
+        Herc_Ammo_Mk_82AIR_bombs = (12, Weapons.Herc_Ammo_Mk_82AIR_bombs)
+        Herc_Ammo_Mk_82Snake_bombs = (12, Weapons.Herc_Ammo_Mk_82Snake_bombs)
+        Herc_Ammo_Mk_83_bombs = (12, Weapons.Herc_Ammo_Mk_83_bombs)
+        Herc_Ammo_Mk_84_bombs = (12, Weapons.Herc_Ammo_Mk_84_bombs)
+        Herc_Ammo_FAB100_bombs = (12, Weapons.Herc_Ammo_FAB100_bombs)
+        Herc_Ammo_FAB250_bombs = (12, Weapons.Herc_Ammo_FAB250_bombs)
+        Herc_Ammo_FAB500_bombs = (12, Weapons.Herc_Ammo_FAB500_bombs)
+        Herc_Ammo_BETAB500_bombs = (12, Weapons.Herc_Ammo_BETAB500_bombs)
+        Herc_Ammo_BETAB500SP_bombs = (12, Weapons.Herc_Ammo_BETAB500SP_bombs)
+        Herc_Ammo_KAB500KR_bombs = (12, Weapons.Herc_Ammo_KAB500KR_bombs)
+        Herc_Ammo_RBK250PTAB25M_bombs = (12, Weapons.Herc_Ammo_RBK250PTAB25M_bombs)
+        Herc_Ammo_RBK500255PTAB105_bombs = (12, Weapons.Herc_Ammo_RBK500255PTAB105_bombs)
+        Herc_Ammo_RBK500PTAB1M_bombs = (12, Weapons.Herc_Ammo_RBK500PTAB1M_bombs)
+#ERRR Herc_Ammo_Herc_Ammo_M117_bombs_bombs
+        Herc_Ammo_KMGU296AO25RT_bombs = (12, Weapons.Herc_Ammo_KMGU296AO25RT_bombs)
+        Herc_Ammo_KMGU296AO25KO_bombs = (12, Weapons.Herc_Ammo_KMGU296AO25KO_bombs)
+        Herc_Ammo_MK20_bombs = (12, Weapons.Herc_Ammo_MK20_bombs)
+        Herc_Ammo_SAB100_bombs = (12, Weapons.Herc_Ammo_SAB100_bombs)
+        Herc_Ammo_hydra_HE_rockets = (12, Weapons.Herc_Ammo_hydra_HE_rockets)
+        Herc_Ammo_hydra_WP_rockets = (12, Weapons.Herc_Ammo_hydra_WP_rockets)
+        Herc_Ammo_AIM9M_missiles = (12, Weapons.Herc_Ammo_AIM9M_missiles)
+        Herc_Ammo_AIM9P5_missiles = (12, Weapons.Herc_Ammo_AIM9P5_missiles)
+        Herc_Ammo_AIM9X_missiles = (12, Weapons.Herc_Ammo_AIM9X_missiles)
+        Herc_Ammo_AIM7M_missiles = (12, Weapons.Herc_Ammo_AIM7M_missiles)
+        Herc_Ammo_AIM120B_missiles = (12, Weapons.Herc_Ammo_AIM120B_missiles)
+        Herc_Ammo_AIM120C_missiles = (12, Weapons.Herc_Ammo_AIM120C_missiles)
+        Herc_Ammo_R60M_missiles = (12, Weapons.Herc_Ammo_R60M_missiles)
+        Herc_Ammo_MAGIC2_missiles = (12, Weapons.Herc_Ammo_MAGIC2_missiles)
+        Herc_Ammo_R27R_missiles = (12, Weapons.Herc_Ammo_R27R_missiles)
+        Herc_Ammo_R27ER_missiles = (12, Weapons.Herc_Ammo_R27ER_missiles)
+        Herc_Ammo_R27T_missiles = (12, Weapons.Herc_Ammo_R27T_missiles)
+        Herc_Ammo_R27ET_missiles = (12, Weapons.Herc_Ammo_R27ET_missiles)
+#ERRR Herc_Ammo_R27_missiles
+        Herc_Ammo_S530D_missiles = (12, Weapons.Herc_Ammo_S530D_missiles)
+        Herc_Ammo_AIM54C_missiles = (12, Weapons.Herc_Ammo_AIM54C_missiles)
+        Herc_APC_M1043_HMMWV_Armament_Air = (12, Weapons.Herc_APC_M1043_HMMWV_Armament_Air)
+        Herc_APC_M1043_HMMWV_Armament_Skid = (12, Weapons.Herc_APC_M1043_HMMWV_Armament_Skid)
+        Herc_ATGM_M1045_HMMWV_TOW_Air = (12, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Air)
+        Herc_ATGM_M1045_HMMWV_TOW_Skid = (12, Weapons.Herc_ATGM_M1045_HMMWV_TOW_Skid)
+        Herc_AAA_Vulcan_M163_Air = (12, Weapons.Herc_AAA_Vulcan_M163_Air)
+        Herc_AAA_Vulcan_M163_Skid = (12, Weapons.Herc_AAA_Vulcan_M163_Skid)
+        Herc_APC_LAV_25_Air = (12, Weapons.Herc_APC_LAV_25_Air)
+        Herc_APC_LAV_25_Skid = (12, Weapons.Herc_APC_LAV_25_Skid)
+        Herc_APC_M1025_HMMWV_Air = (12, Weapons.Herc_APC_M1025_HMMWV_Air)
+        Herc_APC_M1025_HMMWV_Skid = (12, Weapons.Herc_APC_M1025_HMMWV_Skid)
+        Herc_SAM_M1097_HMMWV_Air = (12, Weapons.Herc_SAM_M1097_HMMWV_Air)
+        Herc_SAM_M1097_HMMWV_Skid = (12, Weapons.Herc_SAM_M1097_HMMWV_Skid)
+        Herc_APC_COBRA_Air = (12, Weapons.Herc_APC_COBRA_Air)
+        Herc_APC_COBRA_Skid = (12, Weapons.Herc_APC_COBRA_Skid)
+        Herc_APC_M113_Air = (12, Weapons.Herc_APC_M113_Air)
+        Herc_APC_M113_Skid = (12, Weapons.Herc_APC_M113_Skid)
+        Herc_IFV_BMP_1 = (12, Weapons.Herc_IFV_BMP_1)
+        Herc_ARV_BRDM_2_Air = (12, Weapons.Herc_ARV_BRDM_2_Air)
+        Herc_ARV_BRDM_2_Skid = (12, Weapons.Herc_ARV_BRDM_2_Skid)
+        Herc_APC_BTR_80_Air = (12, Weapons.Herc_APC_BTR_80_Air)
+        Herc_APC_BTR_80_Skid = (12, Weapons.Herc_APC_BTR_80_Skid)
+        Herc_SAM_13 = (12, Weapons.Herc_SAM_13)
+        Herc_UAZ_469_Air = (12, Weapons.Herc_UAZ_469_Air)
+        Herc_UAZ_469_Skid = (12, Weapons.Herc_UAZ_469_Skid)
+        Herc_M_818 = (12, Weapons.Herc_M_818)
+        Herc_TIGR_233036_Air = (12, Weapons.Herc_TIGR_233036_Air)
+        Herc_TIGR_233036_Skid = (12, Weapons.Herc_TIGR_233036_Skid)
+        Herc_SAM_CHAPARRAL_Air = (12, Weapons.Herc_SAM_CHAPARRAL_Air)
+        Herc_SAM_CHAPARRAL_Skid = (12, Weapons.Herc_SAM_CHAPARRAL_Skid)
+        Herc_IFV_BMD1_Air = (12, Weapons.Herc_IFV_BMD1_Air)
+        Herc_IFV_BMD1_Skid = (12, Weapons.Herc_IFV_BMD1_Skid)
+        Herc_IFV_BTRD_Air = (12, Weapons.Herc_IFV_BTRD_Air)
+        Herc_IFV_BTRD_Skid = (12, Weapons.Herc_IFV_BTRD_Skid)
+        Herc_ART_NONA_Air = (12, Weapons.Herc_ART_NONA_Air)
+        Herc_ART_NONA_Skid = (12, Weapons.Herc_ART_NONA_Skid)
+        Herc_GEN_CRATE = (12, Weapons.Herc_GEN_CRATE)
+        Herc_EWR_SBORKA_Air = (12, Weapons.Herc_EWR_SBORKA_Air)
+        Herc_EWR_SBORKA_Skid = (12, Weapons.Herc_EWR_SBORKA_Skid)
+        Herc_APC_BTR_82A_Air = (12, Weapons.Herc_APC_BTR_82A_Air)
+        Herc_APC_BTR_82A_Skid = (12, Weapons.Herc_APC_BTR_82A_Skid)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+
+    tasks = [task.Transport, task.CAS, task.GroundAttack]
+    task_default = task.Transport
+
+
+class Su_15TM(PlaneType):
+    id = "Su_15TM"
+    height = 5
+    width = 9.34
+    length = 21.41
+    fuel_max = 5550
+    max_speed = 2229.984
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "SU_15TM"  # from type
+
+    class Pylon1:
+        R_98MR = (1, Weapons.R_98MR)
+        R_98MT = (1, Weapons.R_98MT)
+        R_8M1R = (1, Weapons.R_8M1R)
+        R_8M1T = (1, Weapons.R_8M1T)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (1, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (1, Weapons.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (1, Weapons.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        FAB_100___100kg_GP_Bomb_LD = (1, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        FAB_250___250kg_GP_Bomb_LD = (1, Weapons.FAB_250___250kg_GP_Bomb_LD)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (1, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+
+    class Pylon2:
+        APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM = (2, Weapons.APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM)
+        APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM = (2, Weapons.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM)
+
+    class Pylon3:
+        SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod = (3, Weapons.SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod)
+        PTB_600 = (3, Weapons.PTB_600)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (3, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (3, Weapons.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (3, Weapons.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        FAB_100___100kg_GP_Bomb_LD = (3, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        FAB_250___250kg_GP_Bomb_LD = (3, Weapons.FAB_250___250kg_GP_Bomb_LD)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (3, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+
+    class Pylon4:
+        SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod = (4, Weapons.SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod)
+        PTB_600 = (4, Weapons.PTB_600)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (4, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (4, Weapons.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (4, Weapons.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        FAB_100___100kg_GP_Bomb_LD = (4, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        FAB_250___250kg_GP_Bomb_LD = (4, Weapons.FAB_250___250kg_GP_Bomb_LD)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (4, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+
+    class Pylon5:
+        APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM = (5, Weapons.APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM)
+        APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM = (5, Weapons.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM)
+
+    class Pylon6:
+        R_98MR = (6, Weapons.R_98MR)
+        R_98MT = (6, Weapons.R_98MT)
+        R_8M1R = (6, Weapons.R_8M1R)
+        R_8M1T = (6, Weapons.R_8M1T)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (6, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (6, Weapons.UB_16_57UMP___16_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (6, Weapons.S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        FAB_100___100kg_GP_Bomb_LD = (6, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        FAB_250___250kg_GP_Bomb_LD = (6, Weapons.FAB_250___250kg_GP_Bomb_LD)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (6, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6}
+
+    tasks = [task.GroundAttack, task.CAS, task.CAP, task.Escort, task.FighterSweep, task.Intercept]
+    task_default = task.Intercept
+
+
+class Su_15(PlaneType):
+    id = "Su_15"
+    height = 5
+    width = 9.34
+    length = 21.41
+    fuel_max = 5600
+    max_speed = 2229.984
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "SU_15"  # from type
+
+    class Pylon1:
+        R_8M1R = (1, Weapons.R_8M1R)
+        R_8R_Inert = (1, Weapons.R_8R_Inert)
+        R_8M1T = (1, Weapons.R_8M1T)
+        R_8T_Inert = (1, Weapons.R_8T_Inert)
+
+    class Pylon2:
+        SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod = (2, Weapons.SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod)
+        PTB_600 = (2, Weapons.PTB_600)
+
+    class Pylon3:
+        SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod = (3, Weapons.SPPU_22_1___2_x_23mm__GSh_23L_Autocannon_Pod)
+        PTB_600 = (3, Weapons.PTB_600)
+
+    class Pylon4:
+        R_8M1R = (4, Weapons.R_8M1R)
+        R_8R_Inert = (4, Weapons.R_8R_Inert)
+        R_8M1T = (4, Weapons.R_8M1T)
+        R_8T_Inert = (4, Weapons.R_8T_Inert)
+
+    pylons: Set[int] = {1, 2, 3, 4}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept]
+    task_default = task.Intercept
+
+
+class SU22M4(PlaneType):
+    id = "SU22M4"
+    flyable = True
+    height = 5.13
+    width = 13.68
+    length = 19.26
+    fuel_max = 3770
+    max_speed = 2649.996
+    chaff = 64
+    flare = 64
+    charge_total = 128
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "SU22M4"  # from type
+
+    class Pylon1:
+        FAB_100___100kg_GP_Bomb_LD = (1, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (1, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (1, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (1, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (1, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (1, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (1, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (1, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (1, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (1, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD = (1, Weapons.MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (1, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (1, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_ = (1, Weapons.Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_)
+        Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_ = (1, Weapons.Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_)
+        Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided = (1, Weapons.Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided)
+        Fuel_tank_1150L = (1, Weapons.Fuel_tank_1150L)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (1, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (1, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation = (1, Weapons.B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (1, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator = (1, Weapons.O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator)
+        O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation = (1, Weapons.O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (1, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (1, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (1, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr = (1, Weapons.Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr)
+        B_8M1___20_S_8OFP2 = (1, Weapons.B_8M1___20_S_8OFP2)
+        Fuel_Tank_800_L__21_ = (1, Weapons.Fuel_Tank_800_L__21_)
+        Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (1, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (1, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+
+    class Pylon2:
+        APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_ = (2, Weapons.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_)
+        APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM = (2, Weapons.APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM)
+        R_73__AA_11_Archer____Infra_Red = (2, Weapons.R_73__AA_11_Archer____Infra_Red)
+
+    class Pylon3:
+        FAB_100___100kg_GP_Bomb_LD = (3, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (3, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (3, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (3, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (3, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (3, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (3, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (3, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (3, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (3, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD = (3, Weapons.MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (3, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (3, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_ = (3, Weapons.Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_)
+        Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_ = (3, Weapons.Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_)
+        Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided = (3, Weapons.Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided)
+        Fuel_tank_1150L = (3, Weapons.Fuel_tank_1150L)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (3, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (3, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation = (3, Weapons.B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (3, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator = (3, Weapons.O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator)
+        O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation = (3, Weapons.O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (3, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (3, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (3, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr = (3, Weapons.Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr)
+        B_8M1___20_S_8OFP2 = (3, Weapons.B_8M1___20_S_8OFP2)
+        Fuel_Tank_800_L__21_ = (3, Weapons.Fuel_Tank_800_L__21_)
+        Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (3, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (3, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+
+    class Pylon4:
+        FAB_100___100kg_GP_Bomb_LD = (4, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (4, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (4, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (4, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (4, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (4, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (4, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (4, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (4, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (4, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (4, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (4, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Fuel_tank_1150L = (4, Weapons.Fuel_tank_1150L)
+        Fuel_tank_800L = (4, Weapons.Fuel_tank_800L)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (4, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (4, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Fuel_Tank_800_L__21_ = (4, Weapons.Fuel_Tank_800_L__21_)
+        L_081_Fantasmagoria_ELINT_pod = (4, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    class Pylon5:
+        FAB_100___100kg_GP_Bomb_LD = (5, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (5, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (5, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (5, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (5, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (5, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (5, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (5, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (5, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (5, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (5, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (5, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Fuel_tank_1150L = (5, Weapons.Fuel_tank_1150L)
+        Fuel_tank_800L = (5, Weapons.Fuel_tank_800L)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (5, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (5, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Fuel_Tank_800_L__21_ = (5, Weapons.Fuel_Tank_800_L__21_)
+
+    class Pylon6:
+        FAB_100___100kg_GP_Bomb_LD = (6, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (6, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (6, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (6, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (6, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (6, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (6, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (6, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (6, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (6, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD = (6, Weapons.MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (6, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (6, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_ = (6, Weapons.Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_)
+        Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_ = (6, Weapons.Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_)
+        Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided = (6, Weapons.Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided)
+        Fuel_tank_1150L = (6, Weapons.Fuel_tank_1150L)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (6, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (6, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation = (6, Weapons.B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (6, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator = (6, Weapons.O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator)
+        O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation = (6, Weapons.O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (6, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (6, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (6, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr = (6, Weapons.Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr)
+        B_8M1___20_S_8OFP2 = (6, Weapons.B_8M1___20_S_8OFP2)
+        Fuel_Tank_800_L__21_ = (6, Weapons.Fuel_Tank_800_L__21_)
+        Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (6, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (6, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+
+    class Pylon7:
+        APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_ = (7, Weapons.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM_)
+        APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM = (7, Weapons.APU_60_1M_with_R_60__AA_8_Aphid____IR_AAM)
+        R_73__AA_11_Archer____Infra_Red = (7, Weapons.R_73__AA_11_Archer____Infra_Red)
+
+    class Pylon8:
+        FAB_100___100kg_GP_Bomb_LD = (8, Weapons.FAB_100___100kg_GP_Bomb_LD)
+        SAB_100MN___100_kg_Illumination_Bomb = (8, Weapons.SAB_100MN___100_kg_Illumination_Bomb)
+        FAB_500_M_62___500kg_GP_Bomb_LD = (8, Weapons.FAB_500_M_62___500kg_GP_Bomb_LD)
+        RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP = (8, Weapons.RBK_500_255___30_x_PTAB_10_5__500kg_CBU_Heavy_HEAT_AP)
+        RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP = (8, Weapons.RBK_500___268_x_PTAB_1M__500kg_CBU_Light_HEAT_AP)
+        KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag = (8, Weapons.KMGU_2___96_x_AO_2_5RT_Dispenser__CBU__HE_Frag)
+        KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP = (8, Weapons.KMGU_2___96_x_PTAB_2_5KO_Dispenser__CBU__HEAT_AP)
+        BetAB_500___500kg_Concrete_Piercing_Bomb_LD = (8, Weapons.BetAB_500___500kg_Concrete_Piercing_Bomb_LD)
+        BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb = (8, Weapons.BetAB_500ShP___500kg_Concrete_Piercing_HD_w_booster_Bomb)
+        MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD = (8, Weapons.MBD3_U4T_with_4_x_FAB_250___250kg_GP_Bombs_LD)
+        MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD = (8, Weapons.MBD3_U6_68_with_6_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD = (8, Weapons.MBD2_67U_with_4_x_FAB_100___100kg_GP_Bombs_LD)
+        MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD = (8, Weapons.MBD3_U6_68_with_2_x_FAB_250___250kg_GP_Bombs_LD)
+        Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_ = (8, Weapons.Kh_25ML__AS_10_Karen____300kg__ASM__Semi_Act_Laser_)
+        Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_ = (8, Weapons.Kh_25MPU__Updated_AS_12_Kegler____320kg__ARM__IN__Pas_Rdr_)
+        Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided = (8, Weapons.Kh_25MR__AS_10_Karen____300kg__ASM__10km__RC_Guided)
+        Fuel_tank_1150L = (8, Weapons.Fuel_tank_1150L)
+        UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag = (8, Weapons.UB_32A___32_x_UnGd_Rkts__57_mm_S_5KO_HEAT_Frag)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation = (8, Weapons.B_13L___5_x_UnGd_Rkts__122_mm_S_13OF_Blast_Fragmentation)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (8, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator = (8, Weapons.O_25___1_x_UnGd_Rkts__340_mm_S_25_OFM_Hardened_Target_Penetrator)
+        O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation = (8, Weapons.O_25___1_x_UnGd_Rkts__420_mm_S_25_O_Fragmentation)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP = (8, Weapons.RBK_250___42_x_PTAB_2_5M__250kg_CBU_Medium_HEAT_AP)
+        RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag = (8, Weapons.RBK_250_275___150_x_AO_1SCh__250kg_CBU_HE_Frag)
+        Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr = (8, Weapons.Kh_25MP__AS_12_Kegler____320kg__ARM__Pas_Rdr)
+        B_8M1___20_S_8OFP2 = (8, Weapons.B_8M1___20_S_8OFP2)
+        Fuel_Tank_800_L__21_ = (8, Weapons.Fuel_Tank_800_L__21_)
+        Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser = (8, Weapons.Kh_29L__AS_14_Kedge____657kg__ASM__Semi_Act_Laser)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided = (8, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8}
+
+    tasks = [task.PinpointStrike, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.SEAD, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.CAS
+
+
+class KC130J(PlaneType):
+    id = "KC130J"
+    group_size_max = 1
+    height = 11.66
+    width = 40.4
+    length = 29.79
+    fuel_max = 30000
+    max_speed = 222.23988
+    chaff = 120
+    flare = 60
+    charge_total = 240
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    tacan = True
+    category = "Tankers"  #{8A302789-A55D-4897-B647-66493FA6826F}
+
+    livery_name = "KC130J"  # from type
+
+    pylons: Set[int] = set()
+
+    tasks = [task.Refueling]
+    task_default = task.Refueling
+
+
+class VSN_A6A(PlaneType):
+    id = "VSN_A6A"
+    flyable = True
+    height = 4.57
+    width = 10.15
+    length = 17.98
+    fuel_max = 6994
+    max_speed = 1047.96
+    chaff = 30
+    flare = 30
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    eplrs = True
+    radio_frequency = 250.5
+
+    livery_name = "VSN_A6A"  # from type
+
+    class Pylon1:
+        F_5_275Gal_Fuel_tank = (1, Weapons.F_5_275Gal_Fuel_tank)
+        AIM_9M_Sidewinder_IR_AAM = (1, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9X_Sidewinder_IR_AAM = (1, Weapons.AIM_9X_Sidewinder_IR_AAM)
+        Mk_82___500lb_GP_Bomb_LD = (1, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (1, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (1, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD = (1, Weapons.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD = (1, Weapons.BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (1, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (1, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (1, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (1, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (1, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (1, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+#ERRR {ac94375e-aa45-491e-858b-a8b93ee8b959}
+#ERRR <CLEAN>
+
+    class Pylon2:
+        F_5_275Gal_Fuel_tank = (2, Weapons.F_5_275Gal_Fuel_tank)
+        AIM_9M_Sidewinder_IR_AAM = (2, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9X_Sidewinder_IR_AAM = (2, Weapons.AIM_9X_Sidewinder_IR_AAM)
+        Mk_82___500lb_GP_Bomb_LD = (2, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets = (2, Weapons.MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets)
+        BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD = (2, Weapons.BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (2, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (2, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (2, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (2, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (2, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+#ERRR {ac94375e-aa45-491e-858b-a8b93ee8b959}
+#ERRR <CLEAN>
+
+    class Pylon3:
+        F_5_275Gal_Fuel_tank = (3, Weapons.F_5_275Gal_Fuel_tank)
+        Mk_82___500lb_GP_Bomb_LD = (3, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets = (3, Weapons.MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets)
+        BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD = (3, Weapons.BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD)
+#ERRR {ac94375e-aa45-491e-858b-a8b93ee8b959}
+#ERRR <CLEAN>
+
+    class Pylon4:
+        F_5_275Gal_Fuel_tank = (4, Weapons.F_5_275Gal_Fuel_tank)
+        AIM_9M_Sidewinder_IR_AAM = (4, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9X_Sidewinder_IR_AAM = (4, Weapons.AIM_9X_Sidewinder_IR_AAM)
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (4, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER6_with_6_x_Mk_82___500lb_GP_Bombs_LD)
+        MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets = (4, Weapons.MER6_with_6_x_Mk_20_Rockeye___490lbs_CBUs__247_x_HEAT_Bomblets)
+        BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD = (4, Weapons.BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (4, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+#ERRR {ac94375e-aa45-491e-858b-a8b93ee8b959}
+#ERRR <CLEAN>
+
+    class Pylon5:
+        F_5_275Gal_Fuel_tank = (5, Weapons.F_5_275Gal_Fuel_tank)
+        AIM_9M_Sidewinder_IR_AAM = (5, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9X_Sidewinder_IR_AAM = (5, Weapons.AIM_9X_Sidewinder_IR_AAM)
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (5, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_84___2000lb_GP_Bomb_LD = (5, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD = (5, Weapons.BRU_42_with_3_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD = (5, Weapons.BRU_42_with_3_x_Mk_82_AIR_Ballute___500lb_GP_Bombs_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (5, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (5, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (5, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (5, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (5, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (5, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+#ERRR {ac94375e-aa45-491e-858b-a8b93ee8b959}
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 4, 5}
+
+    tasks = [task.Escort, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.RunwayAttack, task.AntishipStrike, task.SEAD]
+    task_default = task.GroundAttack
+
+
+class VSN_F100(PlaneType):
+    id = "VSN_F100"
+    flyable = True
+    height = 4.95
+    width = 11.81
+    length = 15
+    fuel_max = 3397
+    max_speed = 1702.8
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_F100"  # from type
+
+    class Pylon2:
+        L_081_Fantasmagoria_ELINT_pod = (2, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    class Pylon3:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (3, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (3, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (3, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (3, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (3, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (3, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_45A_Shrike_ARM = (3, Weapons.AGM_45A_Shrike_ARM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR <CLEAN>
+
+    class Pylon4:
+        AIM_9P_Sidewinder_IR_AAM = (4, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (4, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (4, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (4, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (4, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_45A_Shrike_ARM = (4, Weapons.AGM_45A_Shrike_ARM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (4, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (4, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_1000_Liter = (4, Weapons.Fuel_tank_1000_Liter)
+#ERRR <CLEAN>
+
+    class Pylon5:
+        Mk_84___2000lb_GP_Bomb_LD = (5, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (5, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (5, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (5, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+#ERRR {SB_F105_BRU_41A_M117_6}
+#ERRR {SB_F105_TER9A_M117_3}
+        _3_Mk_83 = (5, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        Fuel_tank_500_Liter = (5, Weapons.Fuel_tank_500_Liter)
+#ERRR <CLEAN>
+
+    class Pylon6:
+        Smoke_Generator___red_ = (6, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (6, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (6, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (6, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (6, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (6, Weapons.Smoke_Generator___orange_)
+
+    class Pylon7:
+        Mk_84___2000lb_GP_Bomb_LD = (7, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (7, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (7, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (7, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (7, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+#ERRR {SB_F105_BRU_41A_M117_6}
+#ERRR {SB_F105_TER9A_M117_3}
+        _3_Mk_83 = (7, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        Fuel_tank_500_Liter = (7, Weapons.Fuel_tank_500_Liter)
+#ERRR <CLEAN>
+
+    class Pylon8:
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (8, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_45A_Shrike_ARM = (8, Weapons.AGM_45A_Shrike_ARM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_1000_Liter = (8, Weapons.Fuel_tank_1000_Liter)
+#ERRR <CLEAN>
+
+    class Pylon9:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (9, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (9, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (9, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (9, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (9, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (9, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (9, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (9, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_45A_Shrike_ARM = (9, Weapons.AGM_45A_Shrike_ARM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (9, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (9, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {2, 3, 4, 5, 6, 7, 8, 9}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_F104C(PlaneType):
+    id = "VSN_F104C"
+    flyable = True
+    height = 4.09
+    width = 6.36
+    length = 16.66
+    fuel_max = 2641
+    max_speed = 2336.4
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_F104C"  # from type
+
+    class Pylon1:
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+
+    class Pylon2:
+        LAU_138_AIM_9L = (2, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (2, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        VSN_F104G_L_PTB = (2, Weapons.VSN_F104G_L_PTB)
+
+    class Pylon4:
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (4, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (4, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (4, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (4, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9L_Sidewinder_IR_AAM = (4, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (4, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (4, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (4, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (4, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81___ = (4, Weapons._2_Mk_81___)
+        Mk_81___250lb_GP_Bomb_LD = (4, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (4, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (4, Weapons.BIN_200)
+        VSN_F104G_PTB = (4, Weapons.VSN_F104G_PTB)
+
+    class Pylon6:
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (6, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        RN_28___260_kg__nuclear_bomb__free_fall = (6, Weapons.RN_28___260_kg__nuclear_bomb__free_fall)
+        TER_9A_with_3_x_BDU_33___25lb_Practice_Bomb_LD = (6, Weapons.TER_9A_with_3_x_BDU_33___25lb_Practice_Bomb_LD)
+        LAU_105_2_AIM_9P5 = (6, Weapons.LAU_105_2_AIM_9P5)
+        LAU_115C_2_AIM_9L = (6, Weapons.LAU_115C_2_AIM_9L)
+        LAU_115C_2_AIM_9P = (6, Weapons.LAU_115C_2_AIM_9P)
+        BIN_200 = (6, Weapons.BIN_200)
+
+    class Pylon8:
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (8, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (8, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (8, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (8, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (8, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (8, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (8, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81 = (8, Weapons._2_Mk_81)
+        Mk_81___250lb_GP_Bomb_LD = (8, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (8, Weapons.BIN_200)
+        VSN_F104G_PTB = (8, Weapons.VSN_F104G_PTB)
+
+    class Pylon10:
+        LAU_138_AIM_9L = (10, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (10, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (10, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (10, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (10, Weapons.Smokewinder___red)
+        Smokewinder___green = (10, Weapons.Smokewinder___green)
+        Smokewinder___blue = (10, Weapons.Smokewinder___blue)
+        Smokewinder___white = (10, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (10, Weapons.Smokewinder___yellow)
+        VSN_F104G_R_PTB = (10, Weapons.VSN_F104G_R_PTB)
+
+    class Pylon11:
+        L_081_Fantasmagoria_ELINT_pod = (11, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    pylons: Set[int] = {1, 2, 4, 6, 8, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_F104G(PlaneType):
+    id = "VSN_F104G"
+    flyable = True
+    height = 4.09
+    width = 6.36
+    length = 16.66
+    fuel_max = 2644
+    max_speed = 2336.4
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_F104G"  # from type
+
+    class Pylon1:
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+
+    class Pylon2:
+        LAU_138_AIM_9L = (2, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (2, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        VSN_F104G_L_PTB = (2, Weapons.VSN_F104G_L_PTB)
+
+    class Pylon4:
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (4, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (4, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (4, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (4, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9L_Sidewinder_IR_AAM = (4, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (4, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (4, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (4, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (4, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81___ = (4, Weapons._2_Mk_81___)
+        Mk_81___250lb_GP_Bomb_LD = (4, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (4, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (4, Weapons.BIN_200)
+        Kormoran___ASM = (4, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (4, Weapons.AGM_119B_Penguin_ASM)
+        VSN_F104G_PTB = (4, Weapons.VSN_F104G_PTB)
+
+    class Pylon5:
+        AIM_9L_Sidewinder_IR_AAM = (5, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (5, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (5, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (5, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon6:
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (6, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        RN_28___260_kg__nuclear_bomb__free_fall = (6, Weapons.RN_28___260_kg__nuclear_bomb__free_fall)
+        TER_9A_with_3_x_BDU_33___25lb_Practice_Bomb_LD = (6, Weapons.TER_9A_with_3_x_BDU_33___25lb_Practice_Bomb_LD)
+        BIN_200 = (6, Weapons.BIN_200)
+
+    class Pylon7:
+        AIM_9L_Sidewinder_IR_AAM = (7, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (7, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (7, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon8:
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (8, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (8, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (8, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (8, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (8, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (8, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (8, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81 = (8, Weapons._2_Mk_81)
+        Mk_81___250lb_GP_Bomb_LD = (8, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (8, Weapons.BIN_200)
+        Kormoran___ASM = (8, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (8, Weapons.AGM_119B_Penguin_ASM)
+        VSN_F104G_PTB = (8, Weapons.VSN_F104G_PTB)
+
+    class Pylon10:
+        LAU_138_AIM_9L = (10, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (10, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (10, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (10, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (10, Weapons.Smokewinder___red)
+        Smokewinder___green = (10, Weapons.Smokewinder___green)
+        Smokewinder___blue = (10, Weapons.Smokewinder___blue)
+        Smokewinder___white = (10, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (10, Weapons.Smokewinder___yellow)
+        VSN_F104G_R_PTB = (10, Weapons.VSN_F104G_R_PTB)
+
+    class Pylon11:
+        L_081_Fantasmagoria_ELINT_pod = (11, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    pylons: Set[int] = {1, 2, 4, 5, 6, 7, 8, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_F104S(PlaneType):
+    id = "VSN_F104S"
+    flyable = True
+    height = 4.09
+    width = 6.36
+    length = 16.66
+    fuel_max = 2641
+    max_speed = 2336.4
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_F104S"  # from type
+
+    class Pylon1:
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+
+    class Pylon2:
+        AIM_9M_Sidewinder_IR_AAM = (2, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        LAU_138_AIM_9L = (2, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (2, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        VSN_F104G_L_PTB = (2, Weapons.VSN_F104G_L_PTB)
+
+    class Pylon3:
+        AIM_9B_Sidewinder_IR_AAM = (3, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (3, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9M_Sidewinder_IR_AAM = (3, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (3, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (3, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        AIM_7E_Sparrow_Semi_Active_Radar = (3, Weapons.AIM_7E_Sparrow_Semi_Active_Radar)
+        AIM_7F_Sparrow_Semi_Active_Radar = (3, Weapons.AIM_7F_Sparrow_Semi_Active_Radar)
+        Selenia_Aspide = (3, Weapons.Selenia_Aspide)
+
+    class Pylon4:
+        AIM_9M_Sidewinder_IR_AAM = (4, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (4, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (4, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (4, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (4, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        VSN_F104G_PTB = (4, Weapons.VSN_F104G_PTB)
+
+    class Pylon5:
+        AIM_9M_Sidewinder_IR_AAM = (5, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (5, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (5, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (5, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (5, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon6:
+        AIM_9M_Sidewinder_IR_AAM = (6, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (6, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (6, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (6, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (6, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon7:
+        AIM_9M_Sidewinder_IR_AAM = (7, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (7, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (7, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (7, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon8:
+        AIM_9M_Sidewinder_IR_AAM = (8, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (8, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        VSN_F104G_PTB = (8, Weapons.VSN_F104G_PTB)
+
+    class Pylon9:
+        AIM_9B_Sidewinder_IR_AAM = (9, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (9, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9M_Sidewinder_IR_AAM = (9, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (9, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (9, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        AIM_7E_Sparrow_Semi_Active_Radar = (9, Weapons.AIM_7E_Sparrow_Semi_Active_Radar)
+        AIM_7F_Sparrow_Semi_Active_Radar = (9, Weapons.AIM_7F_Sparrow_Semi_Active_Radar)
+        Selenia_Aspide = (9, Weapons.Selenia_Aspide)
+
+    class Pylon10:
+        AIM_9M_Sidewinder_IR_AAM = (10, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        LAU_138_AIM_9L = (10, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (10, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (10, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (10, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (10, Weapons.Smokewinder___red)
+        Smokewinder___green = (10, Weapons.Smokewinder___green)
+        Smokewinder___blue = (10, Weapons.Smokewinder___blue)
+        Smokewinder___white = (10, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (10, Weapons.Smokewinder___yellow)
+        VSN_F104G_R_PTB = (10, Weapons.VSN_F104G_R_PTB)
+
+    class Pylon11:
+        L_081_Fantasmagoria_ELINT_pod = (11, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_F104S_AG(PlaneType):
+    id = "VSN_F104S_AG"
+    flyable = True
+    height = 4.09
+    width = 6.36
+    length = 16.66
+    fuel_max = 2644
+    max_speed = 2336.4
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_F104S_AG"  # from type
+
+    class Pylon1:
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+
+    class Pylon2:
+        LAU_138_AIM_9L = (2, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (2, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        VSN_F104G_L_PTB = (2, Weapons.VSN_F104G_L_PTB)
+
+    class Pylon3:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (3, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        GBU_16___1000lb_Laser_Guided_Bomb = (3, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        Mk_82___500lb_GP_Bomb_LD = (3, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (3, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_10___2000lb_Laser_Guided_Bomb = (3, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (3, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        CBU_97___10_x_SFW_Cluster_Bomb = (3, Weapons.CBU_97___10_x_SFW_Cluster_Bomb)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (3, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (3, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (3, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (3, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        BIN_200 = (3, Weapons.BIN_200)
+        AIM_9L_Sidewinder_IR_AAM = (3, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (3, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (3, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (3, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (3, Weapons.AGM_119B_Penguin_ASM)
+
+    class Pylon4:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (4, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        GBU_16___1000lb_Laser_Guided_Bomb = (4, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        Mk_82___500lb_GP_Bomb_LD = (4, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_10___2000lb_Laser_Guided_Bomb = (4, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (4, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        CBU_97___10_x_SFW_Cluster_Bomb = (4, Weapons.CBU_97___10_x_SFW_Cluster_Bomb)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (4, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (4, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (4, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (4, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (4, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (4, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (4, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9M_Sidewinder_IR_AAM = (4, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (4, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (4, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (4, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (4, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (4, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (4, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (4, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (4, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (4, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (4, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81 = (4, Weapons._2_Mk_81)
+        Mk_81___250lb_GP_Bomb_LD = (4, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (4, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (4, Weapons.BIN_200)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (4, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (4, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (4, Weapons.AGM_119B_Penguin_ASM)
+        VSN_F104G_PTB = (4, Weapons.VSN_F104G_PTB)
+
+    class Pylon5:
+        AIM_9M_Sidewinder_IR_AAM = (5, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (5, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (5, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (5, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (5, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon6:
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (6, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        BIN_200 = (6, Weapons.BIN_200)
+
+    class Pylon7:
+        AIM_9M_Sidewinder_IR_AAM = (7, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (7, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (7, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (7, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (7, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+
+    class Pylon8:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (8, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        GBU_16___1000lb_Laser_Guided_Bomb = (8, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_10___2000lb_Laser_Guided_Bomb = (8, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (8, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        CBU_97___10_x_SFW_Cluster_Bomb = (8, Weapons.CBU_97___10_x_SFW_Cluster_Bomb)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (8, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (8, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (8, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_ = (8, Weapons.LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE_)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (8, Weapons.BRU_33_2_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (8, Weapons.BRU_33_2_x_LAU_61___19_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (8, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.BRU_33_2_x_LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (8, Weapons.BRU_33_with_2_x_Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD = (8, Weapons.BRU_33_with_2_x_Mk_82___500lb_GP_Bomb_LD)
+        BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD = (8, Weapons.BRU_33_with_2_x_Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (8, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD = (8, Weapons.BRU_42_with_3_x_Mk_81___250lb_GP_Bombs_LD)
+        _2_Mk_81 = (8, Weapons._2_Mk_81)
+        Mk_81___250lb_GP_Bomb_LD = (8, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        BIN_200 = (8, Weapons.BIN_200)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (8, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (8, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (8, Weapons.AGM_119B_Penguin_ASM)
+        VSN_F104G_PTB = (8, Weapons.VSN_F104G_PTB)
+
+    class Pylon9:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (9, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        GBU_16___1000lb_Laser_Guided_Bomb = (9, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        Mk_82___500lb_GP_Bomb_LD = (9, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (9, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_10___2000lb_Laser_Guided_Bomb = (9, Weapons.GBU_10___2000lb_Laser_Guided_Bomb)
+        BL_755_CBU___450kg__147_Frag_Pen_bomblets = (9, Weapons.BL_755_CBU___450kg__147_Frag_Pen_bomblets)
+        CBU_97___10_x_SFW_Cluster_Bomb = (9, Weapons.CBU_97___10_x_SFW_Cluster_Bomb)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag = (9, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8KOM_HEAT_Frag)
+        APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_ = (9, Weapons.APU_68___S_24B___240mm_UnGd_Rkt__235kg__HE_Frag___Low_Smk_)
+        B_8M1___20_S_8OFP2 = (9, Weapons.B_8M1___20_S_8OFP2)
+        B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange = (9, Weapons.B_8M1___20_x_UnGd_Rkts__80_mm_S_8TsM_SM_Orange)
+        BIN_200 = (9, Weapons.BIN_200)
+        AIM_9P_Sidewinder_IR_AAM = (9, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (9, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (9, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (9, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (9, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (9, Weapons.Kormoran___ASM)
+        AGM_119B_Penguin_ASM = (9, Weapons.AGM_119B_Penguin_ASM)
+
+    class Pylon10:
+        LAU_138_AIM_9L = (10, Weapons.LAU_138_AIM_9L)
+        AIM_9B_Sidewinder_IR_AAM = (10, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (10, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9P5_Sidewinder_IR_AAM = (10, Weapons.AIM_9P5_Sidewinder_IR_AAM)
+        Smokewinder___red = (10, Weapons.Smokewinder___red)
+        Smokewinder___green = (10, Weapons.Smokewinder___green)
+        Smokewinder___blue = (10, Weapons.Smokewinder___blue)
+        Smokewinder___white = (10, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (10, Weapons.Smokewinder___yellow)
+        VSN_F104G_R_PTB = (10, Weapons.VSN_F104G_R_PTB)
+
+    class Pylon11:
+        L_081_Fantasmagoria_ELINT_pod = (11, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_NF104A(PlaneType):
+    id = "VSN_NF104A"
+    flyable = True
+    height = 4.11
+    width = 7.85
+    length = 16.69
+    fuel_max = 2641
+    max_speed = 2336.4
+    chaff = 0
+    flare = 0
+    charge_total = 0
+    chaff_charge_size = 0
+    flare_charge_size = 0
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_NF104A"  # from type
+
+    class Pylon1:
+        custom_Smoke_for_rocket_engine = (1, Weapons.custom_Smoke_for_rocket_engine)
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1}
+
+    tasks = [task.Transport]
+    task_default = task.Nothing
+
+
+class VSN_F106A(PlaneType):
+    id = "VSN_F106A"
+    flyable = True
+    height = 6.18
+    width = 11.67
+    length = 21.56
+    fuel_max = 4464
+    max_speed = 2452.032
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_F106A"  # from type
+
+    class Pylon1:
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Fuel_Tank = (1, Weapons.Fuel_Tank)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (2, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (2, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (2, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon3:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (3, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (3, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (3, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon4:
+        AIR_2A_Genie_Nuclear_air_to_air_unguided_rocket_ = (4, Weapons.AIR_2A_Genie_Nuclear_air_to_air_unguided_rocket_)
+#ERRR <CLEAN>
+
+    class Pylon5:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (5, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (5, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (5, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon6:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (6, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (6, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (6, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon7:
+        Smokewinder___red = (7, Weapons.Smokewinder___red)
+        Smokewinder___green = (7, Weapons.Smokewinder___green)
+        Smokewinder___blue = (7, Weapons.Smokewinder___blue)
+        Smokewinder___white = (7, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (7, Weapons.Smokewinder___yellow)
+        Fuel_Tank_ = (7, Weapons.Fuel_Tank_)
+#ERRR <CLEAN>
+
+    class Pylon8:
+        L005_Sorbtsiya_ECM_pod__left_ = (8, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+
+    class Pylon9:
+        Smoke_Generator___red_ = (9, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (9, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (9, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (9, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (9, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (9, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance]
+    task_default = task.FighterSweep
+
+
+class VSN_F106B(PlaneType):
+    id = "VSN_F106B"
+    flyable = True
+    height = 6.18
+    width = 11.67
+    length = 21.56
+    fuel_max = 4464
+    max_speed = 2452.032
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_F106B"  # from type
+
+    class Pylon1:
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Fuel_Tank = (1, Weapons.Fuel_Tank)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (2, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (2, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (2, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon3:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (3, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (3, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (3, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon4:
+        AIR_2A_Genie_Nuclear_air_to_air_unguided_rocket_ = (4, Weapons.AIR_2A_Genie_Nuclear_air_to_air_unguided_rocket_)
+#ERRR <CLEAN>
+
+    class Pylon5:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (5, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (5, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (5, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon6:
+        AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_ = (6, Weapons.AIM_4D_Rear_aspect_advanced_heat_seeking_air_to_air_missile_)
+        AIM_4F_Semi_active_radar_homing_air_to_air_missile_ = (6, Weapons.AIM_4F_Semi_active_radar_homing_air_to_air_missile_)
+        AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_ = (6, Weapons.AIM_4G_Rear_aspect_heat_seeking_air_to_air_missile_)
+
+    class Pylon7:
+        Smokewinder___red = (7, Weapons.Smokewinder___red)
+        Smokewinder___green = (7, Weapons.Smokewinder___green)
+        Smokewinder___blue = (7, Weapons.Smokewinder___blue)
+        Smokewinder___white = (7, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (7, Weapons.Smokewinder___yellow)
+        Fuel_Tank_ = (7, Weapons.Fuel_Tank_)
+#ERRR <CLEAN>
+
+    class Pylon8:
+        L005_Sorbtsiya_ECM_pod__left_ = (8, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+
+    class Pylon9:
+        Smoke_Generator___red_ = (9, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (9, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (9, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (9, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (9, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (9, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance]
+    task_default = task.FighterSweep
+
+
+class VSN_F80C(PlaneType):
+    id = "VSN_F80C"
+    flyable = True
+    height = 3.43
+    width = 11.81
+    length = 10.49
+    fuel_max = 1282
+    max_speed = 964.8
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_F80C"  # from type
+
+    class Pylon2:
+        Misawa_Tank_left = (2, Weapons.Misawa_Tank_left)
+        Standart_Tank_left = (2, Weapons.Standart_Tank_left)
+        Fletcher_Tank_left = (2, Weapons.Fletcher_Tank_left)
+
+    class Pylon3:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (3, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9B_Sidewinder_IR_AAM = (3, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        M117___750lb_GP_Bomb_LD = (3, Weapons.M117___750lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD_ = (3, Weapons.AN_M64___500lb_GP_Bomb_LD_)
+        _2_x_HVAR__UnGd_Rkts = (3, Weapons._2_x_HVAR__UnGd_Rkts)
+#ERRR <CLEAN>
+        Smoke_Generator___red_ = (3, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (3, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (3, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (3, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (3, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (3, Weapons.Smoke_Generator___orange_)
+
+    class Pylon6:
+        Smoke_Generator___red_ = (6, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (6, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (6, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (6, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (6, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (6, Weapons.Smoke_Generator___orange_)
+
+    class Pylon9:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (9, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9B_Sidewinder_IR_AAM = (9, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        M117___750lb_GP_Bomb_LD = (9, Weapons.M117___750lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD_ = (9, Weapons.AN_M64___500lb_GP_Bomb_LD_)
+        _2_x_HVAR__UnGd_Rkts = (9, Weapons._2_x_HVAR__UnGd_Rkts)
+#ERRR <CLEAN>
+        Smoke_Generator___red_ = (9, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (9, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (9, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (9, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (9, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (9, Weapons.Smoke_Generator___orange_)
+
+    class Pylon10:
+        Misawa_Tank_right = (10, Weapons.Misawa_Tank_right)
+        Standart_Tank_right = (10, Weapons.Standart_Tank_right)
+        Fletcher_Tank_right = (10, Weapons.Fletcher_Tank_right)
+
+    pylons: Set[int] = {2, 3, 6, 9, 10}
+
+    tasks = [task.CAP, task.CAS, task.Escort, task.FighterSweep, task.GroundAttack, task.Intercept, task.AntishipStrike]
+    task_default = task.GroundAttack
+
+
+class VSN_RF80A(PlaneType):
+    id = "VSN_RF80A"
+    flyable = True
+    height = 4.496
+    width = 11.9
+    length = 11.43
+    fuel_max = 1282
+    max_speed = 964.8
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_RF80A"  # from type
+
+    class Pylon2:
+        Misawa_Tank_left = (2, Weapons.Misawa_Tank_left)
+        Standart_Tank_left = (2, Weapons.Standart_Tank_left)
+        Fletcher_Tank_left = (2, Weapons.Fletcher_Tank_left)
+
+    class Pylon3:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (3, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9B_Sidewinder_IR_AAM = (3, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        M117___750lb_GP_Bomb_LD = (3, Weapons.M117___750lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD_ = (3, Weapons.AN_M64___500lb_GP_Bomb_LD_)
+        _2_x_HVAR__UnGd_Rkts = (3, Weapons._2_x_HVAR__UnGd_Rkts)
+#ERRR <CLEAN>
+        Smoke_Generator___red_ = (3, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (3, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (3, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (3, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (3, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (3, Weapons.Smoke_Generator___orange_)
+
+    class Pylon6:
+        Smoke_Generator___red_ = (6, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (6, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (6, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (6, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (6, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (6, Weapons.Smoke_Generator___orange_)
+
+    class Pylon9:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (9, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9B_Sidewinder_IR_AAM = (9, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_1_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_61_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.LAU_131___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        M117___750lb_GP_Bomb_LD = (9, Weapons.M117___750lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD_ = (9, Weapons.AN_M64___500lb_GP_Bomb_LD_)
+        _2_x_HVAR__UnGd_Rkts = (9, Weapons._2_x_HVAR__UnGd_Rkts)
+#ERRR <CLEAN>
+        Smoke_Generator___red_ = (9, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (9, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (9, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (9, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (9, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (9, Weapons.Smoke_Generator___orange_)
+
+    class Pylon10:
+        Misawa_Tank_right = (10, Weapons.Misawa_Tank_right)
+        Standart_Tank_right = (10, Weapons.Standart_Tank_right)
+        Fletcher_Tank_right = (10, Weapons.Fletcher_Tank_right)
+
+    pylons: Set[int] = {2, 3, 6, 9, 10}
+
+    tasks = [task.GroundAttack, task.Reconnaissance]
+    task_default = task.Reconnaissance
+
+
+class VSN_F9F(PlaneType):
+    id = "VSN_F9F"
+    flyable = True
+    height = 3.73
+    width = 11.58
+    length = 11.84
+    fuel_max = 2310
+    max_speed = 961.2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_F9F"  # from type
+
+    class Pylon1:
+        Smoke_Generator___red_ = (1, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (1, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (1, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (1, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (1, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (1, Weapons.Smoke_Generator___orange_)
+#ERRR {HVAM}
+
+    class Pylon2:
+        HVAR__UnGd_Rkt = (2, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (2, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (2, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (2, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (2, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (2, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (2, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (2, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (2, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (2, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon3:
+        HVAR__UnGd_Rkt = (3, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (3, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (3, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (3, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (3, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (3, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (3, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (3, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (3, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (3, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon4:
+        HVAR__UnGd_Rkt = (4, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (4, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (4, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (4, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (4, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (4, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (4, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (4, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (4, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (4, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (4, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon5:
+        HVAR__UnGd_Rkt = (5, Weapons.HVAR__UnGd_Rkt)
+        Tiny_TiM = (5, Weapons.Tiny_TiM)
+        AN_M30A1___100lb_GP_Bomb_LD = (5, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (5, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (5, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M65___1000lb_GP_Bomb_LD = (5, Weapons.AN_M65___1000lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (5, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (5, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (5, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (5, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (5, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (5, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (5, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+
+    class Pylon6:
+        Smoke_Generator___red_ = (6, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (6, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (6, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (6, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (6, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (6, Weapons.Smoke_Generator___orange_)
+#ERRR {HVAM}
+
+    class Pylon7:
+        HVAR__UnGd_Rkt = (7, Weapons.HVAR__UnGd_Rkt)
+        Tiny_TiM = (7, Weapons.Tiny_TiM)
+        AN_M30A1___100lb_GP_Bomb_LD = (7, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (7, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (7, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        AN_M65___1000lb_GP_Bomb_LD = (7, Weapons.AN_M65___1000lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (7, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (7, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (7, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (7, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (7, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (7, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (7, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon8:
+        HVAR__UnGd_Rkt = (8, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (8, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (8, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        AN_M64___500lb_GP_Bomb_LD = (8, Weapons.AN_M64___500lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (8, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (8, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (8, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (8, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (8, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (8, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (8, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon9:
+        HVAR__UnGd_Rkt = (9, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (9, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (9, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (9, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (9, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (9, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (9, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (9, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (9, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (9, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+#ERRR {HVAM}
+
+    class Pylon10:
+        HVAR__UnGd_Rkt = (10, Weapons.HVAR__UnGd_Rkt)
+        AN_M30A1___100lb_GP_Bomb_LD = (10, Weapons.AN_M30A1___100lb_GP_Bomb_LD)
+        AN_M57___250lb_GP_Bomb_LD = (10, Weapons.AN_M57___250lb_GP_Bomb_LD)
+        Smoke_Generator___red_ = (10, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (10, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (10, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (10, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (10, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (10, Weapons.Smoke_Generator___orange_)
+        HVAR_SMOKE__UnGd_Rkt = (10, Weapons.HVAR_SMOKE__UnGd_Rkt)
+#ERRR <CLEAN>
+
+    class Pylon11:
+        Smoke_Generator___red_ = (11, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (11, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (11, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (11, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (11, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (11, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+    tasks = [task.CAP, task.CAS, task.Escort, task.FighterSweep, task.GroundAttack, task.Intercept, task.AntishipStrike]
+    task_default = task.GroundAttack
+
+
+class VSN_Harrier(PlaneType):
+    id = "VSN_Harrier"
+    flyable = True
+    height = 3.55
+    width = 9.24
+    length = 14.12
+    fuel_max = 6103
+    max_speed = 2649.996
+    chaff = 60
+    flare = 120
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    category = "Air"  #{C168A850-3C0B-436a-95B5-C4A015552560}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_HARRIER"  # from type
+
+    class Pylon1:
+        AIM_9M_Sidewinder_IR_AAM = (1, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AGM_122_Sidearm = (1, Weapons.AGM_122_Sidearm)
+        Mk_81___250lb_GP_Bomb_LD = (1, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (1, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (1, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (1, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (1, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (1, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (1, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        CATM_9M = (1, Weapons.CATM_9M)
+        BDU_33___25lb_Practice_Bomb_LD = (1, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (1, Weapons.Smokewinder___orange)
+
+    class Pylon2:
+        LAU_7_with_AIM_9M_Sidewinder_IR_AAM = (2, Weapons.LAU_7_with_AIM_9M_Sidewinder_IR_AAM)
+        AGM_122_Sidearm_ = (2, Weapons.AGM_122_Sidearm_)
+        Mk_81___250lb_GP_Bomb_LD = (2, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (2, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (2, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (2, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (2, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (2, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        GBU_16___1000lb_Laser_Guided_Bomb = (2, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb = (2, Weapons.GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb)
+        _3_Mk_81 = (2, Weapons._3_Mk_81)
+        _2_Mk_82____ = (2, Weapons._2_Mk_82____)
+        _3_Mk_82 = (2, Weapons._3_Mk_82)
+        _2_Mk_20_Rockeye____ = (2, Weapons._2_Mk_20_Rockeye____)
+        _2_GBU_12______ = (2, Weapons._2_GBU_12______)
+        _3_GBU_12 = (2, Weapons._3_GBU_12)
+        _2_Mk_82_AIR____ = (2, Weapons._2_Mk_82_AIR____)
+        _3_Mk_82_AIR = (2, Weapons._3_Mk_82_AIR)
+        _2_Mk_82_Snakeye____ = (2, Weapons._2_Mk_82_Snakeye____)
+        _3_Mk_82_Snakeye = (2, Weapons._3_Mk_82_Snakeye)
+        _2_GBU_38______ = (2, Weapons._2_GBU_38______)
+        _3_GBU_38_ = (2, Weapons._3_GBU_38_)
+        BDU_33___25lb_Practice_Bomb_LD = (2, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        BRU_42_3_BDU_33 = (2, Weapons.BRU_42_3_BDU_33)
+        LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_ = (2, Weapons.LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_)
+        LAU_117_AGM_65G = (2, Weapons.LAU_117_AGM_65G)
+        LAU_117_TGM_65G = (2, Weapons.LAU_117_TGM_65G)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (2, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (2, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (2, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+        BRU_42_with_3_x_SUU_25_x_8_LUU_2___Target_Marker_Flares = (2, Weapons.BRU_42_with_3_x_SUU_25_x_8_LUU_2___Target_Marker_Flares)
+        Smokewinder___red = (2, Weapons.Smokewinder___red)
+        Smokewinder___green = (2, Weapons.Smokewinder___green)
+        Smokewinder___blue = (2, Weapons.Smokewinder___blue)
+        Smokewinder___white = (2, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (2, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (2, Weapons.Smokewinder___orange)
+        AERO_1D_300_Gallons_Fuel_Tank_ = (2, Weapons.AERO_1D_300_Gallons_Fuel_Tank_)
+        AERO_1D_300_Gallons_Fuel_Tank__Empty_ = (2, Weapons.AERO_1D_300_Gallons_Fuel_Tank__Empty_)
+
+    class Pylon3:
+        Mk_81___250lb_GP_Bomb_LD = (3, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (3, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (3, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (3, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (3, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (3, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        GBU_16___1000lb_Laser_Guided_Bomb = (3, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb = (3, Weapons.GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb)
+        _3_Mk_81 = (3, Weapons._3_Mk_81)
+        _2_Mk_82____ = (3, Weapons._2_Mk_82____)
+        _3_Mk_82 = (3, Weapons._3_Mk_82)
+        _2_Mk_83____ = (3, Weapons._2_Mk_83____)
+        _3_Mk_83 = (3, Weapons._3_Mk_83)
+        _2_Mk_20_Rockeye____ = (3, Weapons._2_Mk_20_Rockeye____)
+#ERRR {BRU-42_3*MK-20}
+        _2_GBU_12______ = (3, Weapons._2_GBU_12______)
+        _3_GBU_12 = (3, Weapons._3_GBU_12)
+        _2_GBU_16____ = (3, Weapons._2_GBU_16____)
+        _2_Mk_82_AIR____ = (3, Weapons._2_Mk_82_AIR____)
+        _3_Mk_82_AIR = (3, Weapons._3_Mk_82_AIR)
+        _2_Mk_82_Snakeye____ = (3, Weapons._2_Mk_82_Snakeye____)
+        _3_Mk_82_Snakeye = (3, Weapons._3_Mk_82_Snakeye)
+        _2_GBU_38______ = (3, Weapons._2_GBU_38______)
+        BDU_33___25lb_Practice_Bomb_LD = (3, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        BRU_42_3_BDU_33 = (3, Weapons.BRU_42_3_BDU_33)
+        LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_ = (3, Weapons.LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_)
+        LAU_117_AGM_65G = (3, Weapons.LAU_117_AGM_65G)
+        LAU_117_TGM_65G = (3, Weapons.LAU_117_TGM_65G)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (3, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (3, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (3, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        AN_AAQ_28_LITENING___Targeting_Pod_ = (3, Weapons.AN_AAQ_28_LITENING___Targeting_Pod_)
+        AERO_1D_300_Gallons_Fuel_Tank_ = (3, Weapons.AERO_1D_300_Gallons_Fuel_Tank_)
+        AERO_1D_300_Gallons_Fuel_Tank__Empty_ = (3, Weapons.AERO_1D_300_Gallons_Fuel_Tank__Empty_)
+
+    class Pylon4:
+        GAU_12_Gunpod_w_SAPHEI_T = (4, Weapons.GAU_12_Gunpod_w_SAPHEI_T)
+
+    class Pylon6:
+        L_081_Fantasmagoria_ELINT_pod = (6, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    class Pylon8:
+        AN_ALQ_164_DECM_Pod = (8, Weapons.AN_ALQ_164_DECM_Pod)
+        AN_AAQ_28_LITENING___Targeting_Pod_ = (8, Weapons.AN_AAQ_28_LITENING___Targeting_Pod_)
+
+    class Pylon9:
+        Mk_81___250lb_GP_Bomb_LD = (9, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (9, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (9, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (9, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (9, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (9, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        GBU_16___1000lb_Laser_Guided_Bomb = (9, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb = (9, Weapons.GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb)
+        _3_Mk_81 = (9, Weapons._3_Mk_81)
+        _2_Mk_82_____ = (9, Weapons._2_Mk_82_____)
+        _3_Mk_82 = (9, Weapons._3_Mk_82)
+        _2_Mk_83_____ = (9, Weapons._2_Mk_83_____)
+        _3_Mk_83 = (9, Weapons._3_Mk_83)
+        _2_Mk_20_Rockeye_____ = (9, Weapons._2_Mk_20_Rockeye_____)
+#ERRR {BRU-42_3*MK-20}
+        _2_GBU_12_______ = (9, Weapons._2_GBU_12_______)
+        _3_GBU_12 = (9, Weapons._3_GBU_12)
+        _2_GBU_16_____ = (9, Weapons._2_GBU_16_____)
+        _2_Mk_82_AIR_____ = (9, Weapons._2_Mk_82_AIR_____)
+        _3_Mk_82_AIR = (9, Weapons._3_Mk_82_AIR)
+        _2_Mk_82_Snakeye_____ = (9, Weapons._2_Mk_82_Snakeye_____)
+        _3_Mk_82_Snakeye = (9, Weapons._3_Mk_82_Snakeye)
+        _2_GBU_38_______ = (9, Weapons._2_GBU_38_______)
+        BDU_33___25lb_Practice_Bomb_LD = (9, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        BRU_42_3_BDU_33 = (9, Weapons.BRU_42_3_BDU_33)
+        LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_ = (9, Weapons.LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_)
+        LAU_117_AGM_65G = (9, Weapons.LAU_117_AGM_65G)
+        LAU_117_TGM_65G = (9, Weapons.LAU_117_TGM_65G)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (9, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (9, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (9, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (9, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_Mk_5_HEAT)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M151_HE)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M156_SM)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (9, Weapons.BRU_42_3_x_LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        AN_AAQ_28_LITENING___Targeting_Pod_ = (9, Weapons.AN_AAQ_28_LITENING___Targeting_Pod_)
+        AERO_1D_300_Gallons_Fuel_Tank_ = (9, Weapons.AERO_1D_300_Gallons_Fuel_Tank_)
+        AERO_1D_300_Gallons_Fuel_Tank__Empty_ = (9, Weapons.AERO_1D_300_Gallons_Fuel_Tank__Empty_)
+
+    class Pylon10:
+        LAU_7_with_AIM_9M_Sidewinder_IR_AAM = (10, Weapons.LAU_7_with_AIM_9M_Sidewinder_IR_AAM)
+        AGM_122_Sidearm_ = (10, Weapons.AGM_122_Sidearm_)
+        Mk_81___250lb_GP_Bomb_LD = (10, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (10, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (10, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (10, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_83___1000lb_GP_Bomb_LD = (10, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (10, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (10, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        GBU_16___1000lb_Laser_Guided_Bomb = (10, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb = (10, Weapons.GBU_38_V_1_B___JDAM__500lb_GPS_Guided_Bomb)
+        _3_Mk_81 = (10, Weapons._3_Mk_81)
+        _2_Mk_82_____ = (10, Weapons._2_Mk_82_____)
+        _3_Mk_82 = (10, Weapons._3_Mk_82)
+        _2_Mk_20_Rockeye_____ = (10, Weapons._2_Mk_20_Rockeye_____)
+        _2_GBU_12_______ = (10, Weapons._2_GBU_12_______)
+        _3_GBU_12 = (10, Weapons._3_GBU_12)
+        _2_Mk_82_AIR_____ = (10, Weapons._2_Mk_82_AIR_____)
+        _3_Mk_82_AIR = (10, Weapons._3_Mk_82_AIR)
+        _2_Mk_82_Snakeye_____ = (10, Weapons._2_Mk_82_Snakeye_____)
+        _3_Mk_82_Snakeye = (10, Weapons._3_Mk_82_Snakeye)
+        _2_GBU_38_______ = (10, Weapons._2_GBU_38_______)
+        _3_GBU_38_ = (10, Weapons._3_GBU_38_)
+        BDU_33___25lb_Practice_Bomb_LD = (10, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        BRU_42_3_BDU_33 = (10, Weapons.BRU_42_3_BDU_33)
+        LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_ = (10, Weapons.LAU_117_with_AGM_65E___Maverick_E__Laser_ASM___Lg_Whd_)
+        LAU_117_AGM_65G = (10, Weapons.LAU_117_AGM_65G)
+        LAU_117_TGM_65G = (10, Weapons.LAU_117_TGM_65G)
+        LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE = (10, Weapons.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (10, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (10, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (10, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_M156_SM)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_WTU_1_B_TP)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M257_IL)
+        LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM = (10, Weapons.LAU_68___7_x_UnGd_Rkts__70_mm_Hydra_70_M274_TP_SM)
+        SUU_25_x_8_LUU_2___Target_Marker_Flares = (10, Weapons.SUU_25_x_8_LUU_2___Target_Marker_Flares)
+        BRU_42_with_3_x_SUU_25_x_8_LUU_2___Target_Marker_Flares = (10, Weapons.BRU_42_with_3_x_SUU_25_x_8_LUU_2___Target_Marker_Flares)
+        Smokewinder___red = (10, Weapons.Smokewinder___red)
+        Smokewinder___green = (10, Weapons.Smokewinder___green)
+        Smokewinder___blue = (10, Weapons.Smokewinder___blue)
+        Smokewinder___white = (10, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (10, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (10, Weapons.Smokewinder___orange)
+        AERO_1D_300_Gallons_Fuel_Tank_ = (10, Weapons.AERO_1D_300_Gallons_Fuel_Tank_)
+        AERO_1D_300_Gallons_Fuel_Tank__Empty_ = (10, Weapons.AERO_1D_300_Gallons_Fuel_Tank__Empty_)
+
+    class Pylon11:
+        AIM_9M_Sidewinder_IR_AAM = (11, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AGM_122_Sidearm = (11, Weapons.AGM_122_Sidearm)
+        Mk_81___250lb_GP_Bomb_LD = (11, Weapons.Mk_81___250lb_GP_Bomb_LD)
+        Mk_82___500lb_GP_Bomb_LD = (11, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_82_Snakeye___500lb_GP_Bomb_HD = (11, Weapons.Mk_82_Snakeye___500lb_GP_Bomb_HD)
+        Mk_82_AIR_Ballute___500lb_GP_Bomb_HD = (11, Weapons.Mk_82_AIR_Ballute___500lb_GP_Bomb_HD)
+        Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets = (11, Weapons.Mk_20_Rockeye___490lbs_CBU__247_x_HEAT_Bomblets)
+        GBU_12___500lb_Laser_Guided_Bomb = (11, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        CATM_9M = (11, Weapons.CATM_9M)
+        BDU_33___25lb_Practice_Bomb_LD = (11, Weapons.BDU_33___25lb_Practice_Bomb_LD)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (11, Weapons.Smokewinder___orange)
+
+    pylons: Set[int] = {1, 2, 3, 4, 6, 8, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.RunwayAttack]
+    task_default = task.CAS
+
+
+class VSN_Mk6(PlaneType):
+    id = "VSN_Mk6"
+    flyable = True
+    height = 4.01
+    width = 10.26
+    length = 13.98
+    fuel_max = 1445
+    max_speed = 979.2
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    livery_name = "VSN_MK6"  # from type
+
+    class Pylon1:
+        _2_x_HVAR__UnGd_Rkts = (1, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon2:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (2, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (2, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (2, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (2, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (2, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (2, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter_ = (2, Weapons.Fuel_tank_455_Liter_)
+#ERRR <CLEAN>
+
+    class Pylon3:
+        _2_x_HVAR__UnGd_Rkts = (3, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon4:
+        _2_x_HVAR__UnGd_Rkts = (4, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon5:
+        AIM_9P_Sidewinder_IR_AAM = (5, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (5, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (5, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (5, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (5, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (5, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (5, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (5, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (5, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter_ = (5, Weapons.Fuel_tank_455_Liter_)
+        Fuel_tank_675_Liter_ = (5, Weapons.Fuel_tank_675_Liter_)
+#ERRR <CLEAN>
+
+    class Pylon6:
+        Mk_84___2000lb_GP_Bomb_LD = (6, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (6, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (6, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+        _3_Mk_83 = (6, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (6, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (6, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (6, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (6, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+
+    class Pylon7:
+        Mk_84___2000lb_GP_Bomb_LD = (7, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (7, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (7, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (7, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (7, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+        _3_Mk_83 = (7, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (7, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (7, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+
+    class Pylon8:
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (8, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (8, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (8, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter = (8, Weapons.Fuel_tank_455_Liter)
+        Fuel_tank_675_Liter = (8, Weapons.Fuel_tank_675_Liter)
+#ERRR <CLEAN>
+
+    class Pylon9:
+        _2_x_HVAR__UnGd_Rkts = (9, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon10:
+        _2_x_HVAR__UnGd_Rkts = (10, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon11:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (11, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (11, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (11, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (11, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (11, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (11, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (11, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (11, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (11, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (11, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (11, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (11, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter = (11, Weapons.Fuel_tank_455_Liter)
+#ERRR <CLEAN>
+
+    class Pylon12:
+        _2_x_HVAR__UnGd_Rkts = (12, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon13:
+        Smoke_Generator___red_ = (13, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (13, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (13, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (13, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (13, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (13, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_TMk68(PlaneType):
+    id = "VSN_TMk68"
+    flyable = True
+    height = 4.01
+    width = 10.26
+    length = 13.98
+    fuel_max = 1445
+    max_speed = 979.2
+    chaff = 30
+    flare = 15
+    charge_total = 60
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+
+    property_defaults: Dict[str, Any] = {
+        "SoloFlight": False,
+        "NetCrewControlPriority": 1,
+        "NS430allow": True,
+        "DismountIFRHood": False,
+    }
+
+    class Properties:
+
+        class SoloFlight:
+            id = "SoloFlight"
+
+        class NetCrewControlPriority:
+            id = "NetCrewControlPriority"
+
+            class Values:
+                Pilot = 0
+                Instructor = 1
+                Ask_Always = -1
+                Equally_Responsible = -2
+
+        class NS430allow:
+            id = "NS430allow"
+
+        class DismountIFRHood:
+            id = "DismountIFRHood"
+
+    properties = {
+        "SoloFlight": UnitPropertyDescription(
+            identifier="SoloFlight",
+            control="checkbox",
+            label="Solo Flight",
+            default=False,
+            weight_when_on=-80,
+        ),
+        "NetCrewControlPriority": UnitPropertyDescription(
+            identifier="NetCrewControlPriority",
+            control="comboList",
+            label="Aircraft Control Priority",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                0: "Pilot",
+                1: "Instructor",
+                -1: "Ask Always",
+                -2: "Equally Responsible",
+            },
+        ),
+        "NS430allow": UnitPropertyDescription(
+            identifier="NS430allow",
+            control="checkbox",
+            label="Allow NS 430",
+            default=True,
+        ),
+        "DismountIFRHood": UnitPropertyDescription(
+            identifier="DismountIFRHood",
+            control="checkbox",
+            label="Dismount IFR Hood",
+            player_only=True,
+            default=False,
+        ),
+    }
+
+    livery_name = "VSN_TMK68"  # from type
+
+    class Pylon1:
+        _2_x_HVAR__UnGd_Rkts = (1, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon2:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (2, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (2, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (2, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (2, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (2, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (2, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (2, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (2, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (2, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter_ = (2, Weapons.Fuel_tank_455_Liter_)
+#ERRR <CLEAN>
+
+    class Pylon3:
+        _2_x_HVAR__UnGd_Rkts = (3, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon4:
+        _2_x_HVAR__UnGd_Rkts = (4, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon5:
+        AIM_9P_Sidewinder_IR_AAM = (5, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (5, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (5, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (5, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (5, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (5, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (5, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (5, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (5, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (5, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter_ = (5, Weapons.Fuel_tank_455_Liter_)
+        Fuel_tank_675_Liter_ = (5, Weapons.Fuel_tank_675_Liter_)
+#ERRR <CLEAN>
+
+    class Pylon6:
+        Mk_84___2000lb_GP_Bomb_LD = (6, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (6, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (6, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (6, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+        _3_Mk_83 = (6, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (6, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (6, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (6, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (6, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+
+    class Pylon7:
+        Mk_84___2000lb_GP_Bomb_LD = (7, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (7, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (7, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (7, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD = (7, Weapons.TER_9A_with_3_x_Mk_82___500lb_GP_Bomb_LD)
+        _3_Mk_83 = (7, Weapons._3_Mk_83)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (7, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+#ERRR {BRU33_2*LAU61_M282}
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (7, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (7, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+
+    class Pylon8:
+        AIM_9P_Sidewinder_IR_AAM = (8, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (8, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (8, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (8, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (8, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (8, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (8, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (8, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (8, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (8, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (8, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter = (8, Weapons.Fuel_tank_455_Liter)
+        Fuel_tank_675_Liter = (8, Weapons.Fuel_tank_675_Liter)
+#ERRR <CLEAN>
+
+    class Pylon9:
+        _2_x_HVAR__UnGd_Rkts = (9, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon10:
+        _2_x_HVAR__UnGd_Rkts = (10, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon11:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        AIM_9P_Sidewinder_IR_AAM = (11, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_9L_Sidewinder_IR_AAM = (11, Weapons.AIM_9L_Sidewinder_IR_AAM)
+        AIM_9B_Sidewinder_IR_AAM = (11, Weapons.AIM_9B_Sidewinder_IR_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (11, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (11, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_82___500lb_GP_Bomb_LD = (11, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (11, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        M117___750lb_GP_Bomb_LD = (11, Weapons.M117___750lb_GP_Bomb_LD)
+        AGM_65K___Maverick_K__CCD_Imp_ASM_ = (11, Weapons.AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_ = (11, Weapons.LAU_117_with_AGM_65K___Maverick_K__CCD_Imp_ASM_)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE = (11, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE)
+        LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT = (11, Weapons.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_5_HEAT)
+        Fuel_tank_455_Liter = (11, Weapons.Fuel_tank_455_Liter)
+#ERRR <CLEAN>
+
+    class Pylon12:
+        _2_x_HVAR__UnGd_Rkts = (12, Weapons._2_x_HVAR__UnGd_Rkts)
+
+    class Pylon13:
+        Smoke_Generator___red_ = (13, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (13, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (13, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (13, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (13, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (13, Weapons.Smoke_Generator___orange_)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.RunwayAttack, task.AntishipStrike]
+    task_default = task.FighterSweep
+
+
+class VSN_TornadoIDS(PlaneType):
+    id = "VSN_TornadoIDS"
+    flyable = True
+    height = 5.63
+    width = 13.05
+    length = 19.43
+    fuel_max = 6103
+    max_speed = 2649.996
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_TORNADOIDS"  # from type
+
+    class Pylon1:
+        BOZ_107___Countermeasure_Dispenser = (1, Weapons.BOZ_107___Countermeasure_Dispenser)
+        Sky_Shadow_ECM_Pod = (1, Weapons.Sky_Shadow_ECM_Pod)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+
+    class Pylon2:
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (2, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (2, Weapons.Kormoran___ASM)
+        TORNADO_Fuel_tank = (2, Weapons.TORNADO_Fuel_tank)
+
+    class Pylon3:
+        AIM_9M_Sidewinder_IR_AAM = (3, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (3, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+
+    class Pylon4:
+        GBU_16___1000lb_Laser_Guided_Bomb = (4, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (4, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (4, Weapons.Kormoran___ASM)
+
+    class Pylon5:
+        Mk_82___500lb_GP_Bomb_LD = (5, Weapons.Mk_82___500lb_GP_Bomb_LD)
+
+    class Pylon6:
+        Mk_82___500lb_GP_Bomb_LD = (6, Weapons.Mk_82___500lb_GP_Bomb_LD)
+        L_081_Fantasmagoria_ELINT_pod = (6, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    class Pylon7:
+        Mk_82___500lb_GP_Bomb_LD = (7, Weapons.Mk_82___500lb_GP_Bomb_LD)
+
+    class Pylon8:
+        GBU_16___1000lb_Laser_Guided_Bomb = (8, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (8, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (8, Weapons.Kormoran___ASM)
+
+    class Pylon9:
+        AIM_9M_Sidewinder_IR_AAM = (9, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (9, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+
+    class Pylon10:
+        AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_ = (10, Weapons.AGM_88C_HARM___High_Speed_Anti_Radiation_Missile_)
+        Kormoran___ASM = (10, Weapons.Kormoran___ASM)
+        TORNADO_Fuel_tank = (10, Weapons.TORNADO_Fuel_tank)
+
+    class Pylon11:
+        BOZ_107___Countermeasure_Dispenser = (11, Weapons.BOZ_107___Countermeasure_Dispenser)
+        Sky_Shadow_ECM_Pod = (11, Weapons.Sky_Shadow_ECM_Pod)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+    tasks = [task.Reconnaissance, task.GroundAttack, task.AFAC, task.AntishipStrike, task.PinpointStrike, task.SEAD]
+    task_default = task.GroundAttack
+
+
+class VSN_TornadoGR4(PlaneType):
+    id = "VSN_TornadoGR4"
+    flyable = True
+    height = 5.63
+    width = 13.05
+    length = 19.43
+    fuel_max = 6103
+    max_speed = 2649.996
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_TORNADOGR4"  # from type
+
+    class Pylon1:
+        BOZ_107___Countermeasure_Dispenser = (1, Weapons.BOZ_107___Countermeasure_Dispenser)
+        Sky_Shadow_ECM_Pod = (1, Weapons.Sky_Shadow_ECM_Pod)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+
+    class Pylon2:
+        TORNADO_Fuel_tank = (2, Weapons.TORNADO_Fuel_tank)
+
+    class Pylon3:
+        AIM_9M_Sidewinder_IR_AAM = (3, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        ALARM = (3, Weapons.ALARM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (3, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+
+    class Pylon4:
+        GBU_16___1000lb_Laser_Guided_Bomb = (4, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        ALARM = (4, Weapons.ALARM)
+        Sea_Eagle___ASM = (4, Weapons.Sea_Eagle___ASM)
+        GBU_27___2000lb_Laser_Guided_Penetrator_Bomb = (4, Weapons.GBU_27___2000lb_Laser_Guided_Penetrator_Bomb)
+
+    class Pylon5:
+        GBU_12___500lb_Laser_Guided_Bomb = (5, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        AN_AAQ_28_LITENING___Targeting_Pod_ = (5, Weapons.AN_AAQ_28_LITENING___Targeting_Pod_)
+
+    class Pylon6:
+        GBU_12___500lb_Laser_Guided_Bomb = (6, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+        L_081_Fantasmagoria_ELINT_pod = (6, Weapons.L_081_Fantasmagoria_ELINT_pod)
+
+    class Pylon7:
+        GBU_12___500lb_Laser_Guided_Bomb = (7, Weapons.GBU_12___500lb_Laser_Guided_Bomb)
+
+    class Pylon8:
+        GBU_16___1000lb_Laser_Guided_Bomb = (8, Weapons.GBU_16___1000lb_Laser_Guided_Bomb)
+        ALARM = (8, Weapons.ALARM)
+        Sea_Eagle___ASM = (8, Weapons.Sea_Eagle___ASM)
+        GBU_27___2000lb_Laser_Guided_Penetrator_Bomb = (8, Weapons.GBU_27___2000lb_Laser_Guided_Penetrator_Bomb)
+
+    class Pylon9:
+        AIM_9M_Sidewinder_IR_AAM = (9, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        ALARM = (9, Weapons.ALARM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (9, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+
+    class Pylon10:
+        TORNADO_Fuel_tank = (10, Weapons.TORNADO_Fuel_tank)
+
+    class Pylon11:
+        BOZ_107___Countermeasure_Dispenser = (11, Weapons.BOZ_107___Countermeasure_Dispenser)
+        Sky_Shadow_ECM_Pod = (11, Weapons.Sky_Shadow_ECM_Pod)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+    tasks = [task.Reconnaissance, task.GroundAttack, task.AFAC, task.AntishipStrike, task.PinpointStrike, task.SEAD]
+    task_default = task.GroundAttack
+
+
 plane_map = {
     "Tornado GR4": Tornado_GR4,
     "Tornado IDS": Tornado_IDS,
@@ -31880,4 +35666,27 @@ plane_map = {
     "B-17G": B_17G,
     "Ju-88A4": Ju_88A4,
     "C-47": C_47,
+    "A-4E-C": A_4E_C,
+    "Hercules": Hercules,
+    "Su_15TM": Su_15TM,
+    "Su_15": Su_15,
+    "SU22M4": SU22M4,
+    "KC130J": KC130J,
+    "VSN_A6A": VSN_A6A,
+    "VSN_F100": VSN_F100,
+    "VSN_F104C": VSN_F104C,
+    "VSN_F104G": VSN_F104G,
+    "VSN_F104S": VSN_F104S,
+    "VSN_F104S_AG": VSN_F104S_AG,
+    "VSN_NF104A": VSN_NF104A,
+    "VSN_F106A": VSN_F106A,
+    "VSN_F106B": VSN_F106B,
+    "VSN_F80C": VSN_F80C,
+    "VSN_RF80A": VSN_RF80A,
+    "VSN_F9F": VSN_F9F,
+    "VSN_Harrier": VSN_Harrier,
+    "VSN_Mk6": VSN_Mk6,
+    "VSN_TMk68": VSN_TMk68,
+    "VSN_TornadoIDS": VSN_TornadoIDS,
+    "VSN_TornadoGR4": VSN_TornadoGR4,
 }

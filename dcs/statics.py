@@ -1356,6 +1356,18 @@ class Fortification:
         shape_name = "Freya_Shelter_Concrete"
         rate = 20
 
+    class Hercules_Container_Parachute_Static(unittype.StaticType):
+        id = "Hercules_Container_Parachute_Static"
+        name = "Hercules container with parachute"
+        shape_name = None
+        rate = 1
+
+    class VSN_Edwards_ATC_tower(unittype.StaticType):
+        id = "VSN_Edwards_ATC_tower"
+        name = "VSN Edwards ATC tower"
+        shape_name = "VSN_Edwards_ATC_tower"
+        rate = 10
+
 fortification_map = {
     ".Command Center": Fortification._Command_Center,
     "Hangar A": Fortification.Hangar_A,
@@ -1582,6 +1594,8 @@ fortification_map = {
     "Siegfried Line": Fortification.Siegfried_Line,
     "Freya_Shelter_Brick": Fortification.Freya_Shelter_Brick,
     "Freya_Shelter_Concrete": Fortification.Freya_Shelter_Concrete,
+    "Hercules_Container_Parachute_Static": Fortification.Hercules_Container_Parachute_Static,
+    "VSN_Edwards_ATC_tower": Fortification.VSN_Edwards_ATC_tower,
 }
 
 

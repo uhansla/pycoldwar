@@ -8,18 +8,20 @@ BLUE = [
     'F_4E_45MC',
     # 'F_5E',
     # 'F_5E_3',
-    # 'F_86F_Sabre',
+    'F_86F_Sabre',
     # 'AJS37',
     # 'L_39ZA',
     # 'M_2000C',
     'Mirage_F1CE',
-    'Mirage_F1EE',
+    # 'Mirage_F1EE',
+    # MODS
+    # 'VSN_F104G',
 ]
 
 RED = [
     'F_14A_135_GR',
     'Mirage_F1CE',
-    'Mirage_F1EE',
+    # 'Mirage_F1EE',
     'F_4E_45MC',
     # 'Su_17M4',
     # 'Su_24M',
@@ -31,9 +33,77 @@ RED = [
     # 'Su_25',
     # 'F_5E',
     # 'F_5E_3',
+    # MODS
+    # 'Su_15TM',
 ]
 
 planes_map = {
+    'F_86F_Sabre': [
+        {
+            "type": planes.F_86F_Sabre,
+            "id": planes.F_86F_Sabre.id,
+            "fuel": planes.F_86F_Sabre.fuel_max,
+            "chaff": planes.F_86F_Sabre.chaff,
+            "flare": planes.F_86F_Sabre.flare,
+            "payload": {
+                "pylons": [
+                    planes.F_86F_Sabre.Pylon1.Fuel_Tank_200_gallons,
+                    None,
+                    None,
+                    None,
+                    planes.F_86F_Sabre.Pylon5.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
+                    planes.F_86F_Sabre.Pylon6.LAU_7_with_AIM_9B_Sidewinder_IR_AAM,
+                    None,
+                    None,
+                    None,
+                    planes.F_86F_Sabre.Pylon10.Fuel_Tank_200_gallons
+                ]
+            }
+        }
+    ],
+    'VSN_F104G': [
+        {
+            "type": planes.VSN_F104G,
+            "id": planes.VSN_F104G.id,
+            "fuel": planes.VSN_F104G.fuel_max,
+            "chaff": planes.VSN_F104G.chaff,
+            "flare": planes.VSN_F104G.flare,
+            "payload": {
+                "pylons": [
+                    None, #1
+                    planes.VSN_F104G.Pylon2.VSN_F104G_L_PTB, #2
+                    None, #3
+                    planes.VSN_F104G.Pylon4.AIM_9P5_Sidewinder_IR_AAM, #4
+                    None, #5
+                    None, #6
+                    planes.VSN_F104G.Pylon7.AIM_9P5_Sidewinder_IR_AAM, #7
+                    planes.VSN_F104G.Pylon8.AIM_9P5_Sidewinder_IR_AAM, #8
+                    None, #9
+                    planes.VSN_F104G.Pylon10.VSN_F104G_R_PTB, #10
+                    None #11
+                ]
+            }
+        }
+    ],
+    'Su_15TM': [
+        {
+            "type": planes.Su_15TM,
+            "id": planes.Su_15TM.id,
+            "fuel": planes.Su_15TM.fuel_max,
+            "chaff": planes.Su_15TM.chaff,
+            "flare": planes.Su_15TM.flare,
+            "payload": {
+                "pylons": [
+                    planes.Su_15TM.Pylon1.R_98MR,
+                    planes.Su_15TM.Pylon2.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM,
+                    planes.Su_15TM.Pylon3.PTB_600,
+                    planes.Su_15TM.Pylon4.PTB_600,
+                    planes.Su_15TM.Pylon5.APU_60_1M_with_R_60M__AA_8_Aphid_B____IR_AAM,
+                    planes.Su_15TM.Pylon6.R_98MT
+                ]
+            }
+        }
+    ],
     'F_14A_135_GR': [
         {
             'type': planes.F_14A_135_GR,

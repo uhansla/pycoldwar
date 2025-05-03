@@ -262,6 +262,29 @@ class Russia(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -343,6 +366,29 @@ class Russia(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -360,6 +406,7 @@ class Russia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -376,6 +423,7 @@ class Russia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -399,8 +447,6 @@ class Russia(Country):
         CV_1143_5 = ships.CV_1143_5
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -599,6 +645,7 @@ class Ukraine(Country):
             RLS_19J6 = vehicles.AirDefence.RLS_19J6
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             Soldier_stinger = vehicles.AirDefence.Soldier_stinger
             Stinger_comm = vehicles.AirDefence.Stinger_comm
             NASAMS_Command_Post = vehicles.AirDefence.NASAMS_Command_Post
@@ -786,6 +833,28 @@ class Ukraine(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -859,6 +928,28 @@ class Ukraine(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -875,6 +966,7 @@ class Ukraine(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -890,6 +982,7 @@ class Ukraine(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -905,8 +998,6 @@ class Ukraine(Country):
         BDK_775 = ships.BDK_775
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -1184,6 +1275,29 @@ class USA(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -1265,6 +1379,29 @@ class USA(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -1286,6 +1423,7 @@ class USA(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -1306,6 +1444,7 @@ class USA(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -1327,8 +1466,6 @@ class USA(Country):
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
         Santafe = ships.Santafe
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Forrestal = ships.Forrestal
 
     class CallsignAWACS:
@@ -1619,6 +1756,29 @@ class Turkey(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -1679,6 +1839,29 @@ class Turkey(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -1695,6 +1878,7 @@ class Turkey(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -1710,6 +1894,7 @@ class Turkey(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -1719,8 +1904,6 @@ class Turkey(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -2021,6 +2204,29 @@ class UK(Country):
         Yak_52 = planes.Yak_52
         B_17G = planes.B_17G
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -2080,6 +2286,29 @@ class UK(Country):
         Plane.Yak_52,
         Plane.B_17G,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -2096,6 +2325,7 @@ class UK(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -2111,6 +2341,7 @@ class UK(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -2267,6 +2498,7 @@ class France(Country):
             MLRS_FDDM = vehicles.Artillery.MLRS_FDDM
             Tt_B8M1 = vehicles.Artillery.Tt_B8M1
             HL_B8M1 = vehicles.Artillery.HL_B8M1
+            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
             L118_Unit = vehicles.Artillery.L118_Unit
             M12_GMC = vehicles.Artillery.M12_GMC
             M2A1_105 = vehicles.Artillery.M2A1_105
@@ -2422,6 +2654,29 @@ class France(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -2486,6 +2741,29 @@ class France(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -2499,6 +2777,7 @@ class France(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -2511,6 +2790,7 @@ class France(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -2521,8 +2801,6 @@ class France(Country):
         Leander_gun_condell = ships.Leander_gun_condell
         Leander_gun_lynch = ships.Leander_gun_lynch
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -2895,6 +3173,28 @@ class Germany(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -2956,6 +3256,28 @@ class Germany(Country):
         Plane.Mirage_F1BE,
         Plane.TF_51D,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -2969,6 +3291,7 @@ class Germany(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -2981,6 +3304,7 @@ class Germany(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -2990,8 +3314,6 @@ class Germany(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -3456,6 +3778,9 @@ class USAFAggressors(Country):
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
 
     class Plane:
         A_10C = planes.A_10C
@@ -3507,6 +3832,29 @@ class USAFAggressors(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
         A_50 = planes.A_50
         An_26B = planes.An_26B
         An_30M = planes.An_30M
@@ -3639,6 +3987,29 @@ class USAFAggressors(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
         Plane.A_50,
         Plane.An_26B,
         Plane.An_30M,
@@ -3731,6 +4102,7 @@ class USAFAggressors(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
         Ka_27 = helicopters.Ka_27
         Mi_24V = helicopters.Mi_24V
         Mi_26 = helicopters.Mi_26
@@ -3755,6 +4127,7 @@ class USAFAggressors(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
         Helicopter.Ka_27,
         Helicopter.Mi_24V,
         Helicopter.Mi_26,
@@ -3775,8 +4148,6 @@ class USAFAggressors(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
         ALBATROS = ships.ALBATROS
@@ -3801,6 +4172,7 @@ class USAFAggressors(Country):
         PIOTR = ships.PIOTR
         CV_1143_5 = ships.CV_1143_5
         Santafe = ships.Santafe
+        Ara_vdm = ships.Ara_vdm
         La_Combattante_II = ships.La_Combattante_II
         Leander_gun_condell = ships.Leander_gun_condell
         Leander_gun_lynch = ships.Leander_gun_lynch
@@ -3823,6 +4195,7 @@ class USAFAggressors(Country):
         Leander_gun_achilles = ships.Leander_gun_achilles
         Leander_gun_andromeda = ships.Leander_gun_andromeda
         Leander_gun_ariadne = ships.Leander_gun_ariadne
+        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -4111,6 +4484,29 @@ class Canada(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -4166,6 +4562,29 @@ class Canada(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -4180,6 +4599,7 @@ class Canada(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -4193,6 +4613,7 @@ class Canada(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -4201,8 +4622,6 @@ class Canada(Country):
         LST_Mk2 = ships.LST_Mk2
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
 
@@ -4492,6 +4911,29 @@ class Spain(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -4553,6 +4995,29 @@ class Spain(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -4567,6 +5032,7 @@ class Spain(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -4580,6 +5046,7 @@ class Spain(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -4589,8 +5056,6 @@ class Spain(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -4901,6 +5366,29 @@ class TheNetherlands(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -4960,6 +5448,29 @@ class TheNetherlands(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -4976,6 +5487,7 @@ class TheNetherlands(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -4991,6 +5503,7 @@ class TheNetherlands(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -4999,8 +5512,6 @@ class TheNetherlands(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -5292,6 +5803,29 @@ class Belgium(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -5349,6 +5883,29 @@ class Belgium(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -5362,6 +5919,7 @@ class Belgium(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -5374,6 +5932,7 @@ class Belgium(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -5381,8 +5940,6 @@ class Belgium(Country):
         HandyWind = ships.HandyWind
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -5659,6 +6216,29 @@ class Norway(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -5716,6 +6296,29 @@ class Norway(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -5729,6 +6332,7 @@ class Norway(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -5741,6 +6345,7 @@ class Norway(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -5749,8 +6354,6 @@ class Norway(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -6024,6 +6627,29 @@ class Denmark(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -6081,6 +6707,29 @@ class Denmark(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -6094,6 +6743,7 @@ class Denmark(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -6106,14 +6756,13 @@ class Denmark(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -6405,6 +7054,29 @@ class Israel(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -6465,6 +7137,29 @@ class Israel(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -6482,6 +7177,7 @@ class Israel(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -6498,6 +7194,7 @@ class Israel(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -6506,8 +7203,6 @@ class Israel(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -6837,6 +7532,29 @@ class Georgia(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -6894,6 +7612,29 @@ class Georgia(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -6908,6 +7649,7 @@ class Georgia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -6921,6 +7663,7 @@ class Georgia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -6934,8 +7677,6 @@ class Georgia(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -7222,6 +7963,29 @@ class Insurgents(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.P_51D,
@@ -7273,6 +8037,29 @@ class Insurgents(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -7286,6 +8073,7 @@ class Insurgents(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Mi_8MT,
@@ -7298,6 +8086,7 @@ class Insurgents(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -7309,8 +8098,6 @@ class Insurgents(Country):
         ZWEZDNY = ships.ZWEZDNY
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -7531,6 +8318,28 @@ class Abkhazia(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.Su_25,
@@ -7586,6 +8395,28 @@ class Abkhazia(Country):
         Plane.Mirage_F1BE,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -7600,6 +8431,7 @@ class Abkhazia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Mi_24V,
@@ -7613,6 +8445,7 @@ class Abkhazia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -7624,8 +8457,6 @@ class Abkhazia(Country):
         Dry_cargo_ship_2 = ships.Dry_cargo_ship_2
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -7834,6 +8665,28 @@ class SouthOssetia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.FW_190A8,
@@ -7884,6 +8737,28 @@ class SouthOssetia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -7898,6 +8773,7 @@ class SouthOssetia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Mi_24V,
@@ -7911,13 +8787,12 @@ class SouthOssetia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -8115,6 +8990,29 @@ class Italy(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -8176,6 +9074,29 @@ class Italy(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -8190,6 +9111,7 @@ class Italy(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -8203,6 +9125,7 @@ class Italy(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -8211,8 +9134,6 @@ class Italy(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -8502,6 +9423,29 @@ class Australia(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -8557,6 +9501,29 @@ class Australia(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -8572,6 +9539,7 @@ class Australia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -8586,6 +9554,7 @@ class Australia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -8595,8 +9564,6 @@ class Australia(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -8856,6 +9823,28 @@ class Switzerland(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -8908,6 +9897,28 @@ class Switzerland(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -8919,6 +9930,7 @@ class Switzerland(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -8929,14 +9941,13 @@ class Switzerland(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -9187,6 +10198,29 @@ class Austria(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -9238,6 +10272,29 @@ class Austria(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -9250,6 +10307,7 @@ class Austria(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -9261,14 +10319,13 @@ class Austria(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -9619,6 +10676,28 @@ class Belarus(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -9681,6 +10760,28 @@ class Belarus(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -9695,6 +10796,7 @@ class Belarus(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -9708,14 +10810,13 @@ class Belarus(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -9775,10 +10876,10 @@ class Bulgaria(Country):
             SAU_Akatsia = vehicles.Artillery.SAU_Akatsia
             Tt_B8M1 = vehicles.Artillery.Tt_B8M1
             HL_B8M1 = vehicles.Artillery.HL_B8M1
+            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
             L118_Unit = vehicles.Artillery.L118_Unit
             Wespe124 = vehicles.Artillery.Wespe124
             Pak40 = vehicles.Artillery.Pak40
-            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
 
         class Infantry:
             Soldier_mauser98 = vehicles.Infantry.Soldier_mauser98
@@ -9813,6 +10914,7 @@ class Bulgaria(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             Flak18 = vehicles.AirDefence.Flak18
             Flak30 = vehicles.AirDefence.Flak30
@@ -9973,6 +11075,29 @@ class Bulgaria(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -10032,6 +11157,29 @@ class Bulgaria(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -10045,6 +11193,7 @@ class Bulgaria(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -10057,14 +11206,13 @@ class Bulgaria(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -10367,6 +11515,28 @@ class CzechRepublic(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -10423,6 +11593,28 @@ class CzechRepublic(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -10436,6 +11628,7 @@ class CzechRepublic(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -10448,14 +11641,13 @@ class CzechRepublic(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -10753,6 +11945,29 @@ class China(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -10815,6 +12030,29 @@ class China(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -10829,6 +12067,7 @@ class China(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -10842,6 +12081,7 @@ class China(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -10856,8 +12096,6 @@ class China(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignHelipad:
         Otkrytka = "Otkrytka"
@@ -11028,6 +12266,28 @@ class Croatia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -11079,6 +12339,28 @@ class Croatia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -11093,6 +12375,7 @@ class Croatia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -11106,14 +12389,13 @@ class Croatia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -11446,6 +12728,29 @@ class Egypt(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -11503,6 +12808,29 @@ class Egypt(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -11520,6 +12848,7 @@ class Egypt(Country):
         Mi_24V = helicopters.Mi_24V
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -11536,6 +12865,7 @@ class Egypt(Country):
         Helicopter.Mi_24V,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -11546,8 +12876,6 @@ class Egypt(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -11690,10 +13018,10 @@ class Finland(Country):
             SAU_Gvozdika = vehicles.Artillery.SAU_Gvozdika
             Tt_B8M1 = vehicles.Artillery.Tt_B8M1
             HL_B8M1 = vehicles.Artillery.HL_B8M1
+            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
             L118_Unit = vehicles.Artillery.L118_Unit
             Wespe124 = vehicles.Artillery.Wespe124
             Pak40 = vehicles.Artillery.Pak40
-            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
 
         class Infantry:
             Soldier_mauser98 = vehicles.Infantry.Soldier_mauser98
@@ -11720,6 +13048,7 @@ class Finland(Country):
             NASAMS_LN_C = vehicles.AirDefence.NASAMS_LN_C
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             Flak18 = vehicles.AirDefence.Flak18
             Flak30 = vehicles.AirDefence.Flak30
             Flak36 = vehicles.AirDefence.Flak36
@@ -11867,6 +13196,28 @@ class Finland(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -11918,6 +13269,28 @@ class Finland(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -11931,6 +13304,7 @@ class Finland(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -11943,14 +13317,13 @@ class Finland(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -12257,6 +13630,29 @@ class Greece(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -12315,6 +13711,29 @@ class Greece(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -12332,6 +13751,7 @@ class Greece(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -12348,6 +13768,7 @@ class Greece(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -12355,8 +13776,6 @@ class Greece(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -12534,6 +13953,7 @@ class Hungary(Country):
             FPS_117 = vehicles.AirDefence.FPS_117
             FPS_117_ECS = vehicles.AirDefence.FPS_117_ECS
             FPS_117_Dome = vehicles.AirDefence.FPS_117_Dome
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             Flak18 = vehicles.AirDefence.Flak18
             Flak30 = vehicles.AirDefence.Flak30
@@ -12686,6 +14106,28 @@ class Hungary(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -12741,6 +14183,28 @@ class Hungary(Country):
         Plane.Mirage_F1BE,
         Plane.TF_51D,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -12754,6 +14218,7 @@ class Hungary(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -12766,14 +14231,13 @@ class Hungary(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -13065,6 +14529,29 @@ class India(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -13124,6 +14611,29 @@ class India(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -13139,6 +14649,7 @@ class India(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -13153,6 +14664,7 @@ class India(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -13164,8 +14676,6 @@ class India(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -13355,6 +14865,7 @@ class Iran(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
@@ -13483,6 +14994,29 @@ class Iran(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -13544,6 +15078,29 @@ class Iran(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -13560,6 +15117,7 @@ class Iran(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -13575,6 +15133,7 @@ class Iran(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -13587,8 +15146,6 @@ class Iran(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -13768,6 +15325,7 @@ class Iraq(Country):
             FPS_117 = vehicles.AirDefence.FPS_117
             FPS_117_ECS = vehicles.AirDefence.FPS_117_ECS
             FPS_117_Dome = vehicles.AirDefence.FPS_117_Dome
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
 
         class Fortification:
             Bunker = vehicles.Fortification.Bunker
@@ -13900,6 +15458,29 @@ class Iraq(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -13960,6 +15541,29 @@ class Iraq(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -13973,6 +15577,7 @@ class Iraq(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -13985,14 +15590,13 @@ class Iraq(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -14294,6 +15898,29 @@ class Japan(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -14347,6 +15974,29 @@ class Japan(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -14362,6 +16012,7 @@ class Japan(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -14376,6 +16027,7 @@ class Japan(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -14384,8 +16036,6 @@ class Japan(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -14745,6 +16395,28 @@ class Kazakhstan(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -14808,6 +16480,28 @@ class Kazakhstan(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -14823,6 +16517,7 @@ class Kazakhstan(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -14837,14 +16532,13 @@ class Kazakhstan(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -15004,6 +16698,7 @@ class NorthKorea(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
@@ -15119,6 +16814,28 @@ class NorthKorea(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -15172,6 +16889,28 @@ class NorthKorea(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -15184,6 +16923,7 @@ class NorthKorea(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -15195,14 +16935,13 @@ class NorthKorea(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -15484,6 +17223,29 @@ class Pakistan(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -15542,6 +17304,29 @@ class Pakistan(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -15553,6 +17338,7 @@ class Pakistan(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -15563,6 +17349,7 @@ class Pakistan(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -15572,8 +17359,6 @@ class Pakistan(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -15744,6 +17529,7 @@ class Poland(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             Allies_Director = vehicles.AirDefence.Allies_Director
             M45_Quadmount = vehicles.AirDefence.M45_Quadmount
@@ -15896,6 +17682,29 @@ class Poland(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -15957,6 +17766,29 @@ class Poland(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -15969,6 +17801,7 @@ class Poland(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -15980,6 +17813,7 @@ class Poland(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -15991,8 +17825,6 @@ class Poland(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -16163,6 +17995,7 @@ class Romania(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             Flak18 = vehicles.AirDefence.Flak18
             Flak30 = vehicles.AirDefence.Flak30
@@ -16317,6 +18150,29 @@ class Romania(Country):
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -16373,6 +18229,29 @@ class Romania(Country):
         Plane.TF_51D,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -16385,6 +18264,7 @@ class Romania(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -16396,6 +18276,7 @@ class Romania(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -16407,8 +18288,6 @@ class Romania(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -16694,6 +18573,29 @@ class SaudiArabia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -16751,6 +18653,29 @@ class SaudiArabia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -16768,6 +18693,7 @@ class SaudiArabia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -16784,6 +18710,7 @@ class SaudiArabia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -16792,8 +18719,6 @@ class SaudiArabia(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -17093,6 +19018,28 @@ class Serbia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -17148,6 +19095,28 @@ class Serbia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -17160,6 +19129,7 @@ class Serbia(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -17171,14 +19141,13 @@ class Serbia(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -17466,6 +19435,28 @@ class Slovakia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -17521,6 +19512,28 @@ class Slovakia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -17533,6 +19546,7 @@ class Slovakia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -17544,14 +19558,13 @@ class Slovakia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -17830,6 +19843,29 @@ class SouthKorea(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -17886,6 +19922,29 @@ class SouthKorea(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -17899,6 +19958,7 @@ class SouthKorea(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -17911,6 +19971,7 @@ class SouthKorea(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -17919,8 +19980,6 @@ class SouthKorea(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -18060,6 +20119,7 @@ class Sweden(Country):
         class Artillery:
             Tt_B8M1 = vehicles.Artillery.Tt_B8M1
             HL_B8M1 = vehicles.Artillery.HL_B8M1
+            LeFH_18_40_105 = vehicles.Artillery.LeFH_18_40_105
             L118_Unit = vehicles.Artillery.L118_Unit
 
         class AirDefence:
@@ -18178,6 +20238,29 @@ class Sweden(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -18232,6 +20315,29 @@ class Sweden(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -18243,6 +20349,7 @@ class Sweden(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -18253,14 +20360,13 @@ class Sweden(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -18452,8 +20558,8 @@ class Syria(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
-            RD_75 = vehicles.AirDefence.RD_75
             ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
+            RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
             Bunker = vehicles.Fortification.Bunker
@@ -18582,6 +20688,28 @@ class Syria(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -18640,6 +20768,28 @@ class Syria(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -18654,6 +20804,7 @@ class Syria(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -18667,14 +20818,13 @@ class Syria(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -18956,6 +21106,29 @@ class Yemen(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -19010,6 +21183,29 @@ class Yemen(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -19024,6 +21220,7 @@ class Yemen(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -19037,6 +21234,7 @@ class Yemen(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -19045,8 +21243,6 @@ class Yemen(Country):
         BDK_775 = ships.BDK_775
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -19222,6 +21418,7 @@ class Vietnam(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
@@ -19340,6 +21537,28 @@ class Vietnam(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         TF_51D = planes.TF_51D
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -19396,6 +21615,28 @@ class Vietnam(Country):
         Plane.Mirage_F1BE,
         Plane.TF_51D,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -19409,6 +21650,7 @@ class Vietnam(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -19421,6 +21663,7 @@ class Vietnam(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -19429,8 +21672,6 @@ class Vietnam(Country):
         HandyWind = ships.HandyWind
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -19709,6 +21950,29 @@ class Venezuela(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -19762,6 +22026,29 @@ class Venezuela(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -19775,6 +22062,7 @@ class Venezuela(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -19787,14 +22075,13 @@ class Venezuela(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -20043,6 +22330,29 @@ class Tunisia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -20094,6 +22404,29 @@ class Tunisia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -20105,6 +22438,7 @@ class Tunisia(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -20115,14 +22449,13 @@ class Tunisia(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -20385,6 +22718,29 @@ class Thailand(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -20439,6 +22795,29 @@ class Thailand(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -20453,6 +22832,7 @@ class Thailand(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -20466,6 +22846,7 @@ class Thailand(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -20474,8 +22855,6 @@ class Thailand(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -20744,6 +23123,29 @@ class Sudan(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -20799,6 +23201,29 @@ class Sudan(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -20811,6 +23236,7 @@ class Sudan(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -20822,14 +23248,13 @@ class Sudan(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -21073,6 +23498,28 @@ class Philippines(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -21126,6 +23573,28 @@ class Philippines(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -21153,8 +23622,6 @@ class Philippines(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -21434,6 +23901,29 @@ class Morocco(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -21489,6 +23979,29 @@ class Morocco(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -21502,6 +24015,7 @@ class Morocco(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -21514,14 +24028,13 @@ class Morocco(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -21773,6 +24286,29 @@ class Mexico(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -21825,6 +24361,29 @@ class Mexico(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -21839,6 +24398,7 @@ class Mexico(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -21852,6 +24412,7 @@ class Mexico(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -21860,8 +24421,6 @@ class Mexico(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -22118,6 +24677,29 @@ class Malaysia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -22170,6 +24752,29 @@ class Malaysia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -22182,6 +24787,7 @@ class Malaysia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -22193,6 +24799,7 @@ class Malaysia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -22202,8 +24809,6 @@ class Malaysia(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -22490,6 +25095,29 @@ class Libya(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -22546,6 +25174,29 @@ class Libya(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -22557,6 +25208,7 @@ class Libya(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -22567,14 +25219,13 @@ class Libya(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         La_Combattante_II = ships.La_Combattante_II
 
     class CallsignAWACS:
@@ -22850,6 +25501,29 @@ class Jordan(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -22905,6 +25579,29 @@ class Jordan(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -22920,6 +25617,7 @@ class Jordan(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -22934,14 +25632,13 @@ class Jordan(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -23233,6 +25930,29 @@ class Indonesia(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -23291,6 +26011,29 @@ class Indonesia(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -23305,6 +26048,7 @@ class Indonesia(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -23318,6 +26062,7 @@ class Indonesia(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -23327,8 +26072,6 @@ class Indonesia(Country):
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -23575,6 +26318,29 @@ class Honduras(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -23626,6 +26392,29 @@ class Honduras(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -23638,6 +26427,7 @@ class Honduras(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -23649,14 +26439,13 @@ class Honduras(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -23819,6 +26608,7 @@ class Ethiopia(Country):
             S_60_Type59_Artillery = vehicles.AirDefence.S_60_Type59_Artillery
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
@@ -23930,6 +26720,27 @@ class Ethiopia(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -23984,6 +26795,27 @@ class Ethiopia(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -24013,8 +26845,6 @@ class Ethiopia(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -24285,6 +27115,29 @@ class Chile(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -24342,6 +27195,29 @@ class Chile(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -24356,6 +27232,7 @@ class Chile(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -24369,6 +27246,7 @@ class Chile(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -24377,9 +27255,9 @@ class Chile(Country):
         Seawise_Giant = ships.Seawise_Giant
         La_Combattante_II = ships.La_Combattante_II
         HarborTug = ships.HarborTug
+        Leander_gun_condell = ships.Leander_gun_condell
+        Leander_gun_lynch = ships.Leander_gun_lynch
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -24650,6 +27528,29 @@ class Brazil(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -24702,6 +27603,29 @@ class Brazil(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -24716,6 +27640,7 @@ class Brazil(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -24729,6 +27654,7 @@ class Brazil(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -24737,8 +27663,6 @@ class Brazil(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -25006,6 +27930,27 @@ class Bahrain(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -25056,6 +28001,27 @@ class Bahrain(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -25086,8 +28052,6 @@ class Bahrain(Country):
         PERRY = ships.PERRY
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -25361,6 +28325,27 @@ class ThirdReich(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -25412,6 +28397,27 @@ class ThirdReich(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -25439,8 +28445,6 @@ class ThirdReich(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -25598,6 +28602,7 @@ class Yugoslavia(Country):
             ZSU_23_4_Shilka = vehicles.AirDefence.ZSU_23_4_Shilka
             S_60_Type59_Artillery = vehicles.AirDefence.S_60_Type59_Artillery
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             Bofors40 = vehicles.AirDefence.Bofors40
             QF_37_AA = vehicles.AirDefence.QF_37_AA
@@ -25726,6 +28731,27 @@ class Yugoslavia(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -25779,6 +28805,27 @@ class Yugoslavia(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -25808,8 +28855,6 @@ class Yugoslavia(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -26114,6 +29159,27 @@ class USSR(Country):
         Mirage_F1EE = planes.Mirage_F1EE
         Mirage_F1BE = planes.Mirage_F1BE
         Ju_88A4 = planes.Ju_88A4
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -26190,6 +29256,27 @@ class USSR(Country):
         Plane.Mirage_F1EE,
         Plane.Mirage_F1BE,
         Plane.Ju_88A4,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -26238,8 +29325,6 @@ class USSR(Country):
         BDK_775 = ships.BDK_775
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         LST_Mk2 = ships.LST_Mk2
         USS_Samuel_Chase = ships.USS_Samuel_Chase
         Higgins_boat = ships.Higgins_boat
@@ -26431,6 +29516,27 @@ class ItalianSocialRepublic(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -26481,6 +29587,27 @@ class ItalianSocialRepublic(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -26508,8 +29635,6 @@ class ItalianSocialRepublic(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
 
@@ -26707,6 +29832,7 @@ class Algeria(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
             HQ_7_LN_SP = vehicles.AirDefence.HQ_7_LN_SP
             HQ_7_LN_P = vehicles.AirDefence.HQ_7_LN_P
@@ -26864,6 +29990,29 @@ class Algeria(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -26931,6 +30080,29 @@ class Algeria(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -26949,6 +30121,7 @@ class Algeria(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -26966,6 +30139,7 @@ class Algeria(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -26980,8 +30154,6 @@ class Algeria(Country):
         REZKY = ships.REZKY
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -27256,6 +30428,28 @@ class Kuwait(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -27309,6 +30503,28 @@ class Kuwait(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -27338,8 +30554,6 @@ class Kuwait(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -27603,6 +30817,28 @@ class Qatar(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -27657,6 +30893,28 @@ class Qatar(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -27668,6 +30926,7 @@ class Qatar(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -27678,14 +30937,13 @@ class Qatar(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -27967,6 +31225,29 @@ class Oman(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -28020,6 +31301,29 @@ class Oman(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -28032,6 +31336,7 @@ class Oman(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -28043,6 +31348,7 @@ class Oman(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -28051,8 +31357,6 @@ class Oman(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -28334,6 +31638,29 @@ class UnitedArabEmirates(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -28389,6 +31716,29 @@ class UnitedArabEmirates(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -28405,6 +31755,7 @@ class UnitedArabEmirates(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -28420,6 +31771,7 @@ class UnitedArabEmirates(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -28428,8 +31780,6 @@ class UnitedArabEmirates(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -28681,6 +32031,29 @@ class SouthAfrica(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -28736,6 +32109,29 @@ class SouthAfrica(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -28748,6 +32144,7 @@ class SouthAfrica(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -28759,6 +32156,7 @@ class SouthAfrica(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -28767,8 +32165,6 @@ class SouthAfrica(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -28945,6 +32341,7 @@ class Cuba(Country):
             Tt_ZU_23 = vehicles.AirDefence.Tt_ZU_23
             HL_ZU_23 = vehicles.AirDefence.HL_ZU_23
             SON_9 = vehicles.AirDefence.SON_9
+            ZSU_57_2 = vehicles.AirDefence.ZSU_57_2
             RD_75 = vehicles.AirDefence.RD_75
 
         class Fortification:
@@ -29077,6 +32474,28 @@ class Cuba(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -29138,6 +32557,28 @@ class Cuba(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -29151,6 +32592,7 @@ class Cuba(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -29163,6 +32605,7 @@ class Cuba(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -29175,8 +32618,6 @@ class Cuba(Country):
         Dry_cargo_ship_2 = ships.Dry_cargo_ship_2
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -29439,6 +32880,28 @@ class Portugal(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -29495,6 +32958,28 @@ class Portugal(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -29522,8 +33007,6 @@ class Portugal(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -29701,6 +33184,7 @@ class GDR(Country):
             KS_19 = vehicles.AirDefence.KS_19
             RLS_19J6 = vehicles.AirDefence.RLS_19J6
             SON_9 = vehicles.AirDefence.SON_9
+            S_60_Type59_Artillery = vehicles.AirDefence.S_60_Type59_Artillery
 
         class Fortification:
             Bunker = vehicles.Fortification.Bunker
@@ -29746,6 +33230,7 @@ class GDR(Country):
             BMP_2 = vehicles.Armor.BMP_2
             T_55 = vehicles.Armor.T_55
             T_72B = vehicles.Armor.T_72B
+            PT_76 = vehicles.Armor.PT_76
 
         class MissilesSS:
             Scud_B = vehicles.MissilesSS.Scud_B
@@ -29757,6 +33242,9 @@ class GDR(Country):
             DRG_Class_86 = vehicles.Locomotive.DRG_Class_86
 
         class Carriage:
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             Coach_cargo = vehicles.Carriage.Coach_cargo
@@ -29781,6 +33269,8 @@ class GDR(Country):
         MiG_29A = planes.MiG_29A
         Su_17M4 = planes.Su_17M4
         Yak_40 = planes.Yak_40
+        Su_25 = planes.Su_25
+        MiG_23MLD = planes.MiG_23MLD
         FW_190A8 = planes.FW_190A8
         Bf_109K_4 = planes.Bf_109K_4
         SpitfireLFMkIX = planes.SpitfireLFMkIX
@@ -29825,6 +33315,27 @@ class GDR(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -29835,6 +33346,8 @@ class GDR(Country):
         Plane.MiG_29A,
         Plane.Su_17M4,
         Plane.Yak_40,
+        Plane.Su_25,
+        Plane.MiG_23MLD,
         Plane.FW_190A8,
         Plane.Bf_109K_4,
         Plane.SpitfireLFMkIX,
@@ -29879,10 +33392,33 @@ class GDR(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
         Ka_50 = helicopters.Ka_50
+        Mi_24V = helicopters.Mi_24V
+        Mi_8MT = helicopters.Mi_8MT
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
@@ -29893,6 +33429,8 @@ class GDR(Country):
 
     helicopters = [
         Helicopter.Ka_50,
+        Helicopter.Mi_24V,
+        Helicopter.Mi_8MT,
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
@@ -29906,8 +33444,6 @@ class GDR(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -30183,6 +33719,28 @@ class Lebanon(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -30235,6 +33793,28 @@ class Lebanon(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -30247,6 +33827,7 @@ class Lebanon(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -30258,6 +33839,7 @@ class Lebanon(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -30266,8 +33848,6 @@ class Lebanon(Country):
         Seawise_Giant = ships.Seawise_Giant
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -30730,6 +34310,9 @@ class CombinedJointTaskForcesBlue(Country):
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
 
     class Plane:
         A_10C = planes.A_10C
@@ -30780,6 +34363,27 @@ class CombinedJointTaskForcesBlue(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
         A_50 = planes.A_50
         An_26B = planes.An_26B
         An_30M = planes.An_30M
@@ -30808,6 +34412,8 @@ class CombinedJointTaskForcesBlue(Country):
         Yak_40 = planes.Yak_40
         C_130 = planes.C_130
         MiG_29S = planes.MiG_29S
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
         Mirage_2000_5 = planes.Mirage_2000_5
         P_51D_30_NA = planes.P_51D_30_NA
         F_16C_bl_50 = planes.F_16C_bl_50
@@ -30912,6 +34518,27 @@ class CombinedJointTaskForcesBlue(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
         Plane.A_50,
         Plane.An_26B,
         Plane.An_30M,
@@ -30940,6 +34567,8 @@ class CombinedJointTaskForcesBlue(Country):
         Plane.Yak_40,
         Plane.C_130,
         Plane.MiG_29S,
+        Plane.A_4E_C,
+        Plane.Hercules,
         Plane.Mirage_2000_5,
         Plane.P_51D_30_NA,
         Plane.F_16C_bl_50,
@@ -31010,6 +34639,7 @@ class CombinedJointTaskForcesBlue(Country):
         Mi_26 = helicopters.Mi_26
         Mi_8MT = helicopters.Mi_8MT
         UH_1H = helicopters.UH_1H
+        UH_60L = helicopters.UH_60L
         UH_60A = helicopters.UH_60A
         CH_47D = helicopters.CH_47D
         Mi_28N = helicopters.Mi_28N
@@ -31034,6 +34664,7 @@ class CombinedJointTaskForcesBlue(Country):
         Helicopter.Mi_26,
         Helicopter.Mi_8MT,
         Helicopter.UH_1H,
+        Helicopter.UH_60L,
         Helicopter.UH_60A,
         Helicopter.CH_47D,
         Helicopter.Mi_28N,
@@ -31049,8 +34680,6 @@ class CombinedJointTaskForcesBlue(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
         ALBATROS = ships.ALBATROS
@@ -31075,6 +34704,7 @@ class CombinedJointTaskForcesBlue(Country):
         PIOTR = ships.PIOTR
         CV_1143_5 = ships.CV_1143_5
         Santafe = ships.Santafe
+        Ara_vdm = ships.Ara_vdm
         La_Combattante_II = ships.La_Combattante_II
         Leander_gun_condell = ships.Leander_gun_condell
         Leander_gun_lynch = ships.Leander_gun_lynch
@@ -31097,6 +34727,7 @@ class CombinedJointTaskForcesBlue(Country):
         Leander_gun_achilles = ships.Leander_gun_achilles
         Leander_gun_andromeda = ships.Leander_gun_andromeda
         Leander_gun_ariadne = ships.Leander_gun_ariadne
+        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -31559,6 +35190,9 @@ class CombinedJointTaskForcesRed(Country):
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
 
     class Plane:
         A_10C = planes.A_10C
@@ -31609,6 +35243,27 @@ class CombinedJointTaskForcesRed(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
         A_50 = planes.A_50
         An_26B = planes.An_26B
         An_30M = planes.An_30M
@@ -31637,6 +35292,8 @@ class CombinedJointTaskForcesRed(Country):
         Yak_40 = planes.Yak_40
         C_130 = planes.C_130
         MiG_29S = planes.MiG_29S
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
         Mirage_2000_5 = planes.Mirage_2000_5
         P_51D_30_NA = planes.P_51D_30_NA
         F_16C_bl_50 = planes.F_16C_bl_50
@@ -31741,6 +35398,27 @@ class CombinedJointTaskForcesRed(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
         Plane.A_50,
         Plane.An_26B,
         Plane.An_30M,
@@ -31769,6 +35447,8 @@ class CombinedJointTaskForcesRed(Country):
         Plane.Yak_40,
         Plane.C_130,
         Plane.MiG_29S,
+        Plane.A_4E_C,
+        Plane.Hercules,
         Plane.Mirage_2000_5,
         Plane.P_51D_30_NA,
         Plane.F_16C_bl_50,
@@ -31839,6 +35519,7 @@ class CombinedJointTaskForcesRed(Country):
         Mi_26 = helicopters.Mi_26
         Mi_8MT = helicopters.Mi_8MT
         UH_1H = helicopters.UH_1H
+        UH_60L = helicopters.UH_60L
         UH_60A = helicopters.UH_60A
         CH_47D = helicopters.CH_47D
         Mi_28N = helicopters.Mi_28N
@@ -31863,6 +35544,7 @@ class CombinedJointTaskForcesRed(Country):
         Helicopter.Mi_26,
         Helicopter.Mi_8MT,
         Helicopter.UH_1H,
+        Helicopter.UH_60L,
         Helicopter.UH_60A,
         Helicopter.CH_47D,
         Helicopter.Mi_28N,
@@ -31878,8 +35560,6 @@ class CombinedJointTaskForcesRed(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
         ALBATROS = ships.ALBATROS
@@ -31904,6 +35584,7 @@ class CombinedJointTaskForcesRed(Country):
         PIOTR = ships.PIOTR
         CV_1143_5 = ships.CV_1143_5
         Santafe = ships.Santafe
+        Ara_vdm = ships.Ara_vdm
         La_Combattante_II = ships.La_Combattante_II
         Leander_gun_condell = ships.Leander_gun_condell
         Leander_gun_lynch = ships.Leander_gun_lynch
@@ -31926,6 +35607,7 @@ class CombinedJointTaskForcesRed(Country):
         Leander_gun_achilles = ships.Leander_gun_achilles
         Leander_gun_andromeda = ships.Leander_gun_andromeda
         Leander_gun_ariadne = ships.Leander_gun_ariadne
+        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -32388,6 +36070,9 @@ class UnitedNationsPeacekeepers(Country):
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
             German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
+            German_tank_wagon = vehicles.Carriage.German_tank_wagon
 
     class Plane:
         A_10C = planes.A_10C
@@ -32438,6 +36123,27 @@ class UnitedNationsPeacekeepers(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
         A_50 = planes.A_50
         An_26B = planes.An_26B
         An_30M = planes.An_30M
@@ -32466,6 +36172,8 @@ class UnitedNationsPeacekeepers(Country):
         Yak_40 = planes.Yak_40
         C_130 = planes.C_130
         MiG_29S = planes.MiG_29S
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
         Mirage_2000_5 = planes.Mirage_2000_5
         P_51D_30_NA = planes.P_51D_30_NA
         F_16C_bl_50 = planes.F_16C_bl_50
@@ -32570,6 +36278,27 @@ class UnitedNationsPeacekeepers(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
         Plane.A_50,
         Plane.An_26B,
         Plane.An_30M,
@@ -32598,6 +36327,8 @@ class UnitedNationsPeacekeepers(Country):
         Plane.Yak_40,
         Plane.C_130,
         Plane.MiG_29S,
+        Plane.A_4E_C,
+        Plane.Hercules,
         Plane.Mirage_2000_5,
         Plane.P_51D_30_NA,
         Plane.F_16C_bl_50,
@@ -32668,6 +36399,7 @@ class UnitedNationsPeacekeepers(Country):
         Mi_26 = helicopters.Mi_26
         Mi_8MT = helicopters.Mi_8MT
         UH_1H = helicopters.UH_1H
+        UH_60L = helicopters.UH_60L
         UH_60A = helicopters.UH_60A
         CH_47D = helicopters.CH_47D
         Mi_28N = helicopters.Mi_28N
@@ -32692,6 +36424,7 @@ class UnitedNationsPeacekeepers(Country):
         Helicopter.Mi_26,
         Helicopter.Mi_8MT,
         Helicopter.UH_1H,
+        Helicopter.UH_60L,
         Helicopter.UH_60A,
         Helicopter.CH_47D,
         Helicopter.Mi_28N,
@@ -32707,8 +36440,6 @@ class UnitedNationsPeacekeepers(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
         Uboat_VIIC = ships.Uboat_VIIC
         Schnellboot_type_S130 = ships.Schnellboot_type_S130
         ALBATROS = ships.ALBATROS
@@ -32733,6 +36464,7 @@ class UnitedNationsPeacekeepers(Country):
         PIOTR = ships.PIOTR
         CV_1143_5 = ships.CV_1143_5
         Santafe = ships.Santafe
+        Ara_vdm = ships.Ara_vdm
         La_Combattante_II = ships.La_Combattante_II
         Leander_gun_condell = ships.Leander_gun_condell
         Leander_gun_lynch = ships.Leander_gun_lynch
@@ -32755,6 +36487,7 @@ class UnitedNationsPeacekeepers(Country):
         Leander_gun_achilles = ships.Leander_gun_achilles
         Leander_gun_andromeda = ships.Leander_gun_andromeda
         Leander_gun_ariadne = ships.Leander_gun_ariadne
+        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -33009,6 +36742,29 @@ class Argentina(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        A_4E_C = planes.A_4E_C
+        Hercules = planes.Hercules
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -33061,6 +36817,29 @@ class Argentina(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.A_4E_C,
+        Plane.Hercules,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -33076,6 +36855,7 @@ class Argentina(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -33090,6 +36870,7 @@ class Argentina(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -33098,7 +36879,6 @@ class Argentina(Country):
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
         Santafe = ships.Santafe
         Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -33370,6 +37150,28 @@ class Cyprus(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -33421,6 +37223,28 @@ class Cyprus(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -33433,6 +37257,7 @@ class Cyprus(Country):
         AH_64D_BLK_II = helicopters.AH_64D_BLK_II
         CH_47Fbl1 = helicopters.CH_47Fbl1
         OH58D = helicopters.OH58D
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -33444,14 +37269,13 @@ class Cyprus(Country):
         Helicopter.AH_64D_BLK_II,
         Helicopter.CH_47Fbl1,
         Helicopter.OH58D,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -33716,6 +37540,28 @@ class Slovenia(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -33768,6 +37614,28 @@ class Slovenia(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -33781,6 +37649,7 @@ class Slovenia(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -33793,6 +37662,7 @@ class Slovenia(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
@@ -33800,8 +37670,6 @@ class Slovenia(Country):
         MOLNIYA = ships.MOLNIYA
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -34063,6 +37931,27 @@ class Bolivia(Country):
         Mirage_F1BE = planes.Mirage_F1BE
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -34117,6 +38006,27 @@ class Bolivia(Country):
         Plane.Mirage_F1BE,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -34146,8 +38056,6 @@ class Bolivia(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -34398,6 +38306,28 @@ class Ghana(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -34449,6 +38379,28 @@ class Ghana(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -34462,6 +38414,7 @@ class Ghana(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -34474,14 +38427,13 @@ class Ghana(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -34743,6 +38695,28 @@ class Nigeria(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -34795,6 +38769,28 @@ class Nigeria(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -34809,6 +38805,7 @@ class Nigeria(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -34822,14 +38819,13 @@ class Nigeria(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -35098,6 +39094,28 @@ class Peru(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        A_4E_C = planes.A_4E_C
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -35155,6 +39173,28 @@ class Peru(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.A_4E_C,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -35170,6 +39210,7 @@ class Peru(Country):
         SA342L = helicopters.SA342L
         SA342Mistral = helicopters.SA342Mistral
         SA342Minigun = helicopters.SA342Minigun
+        UH_60L = helicopters.UH_60L
 
     helicopters = [
         Helicopter.Ka_50,
@@ -35184,14 +39225,13 @@ class Peru(Country):
         Helicopter.SA342L,
         Helicopter.SA342Mistral,
         Helicopter.SA342Minigun,
+        Helicopter.UH_60L,
     ]
 
     class Ship:
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -35448,6 +39488,27 @@ class Ecuador(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -35500,6 +39561,27 @@ class Ecuador(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -35531,8 +39613,6 @@ class Ecuador(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -35820,6 +39900,27 @@ class Afghanistan(Country):
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
         C_47 = planes.C_47
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -35874,6 +39975,27 @@ class Afghanistan(Country):
         Plane.Yak_52,
         Plane.Ju_88A4,
         Plane.C_47,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -35907,8 +40029,6 @@ class Afghanistan(Country):
         Speedboat = ships.Speedboat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"
@@ -36181,6 +40301,27 @@ class NewZealand(Country):
         TF_51D = planes.TF_51D
         Yak_52 = planes.Yak_52
         Ju_88A4 = planes.Ju_88A4
+        Su_15TM = planes.Su_15TM
+        Su_15 = planes.Su_15
+        SU22M4 = planes.SU22M4
+        KC130J = planes.KC130J
+        VSN_A6A = planes.VSN_A6A
+        VSN_F100 = planes.VSN_F100
+        VSN_F104C = planes.VSN_F104C
+        VSN_F104G = planes.VSN_F104G
+        VSN_F104S = planes.VSN_F104S
+        VSN_F104S_AG = planes.VSN_F104S_AG
+        VSN_NF104A = planes.VSN_NF104A
+        VSN_F106A = planes.VSN_F106A
+        VSN_F106B = planes.VSN_F106B
+        VSN_F80C = planes.VSN_F80C
+        VSN_RF80A = planes.VSN_RF80A
+        VSN_F9F = planes.VSN_F9F
+        VSN_Harrier = planes.VSN_Harrier
+        VSN_Mk6 = planes.VSN_Mk6
+        VSN_TMk68 = planes.VSN_TMk68
+        VSN_TornadoIDS = planes.VSN_TornadoIDS
+        VSN_TornadoGR4 = planes.VSN_TornadoGR4
 
     planes = [
         Plane.A_10C,
@@ -36233,6 +40374,27 @@ class NewZealand(Country):
         Plane.TF_51D,
         Plane.Yak_52,
         Plane.Ju_88A4,
+        Plane.Su_15TM,
+        Plane.Su_15,
+        Plane.SU22M4,
+        Plane.KC130J,
+        Plane.VSN_A6A,
+        Plane.VSN_F100,
+        Plane.VSN_F104C,
+        Plane.VSN_F104G,
+        Plane.VSN_F104S,
+        Plane.VSN_F104S_AG,
+        Plane.VSN_NF104A,
+        Plane.VSN_F106A,
+        Plane.VSN_F106B,
+        Plane.VSN_F80C,
+        Plane.VSN_RF80A,
+        Plane.VSN_F9F,
+        Plane.VSN_Harrier,
+        Plane.VSN_Mk6,
+        Plane.VSN_TMk68,
+        Plane.VSN_TornadoIDS,
+        Plane.VSN_TornadoGR4,
     ]
 
     class Helicopter:
@@ -36267,8 +40429,6 @@ class NewZealand(Country):
         Higgins_boat = ships.Higgins_boat
         HarborTug = ships.HarborTug
         Ship_Tilde_Supply = ships.Ship_Tilde_Supply
-        Ara_vdm = ships.Ara_vdm
-        Atconveyor = ships.Atconveyor
 
     class CallsignAWACS:
         Overlord = "Overlord"

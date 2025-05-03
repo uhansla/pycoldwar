@@ -1790,7 +1790,7 @@ class Ka_50_3(HelicopterType):
             id = "Helmet-mounted device"
 
             class Values:
-                Auto = 0
+                AUTO = 0
                 HMS = 1
                 NVG = 2
 
@@ -1833,7 +1833,7 @@ class Ka_50_3(HelicopterType):
             default=0,
             w_ctrl=150,
             values={
-                0: "Auto",
+                0: "AUTO",
                 1: "HMS",
                 2: "NVG",
             },
@@ -3119,6 +3119,161 @@ class SA342Minigun(HelicopterType):
     task_default = task.CAS
 
 
+class UH_60L(HelicopterType):
+    id = "UH-60L"
+    flyable = True
+    height = 5.13
+    width = 16.4
+    length = 19.76
+    fuel_max = 1362
+    max_speed = 355.584
+    chaff = 30
+    flare = 60
+    charge_total = 90
+    chaff_charge_size = 1
+    flare_charge_size = 1
+    radio_frequency = 124
+
+    panel_radio = {
+        2: {
+            "channels": {
+                1: 264,
+                2: 265,
+                4: 254,
+                8: 258,
+                16: 267,
+                17: 251,
+                9: 262,
+                18: 253,
+                5: 250,
+                10: 259,
+                20: 252,
+                11: 268,
+                3: 256,
+                6: 270,
+                12: 269,
+                13: 260,
+                7: 257,
+                14: 263,
+                19: 266,
+                15: 261
+            },
+        },
+        3: {
+            "channels": {
+                1: 124,
+                2: 127.5
+            },
+        },
+        1: {
+            "channels": {
+                6: 41,
+                2: 31,
+                8: 50,
+                3: 32,
+                1: 30,
+                4: 33,
+                5: 40,
+                7: 42
+            },
+        },
+        4: {
+            "channels": {
+                6: 41,
+                2: 31,
+                8: 50,
+                3: 32,
+                1: 30,
+                4: 33,
+                5: 40,
+                7: 42
+            },
+        },
+        5: {
+            "channels": {
+                1: 3,
+                2: 10
+            },
+        },
+    }
+
+    property_defaults: Dict[str, Any] = {
+        "FuelProbeEnabled": False,
+        "NetCrewControlPriority": 1,
+    }
+
+    class Properties:
+
+        class FuelProbeEnabled:
+            id = "FuelProbeEnabled"
+
+        class NetCrewControlPriority:
+            id = "NetCrewControlPriority"
+
+            class Values:
+                Pilot = 0
+                Instructor = 1
+                Ask_Always = -1
+                Equally_Responsible = -2
+
+    properties = {
+        "FuelProbeEnabled": UnitPropertyDescription(
+            identifier="FuelProbeEnabled",
+            control="checkbox",
+            label="Enable Fuel Probe",
+            default=False,
+            weight_when_on=0,
+        ),
+        "NetCrewControlPriority": UnitPropertyDescription(
+            identifier="NetCrewControlPriority",
+            control="comboList",
+            label="Aircraft Control Priority",
+            player_only=True,
+            default=1,
+            w_ctrl=150,
+            values={
+                0: "Pilot",
+                1: "Instructor",
+                -1: "Ask Always",
+                -2: "Equally Responsible",
+            },
+        ),
+    }
+
+    livery_name = "UH-60L"  # from type
+
+    class Pylon1:
+        CEFS_Fuel_Tank_200_gallons = (1, Weapons.CEFS_Fuel_Tank_200_gallons)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        CEFS_Fuel_Tank_200_gallons = (2, Weapons.CEFS_Fuel_Tank_200_gallons)
+#ERRR <CLEAN>
+
+    class Pylon3:
+        Left_Gunner_Seat = (3, Weapons.Left_Gunner_Seat)
+
+    class Pylon4:
+        Cargo_Seats__Rear_Row_ = (4, Weapons.Cargo_Seats__Rear_Row_)
+        Cargo_Seats__Three_Rows_ = (4, Weapons.Cargo_Seats__Three_Rows_)
+
+    class Pylon5:
+        Right_Gunner_Seat = (5, Weapons.Right_Gunner_Seat)
+
+    class Pylon6:
+        CEFS_Fuel_Tank_200_gallons = (6, Weapons.CEFS_Fuel_Tank_200_gallons)
+#ERRR <CLEAN>
+
+    class Pylon7:
+        CEFS_Fuel_Tank_200_gallons = (7, Weapons.CEFS_Fuel_Tank_200_gallons)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 4, 5, 6, 7}
+
+    tasks = [task.Transport, task.Reconnaissance]
+    task_default = task.Transport
+
+
 helicopter_map = {
     "Mi-24V": Mi_24V,
     "Mi-8MT": Mi_8MT,
@@ -3145,4 +3300,5 @@ helicopter_map = {
     "SA342L": SA342L,
     "SA342Mistral": SA342Mistral,
     "SA342Minigun": SA342Minigun,
+    "UH-60L": UH_60L,
 }

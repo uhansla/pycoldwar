@@ -35,17 +35,17 @@ types = [
 
 BLUE = [
     'MB_339A',
-    'F_A_18A',
+    # 'F_A_18A',
     'A_10A',
     'F_4E_45MC',
     'F_5E',
-    'F_5E_3',
+    # 'F_5E_3',
     'F_86F_Sabre',
     'AJS37',
     'L_39ZA',
     'M_2000C',
     'Mirage_F1CE',
-    'Mirage_F1EE',
+    # 'Mirage_F1EE',
 ]
 
 RED = [
@@ -60,7 +60,7 @@ RED = [
     'MiG_15bis',
     'Su_25',
     'F_5E',
-    'F_5E_3',
+    # 'F_5E_3',
 ]
 
 planes_map = {

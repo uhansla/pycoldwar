@@ -45,7 +45,7 @@ planes_map = {
                     planes.A_4E_C.Pylon1.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE,
                     planes.A_4E_C.Pylon2._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_,
                     planes.A_4E_C.Pylon3.Fuel_Tank_300_gallons,
-                    planes.A_4E_C.Pylon4._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_,
+                    planes.A_4E_C.Pylon4._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER__,
                     planes.A_4E_C.Pylon5.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE,
                 ]
             }

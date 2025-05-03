@@ -71,7 +71,7 @@ planes_map = {
                     planes.A_4E_C.Pylon1.Mk_82___500lb_GP_Bomb_LD,
                     planes.A_4E_C.Pylon2._2_x_Mk_82___500lb_GP_Bomb_LD__TER_,
                     planes.A_4E_C.Pylon3._6_x_Mk_82___500lb_GP_Bomb_LD__MER_,
-                    planes.A_4E_C.Pylon4._2_x_Mk_82___500lb_GP_Bomb_LD__TER_,
+                    planes.A_4E_C.Pylon4._2_x_Mk_82___500lb_GP_Bomb_LD__TER__,
                     planes.A_4E_C.Pylon5.Mk_82___500lb_GP_Bomb_LD,
                 ]
             }

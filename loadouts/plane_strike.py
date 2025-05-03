@@ -14,6 +14,9 @@ BLUE = [
     'Mirage_F1CE',
     'Mirage_F1CT',
     # 'Mirage_F1EE',
+    # MODS
+    'A_4E_C',
+    'VSN_F100'
 ]
 
 RED = [
@@ -33,6 +36,47 @@ RED = [
 ]
 
 planes_map = {
+    'VSN_F100': [
+            {
+                'type': planes.VSN_F100,
+                'id': planes.VSN_F100.id,
+                'fuel': planes.VSN_F100.fuel_max,
+                'chaff': planes.VSN_F100.chaff,
+                'flare': planes.VSN_F100.flare,
+                'payload': {
+                    'pylons': [
+                        None,
+                        None,
+                        planes.VSN_F100.Pylon3.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE,
+                        planes.VSN_F100.Pylon4.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD,
+                        planes.VSN_F100.Pylon5.Fuel_tank_500_Liter,
+                        None,
+                        planes.VSN_F100.Pylon7.Fuel_tank_500_Liter,
+                        planes.VSN_F100.Pylon8.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD,
+                        planes.VSN_F100.Pylon9.LAU_3___19_x_UnGd_Rkts__70_mm_Mk_4_FFAR_Mk_1_HE,
+                    ]
+                }
+            },
+        ],
+
+    'A_4E_C': [
+        {
+            'type': planes.A_4E_C,
+            'id': planes.A_4E_C.id,
+            'fuel': planes.A_4E_C.fuel_max,
+            'chaff': planes.A_4E_C.chaff,
+            'flare': planes.A_4E_C.flare,
+            'payload': {
+                'pylons': [
+                    planes.A_4E_C.Pylon1.Mk_82___500lb_GP_Bomb_LD,
+                    planes.A_4E_C.Pylon2._2_x_Mk_82___500lb_GP_Bomb_LD__TER_,
+                    planes.A_4E_C.Pylon3._6_x_Mk_82___500lb_GP_Bomb_LD__MER_,
+                    planes.A_4E_C.Pylon4._2_x_Mk_82___500lb_GP_Bomb_LD__TER_,
+                    planes.A_4E_C.Pylon5.Mk_82___500lb_GP_Bomb_LD,
+                ]
+            }
+        },
+    ],
     'F_4E_45MC': [
         {
             'type': planes.F_4E_45MC,

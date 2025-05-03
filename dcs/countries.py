@@ -281,6 +281,9 @@ class Russia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -385,6 +388,9 @@ class Russia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -851,6 +857,9 @@ class Ukraine(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -946,6 +955,9 @@ class Ukraine(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -1294,6 +1306,9 @@ class USA(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -1398,6 +1413,9 @@ class USA(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -1775,6 +1793,9 @@ class Turkey(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -1858,6 +1879,9 @@ class Turkey(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -2223,6 +2247,9 @@ class UK(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -2305,6 +2332,9 @@ class UK(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -2673,6 +2703,9 @@ class France(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -2760,6 +2793,9 @@ class France(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -3191,6 +3227,9 @@ class Germany(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -3274,6 +3313,9 @@ class Germany(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -3851,6 +3893,9 @@ class USAFAggressors(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -4006,6 +4051,9 @@ class USAFAggressors(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -4503,6 +4551,9 @@ class Canada(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -4581,6 +4632,9 @@ class Canada(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -4930,6 +4984,9 @@ class Spain(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -5014,6 +5071,9 @@ class Spain(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -5385,6 +5445,9 @@ class TheNetherlands(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -5467,6 +5530,9 @@ class TheNetherlands(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -5822,6 +5888,9 @@ class Belgium(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -5902,6 +5971,9 @@ class Belgium(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -6235,6 +6307,9 @@ class Norway(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -6315,6 +6390,9 @@ class Norway(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -6646,6 +6724,9 @@ class Denmark(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -6726,6 +6807,9 @@ class Denmark(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -7073,6 +7157,9 @@ class Israel(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -7156,6 +7243,9 @@ class Israel(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -7551,6 +7641,9 @@ class Georgia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -7631,6 +7724,9 @@ class Georgia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -7982,6 +8078,9 @@ class Insurgents(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -8056,6 +8155,9 @@ class Insurgents(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -8336,6 +8438,9 @@ class Abkhazia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -8413,6 +8518,9 @@ class Abkhazia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -8683,6 +8791,9 @@ class SouthOssetia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -8755,6 +8866,9 @@ class SouthOssetia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -9009,6 +9123,9 @@ class Italy(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -9093,6 +9210,9 @@ class Italy(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -9442,6 +9562,9 @@ class Australia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -9520,6 +9643,9 @@ class Australia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -9841,6 +9967,9 @@ class Switzerland(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -9915,6 +10044,9 @@ class Switzerland(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -10217,6 +10349,9 @@ class Austria(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -10291,6 +10426,9 @@ class Austria(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -10694,6 +10832,9 @@ class Belarus(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -10778,6 +10919,9 @@ class Belarus(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -11094,6 +11238,9 @@ class Bulgaria(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -11176,6 +11323,9 @@ class Bulgaria(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -11533,6 +11683,9 @@ class CzechRepublic(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -11611,6 +11764,9 @@ class CzechRepublic(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -11964,6 +12120,9 @@ class China(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -12049,6 +12208,9 @@ class China(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -12284,6 +12446,9 @@ class Croatia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -12357,6 +12522,9 @@ class Croatia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -12747,6 +12915,9 @@ class Egypt(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -12827,6 +12998,9 @@ class Egypt(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -13214,6 +13388,9 @@ class Finland(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -13287,6 +13464,9 @@ class Finland(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -13649,6 +13829,9 @@ class Greece(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -13730,6 +13913,9 @@ class Greece(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -14124,6 +14310,9 @@ class Hungary(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -14201,6 +14390,9 @@ class Hungary(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -14548,6 +14740,9 @@ class India(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -14630,6 +14825,9 @@ class India(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -15013,6 +15211,9 @@ class Iran(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -15097,6 +15298,9 @@ class Iran(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -15477,6 +15681,9 @@ class Iraq(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -15560,6 +15767,9 @@ class Iraq(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -15917,6 +16127,9 @@ class Japan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -15993,6 +16206,9 @@ class Japan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -16413,6 +16629,9 @@ class Kazakhstan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -16498,6 +16717,9 @@ class Kazakhstan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -16832,6 +17054,9 @@ class NorthKorea(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -16907,6 +17132,9 @@ class NorthKorea(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -17242,6 +17470,9 @@ class Pakistan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -17323,6 +17554,9 @@ class Pakistan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -17701,6 +17935,9 @@ class Poland(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -17785,6 +18022,9 @@ class Poland(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -18169,6 +18409,9 @@ class Romania(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -18248,6 +18491,9 @@ class Romania(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -18592,6 +18838,9 @@ class SaudiArabia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -18672,6 +18921,9 @@ class SaudiArabia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -19036,6 +19288,9 @@ class Serbia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -19113,6 +19368,9 @@ class Serbia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -19453,6 +19711,9 @@ class Slovakia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -19530,6 +19791,9 @@ class Slovakia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -19862,6 +20126,9 @@ class SouthKorea(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -19941,6 +20208,9 @@ class SouthKorea(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -20257,6 +20527,9 @@ class Sweden(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -20334,6 +20607,9 @@ class Sweden(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -20706,6 +20982,9 @@ class Syria(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -20786,6 +21065,9 @@ class Syria(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -21125,6 +21407,9 @@ class Yemen(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -21202,6 +21487,9 @@ class Yemen(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -21555,6 +21843,9 @@ class Vietnam(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -21633,6 +21924,9 @@ class Vietnam(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -21969,6 +22263,9 @@ class Venezuela(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -22045,6 +22342,9 @@ class Venezuela(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -22349,6 +22649,9 @@ class Tunisia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -22423,6 +22726,9 @@ class Tunisia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -22737,6 +23043,9 @@ class Thailand(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -22814,6 +23123,9 @@ class Thailand(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -23142,6 +23454,9 @@ class Sudan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -23220,6 +23535,9 @@ class Sudan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -23516,6 +23834,9 @@ class Philippines(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -23591,6 +23912,9 @@ class Philippines(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -23920,6 +24244,9 @@ class Morocco(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -23998,6 +24325,9 @@ class Morocco(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -24305,6 +24635,9 @@ class Mexico(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -24380,6 +24713,9 @@ class Mexico(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -24696,6 +25032,9 @@ class Malaysia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -24771,6 +25110,9 @@ class Malaysia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -25114,6 +25456,9 @@ class Libya(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -25193,6 +25538,9 @@ class Libya(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -25520,6 +25868,9 @@ class Jordan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -25598,6 +25949,9 @@ class Jordan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -25949,6 +26303,9 @@ class Indonesia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -26030,6 +26387,9 @@ class Indonesia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -26337,6 +26697,9 @@ class Honduras(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -26411,6 +26774,9 @@ class Honduras(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -26737,6 +27103,9 @@ class Ethiopia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -26812,6 +27181,9 @@ class Ethiopia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -27134,6 +27506,9 @@ class Chile(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -27214,6 +27589,9 @@ class Chile(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -27547,6 +27925,9 @@ class Brazil(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -27622,6 +28003,9 @@ class Brazil(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -27947,6 +28331,9 @@ class Bahrain(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -28018,6 +28405,9 @@ class Bahrain(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -28342,6 +28732,9 @@ class ThirdReich(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -28414,6 +28807,9 @@ class ThirdReich(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -28748,6 +29144,9 @@ class Yugoslavia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -28822,6 +29221,9 @@ class Yugoslavia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -29176,6 +29578,9 @@ class USSR(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -29273,6 +29678,9 @@ class USSR(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -29533,6 +29941,9 @@ class ItalianSocialRepublic(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -29604,6 +30015,9 @@ class ItalianSocialRepublic(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -30009,6 +30423,9 @@ class Algeria(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -30099,6 +30516,9 @@ class Algeria(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -30446,6 +30866,9 @@ class Kuwait(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -30521,6 +30944,9 @@ class Kuwait(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -30835,6 +31261,9 @@ class Qatar(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -30911,6 +31340,9 @@ class Qatar(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -31244,6 +31676,9 @@ class Oman(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -31320,6 +31755,9 @@ class Oman(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -31657,6 +32095,9 @@ class UnitedArabEmirates(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -31735,6 +32176,9 @@ class UnitedArabEmirates(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -32050,6 +32494,9 @@ class SouthAfrica(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -32128,6 +32575,9 @@ class SouthAfrica(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -32492,6 +32942,9 @@ class Cuba(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -32575,6 +33028,9 @@ class Cuba(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -32898,6 +33354,9 @@ class Portugal(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -32976,6 +33435,9 @@ class Portugal(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -33332,6 +33794,9 @@ class GDR(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -33409,6 +33874,9 @@ class GDR(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -33737,6 +34205,9 @@ class Lebanon(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -33811,6 +34282,9 @@ class Lebanon(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -34380,6 +34854,9 @@ class CombinedJointTaskForcesBlue(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -34535,6 +35012,9 @@ class CombinedJointTaskForcesBlue(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -35260,6 +35740,9 @@ class CombinedJointTaskForcesRed(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -35415,6 +35898,9 @@ class CombinedJointTaskForcesRed(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -36140,6 +36626,9 @@ class UnitedNationsPeacekeepers(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -36295,6 +36784,9 @@ class UnitedNationsPeacekeepers(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -36761,6 +37253,9 @@ class Argentina(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -36836,6 +37331,9 @@ class Argentina(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -37168,6 +37666,9 @@ class Cyprus(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -37241,6 +37742,9 @@ class Cyprus(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -37558,6 +38062,9 @@ class Slovenia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -37632,6 +38139,9 @@ class Slovenia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -37948,6 +38458,9 @@ class Bolivia(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -38023,6 +38536,9 @@ class Bolivia(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -38324,6 +38840,9 @@ class Ghana(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -38397,6 +38916,9 @@ class Ghana(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -38713,6 +39235,9 @@ class Nigeria(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -38787,6 +39312,9 @@ class Nigeria(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -39112,6 +39640,9 @@ class Peru(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -39191,6 +39722,9 @@ class Peru(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -39505,6 +40039,9 @@ class Ecuador(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -39578,6 +40115,9 @@ class Ecuador(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -39917,6 +40457,9 @@ class Afghanistan(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -39992,6 +40535,9 @@ class Afghanistan(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,
@@ -40318,6 +40864,9 @@ class NewZealand(Country):
         VSN_RF80A = planes.VSN_RF80A
         VSN_F9F = planes.VSN_F9F
         VSN_Harrier = planes.VSN_Harrier
+        VSN_MirageIIIC = planes.VSN_MirageIIIC
+        VSN_MirageIIIC_AG = planes.VSN_MirageIIIC_AG
+        VSN_MirageIIIS = planes.VSN_MirageIIIS
         VSN_Mk6 = planes.VSN_Mk6
         VSN_TMk68 = planes.VSN_TMk68
         VSN_TornadoIDS = planes.VSN_TornadoIDS
@@ -40391,6 +40940,9 @@ class NewZealand(Country):
         Plane.VSN_RF80A,
         Plane.VSN_F9F,
         Plane.VSN_Harrier,
+        Plane.VSN_MirageIIIC,
+        Plane.VSN_MirageIIIC_AG,
+        Plane.VSN_MirageIIIS,
         Plane.VSN_Mk6,
         Plane.VSN_TMk68,
         Plane.VSN_TornadoIDS,

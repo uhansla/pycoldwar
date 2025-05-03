@@ -1103,6 +1103,9 @@ class Weapons:
     M299___4_x_AGM_114L_Hellfire = {"clsid": "{M299_4xAGM_114L}", "name": "M299 - 4 x AGM-114L Hellfire", "weight": 260.9}
     M299___Empty_Launcher = {"clsid": "{M299_EMPTY}", "name": "M299 - Empty Launcher", "weight": 64.9}
     M3M = {"clsid": "{CH47_AFT_M3M}", "name": "M3M", "weight": 113}
+    M3_Fuel_Tank_1300_Liter = {"clsid": "{VSN_M3C2_PTB}", "name": "M3 Fuel Tank 1300 Liter", "weight": 1172}
+    M3_Fuel_Tank_1700_Liter = {"clsid": "{VSN_M3C3_PTB}", "name": "M3 Fuel Tank 1700 Liter", "weight": 1492}
+    M3_Fuel_Tank_625_Liter = {"clsid": "{VSN_M3C1_PTB}", "name": "M3 Fuel Tank 625 Liter", "weight": 600}
     M60D = {"clsid": "{CH47_PORT_M60D}", "name": "M60D", "weight": 113}
     M60D_ = {"clsid": "{CH47_STBD_M60D}", "name": "M60D", "weight": 113}
     M60D__ = {"clsid": "{CH47_AFT_M60D}", "name": "M60D", "weight": 113}
@@ -3180,6 +3183,9 @@ weapon_ids = {
     "{M299_4xAGM_114L}": Weapons.M299___4_x_AGM_114L_Hellfire,
     "{M299_EMPTY}": Weapons.M299___Empty_Launcher,
     "{CH47_AFT_M3M}": Weapons.M3M,
+    "{VSN_M3C2_PTB}": Weapons.M3_Fuel_Tank_1300_Liter,
+    "{VSN_M3C3_PTB}": Weapons.M3_Fuel_Tank_1700_Liter,
+    "{VSN_M3C1_PTB}": Weapons.M3_Fuel_Tank_625_Liter,
     "{CH47_PORT_M60D}": Weapons.M60D,
     "{CH47_STBD_M60D}": Weapons.M60D_,
     "{CH47_AFT_M60D}": Weapons.M60D__,

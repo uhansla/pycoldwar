@@ -15,7 +15,7 @@ BLUE = [
     'Mirage_F1CE',
     # 'Mirage_F1EE',
     # MODS
-    # 'VSN_F104G',
+    'VSN_F104G',
 ]
 
 RED = [
@@ -34,7 +34,7 @@ RED = [
     # 'F_5E',
     # 'F_5E_3',
     # MODS
-    # 'Su_15TM',
+    'Su_15TM',
 ]
 
 planes_map = {

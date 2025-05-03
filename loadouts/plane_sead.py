@@ -13,6 +13,8 @@ BLUE = [
     # 'M_2000C',
     # 'Mirage_F1CE',
     # 'Mirage_F1EE',
+    # MODS
+    'A_4E_C',
 ]
 
 RED = [
@@ -31,6 +33,24 @@ RED = [
 ]
 
 planes_map = {
+    'A_4E_C': [
+        {
+            'type': planes.A_4E_C,
+            'id': planes.A_4E_C.id,
+            'fuel': planes.A_4E_C.fuel_max,
+            'chaff': planes.A_4E_C.chaff,
+            'flare': planes.A_4E_C.flare,
+            'payload': {
+                'pylons': [
+                    planes.A_4E_C.Pylon1.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE,
+                    planes.A_4E_C.Pylon2._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_,
+                    planes.A_4E_C.Pylon3.Fuel_Tank_300_gallons,
+                    planes.A_4E_C.Pylon4._5_x_Mk_81_Snakeye___250lb_GP_Bomb_HD__MER_,
+                    planes.A_4E_C.Pylon5.LAU_10___4_x_UnGd_Rkts__127_mm_Zuni_Mk__24_Mod__1_HE,
+                ]
+            }
+        },
+    ],
     'F_4E_45MC': [
         {
             'type': planes.F_4E_45MC,

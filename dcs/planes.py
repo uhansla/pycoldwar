@@ -35021,6 +35021,397 @@ class VSN_Harrier(PlaneType):
     task_default = task.CAS
 
 
+class VSN_MirageIIIC(PlaneType):
+    id = "VSN_MirageIIIC"
+    flyable = True
+    height = 4.5
+    width = 8.22
+    length = 15.03
+    fuel_max = 2150
+    max_speed = 2450.088
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_MIRAGEIIIC"  # from type
+
+    class Pylon1:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (1, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (1, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (1, Weapons.S530D)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (2, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (2, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (2, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (2, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (2, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (2, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (2, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (2, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (2, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (2, Weapons.M3_Fuel_Tank_625_Liter)
+        M3_Fuel_Tank_1300_Liter = (2, Weapons.M3_Fuel_Tank_1300_Liter)
+
+    class Pylon3:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (3, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (3, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (3, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (3, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (3, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon5:
+        L005_Sorbtsiya_ECM_pod__left_ = (5, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (5, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (5, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (5, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (5, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (5, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (5, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (5, Weapons.Smoke_Generator___orange_)
+
+    class Pylon6:
+        M3_Fuel_Tank_1300_Liter = (6, Weapons.M3_Fuel_Tank_1300_Liter)
+        M3_Fuel_Tank_1700_Liter = (6, Weapons.M3_Fuel_Tank_1700_Liter)
+
+    class Pylon7:
+        L005_Sorbtsiya_ECM_pod__left_ = (7, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (7, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (7, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (7, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (7, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (7, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (7, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (7, Weapons.Smoke_Generator___orange_)
+
+    class Pylon9:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (9, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (9, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (9, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (9, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (9, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (9, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (9, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon10:
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (10, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (10, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (10, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (10, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (10, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (10, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (10, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (10, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (10, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (10, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (10, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (10, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (10, Weapons.M3_Fuel_Tank_625_Liter)
+        M3_Fuel_Tank_1300_Liter = (10, Weapons.M3_Fuel_Tank_1300_Liter)
+
+    class Pylon11:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (11, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (11, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (11, Weapons.S530D)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 5, 6, 7, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.RunwayAttack]
+    task_default = task.FighterSweep
+
+
+class VSN_MirageIIIC_AG(PlaneType):
+    id = "VSN_MirageIIIC_AG"
+    flyable = True
+    height = 4.5
+    width = 8.22
+    length = 15.03
+    fuel_max = 2150
+    max_speed = 2450.088
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_MIRAGEIIIC_AG"  # from type
+
+    class Pylon1:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (1, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (1, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (1, Weapons.S530D)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (2, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (2, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (2, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (2, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (2, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (2, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (2, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (2, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (2, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (2, Weapons.M3_Fuel_Tank_625_Liter)
+        M3_Fuel_Tank_1300_Liter = (2, Weapons.M3_Fuel_Tank_1300_Liter)
+
+    class Pylon3:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (3, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (3, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (3, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (3, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (3, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon5:
+        L005_Sorbtsiya_ECM_pod__left_ = (5, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (5, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (5, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (5, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (5, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (5, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (5, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (5, Weapons.Smoke_Generator___orange_)
+
+    class Pylon6:
+        M3_Fuel_Tank_1300_Liter = (6, Weapons.M3_Fuel_Tank_1300_Liter)
+        M3_Fuel_Tank_1700_Liter = (6, Weapons.M3_Fuel_Tank_1700_Liter)
+
+    class Pylon7:
+        L005_Sorbtsiya_ECM_pod__left_ = (7, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (7, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (7, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (7, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (7, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (7, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (7, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (7, Weapons.Smoke_Generator___orange_)
+
+    class Pylon9:
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (9, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (9, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (9, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (9, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (9, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (9, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (9, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon10:
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (10, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_ = (10, Weapons.LAU_117_with_AGM_65D___Maverick_D__IIR_ASM_)
+        KAB_1500L___1500kg_Laser_Guided_Bomb = (10, Weapons.KAB_1500L___1500kg_Laser_Guided_Bomb)
+        KAB_500Kr___500kg_TV_Guided_Bomb = (10, Weapons.KAB_500Kr___500kg_TV_Guided_Bomb)
+        Mk_84___2000lb_GP_Bomb_LD = (10, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (10, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (10, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (10, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (10, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (10, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (10, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (10, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (10, Weapons.M3_Fuel_Tank_625_Liter)
+        M3_Fuel_Tank_1300_Liter = (10, Weapons.M3_Fuel_Tank_1300_Liter)
+
+    class Pylon11:
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (11, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (11, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (11, Weapons.S530D)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 5, 6, 7, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.RunwayAttack]
+    task_default = task.FighterSweep
+
+
+class VSN_MirageIIIS(PlaneType):
+    id = "VSN_MirageIIIS"
+    flyable = True
+    height = 4.5
+    width = 8.22
+    length = 15.03
+    fuel_max = 2150
+    max_speed = 2450.088
+    chaff = 90
+    flare = 45
+    charge_total = 180
+    chaff_charge_size = 1
+    flare_charge_size = 2
+    category = "Interceptor"  #{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}
+    radio_frequency = 127.5
+
+    livery_name = "VSN_MIRAGEIIIS"  # from type
+
+    class Pylon1:
+        AIM_9M_Sidewinder_IR_AAM = (1, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (1, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (1, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (1, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (1, Weapons.Smokewinder___red)
+        Smokewinder___green = (1, Weapons.Smokewinder___green)
+        Smokewinder___blue = (1, Weapons.Smokewinder___blue)
+        Smokewinder___white = (1, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (1, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (1, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (1, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (1, Weapons.S530D)
+#ERRR <CLEAN>
+
+    class Pylon2:
+        LAU_115_LAU_127_CATM_9M = (2, Weapons.LAU_115_LAU_127_CATM_9M)
+        LAU_115_LAU_127_AIM_9L = (2, Weapons.LAU_115_LAU_127_AIM_9L)
+        LAU_115_LAU_127_AIM_9M = (2, Weapons.LAU_115_LAU_127_AIM_9M)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (2, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (2, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        Mk_84___2000lb_GP_Bomb_LD = (2, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (2, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (2, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (2, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (2, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (2, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (2, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (2, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (2, Weapons.M3_Fuel_Tank_625_Liter)
+
+    class Pylon3:
+        LAU_115_LAU_127_CATM_9M = (3, Weapons.LAU_115_LAU_127_CATM_9M)
+        LAU_115_LAU_127_AIM_9L = (3, Weapons.LAU_115_LAU_127_AIM_9L)
+        LAU_115_LAU_127_AIM_9M = (3, Weapons.LAU_115_LAU_127_AIM_9M)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (3, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (3, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (3, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (3, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (3, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (3, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon5:
+        L005_Sorbtsiya_ECM_pod__left_ = (5, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (5, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (5, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (5, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (5, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (5, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (5, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (5, Weapons.Smoke_Generator___orange_)
+
+    class Pylon6:
+        M3_Fuel_Tank_1700_Liter = (6, Weapons.M3_Fuel_Tank_1700_Liter)
+
+    class Pylon7:
+        L005_Sorbtsiya_ECM_pod__left_ = (7, Weapons.L005_Sorbtsiya_ECM_pod__left_)
+        L_081_Fantasmagoria_ELINT_pod = (7, Weapons.L_081_Fantasmagoria_ELINT_pod)
+        Smoke_Generator___red_ = (7, Weapons.Smoke_Generator___red_)
+        Smoke_Generator___green_ = (7, Weapons.Smoke_Generator___green_)
+        Smoke_Generator___blue_ = (7, Weapons.Smoke_Generator___blue_)
+        Smoke_Generator___white_ = (7, Weapons.Smoke_Generator___white_)
+        Smoke_Generator___yellow_ = (7, Weapons.Smoke_Generator___yellow_)
+        Smoke_Generator___orange_ = (7, Weapons.Smoke_Generator___orange_)
+
+    class Pylon9:
+        LAU_115_LAU_127_CATM_9M = (9, Weapons.LAU_115_LAU_127_CATM_9M)
+        LAU_115_LAU_127_AIM_9L = (9, Weapons.LAU_115_LAU_127_AIM_9L)
+        LAU_115_LAU_127_AIM_9M = (9, Weapons.LAU_115_LAU_127_AIM_9M)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (9, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        Mk_84___2000lb_GP_Bomb_LD = (9, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (9, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (9, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        R550_Magic_2_IR_AAM = (9, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (9, Weapons.S530D)
+#ERRR {Kh-58U}
+
+    class Pylon10:
+        LAU_115_LAU_127_CATM_9M = (10, Weapons.LAU_115_LAU_127_CATM_9M)
+        LAU_115_LAU_127_AIM_9L = (10, Weapons.LAU_115_LAU_127_AIM_9L)
+        LAU_115_LAU_127_AIM_9M = (10, Weapons.LAU_115_LAU_127_AIM_9M)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (10, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_ = (10, Weapons.Kh_29T__AS_14_Kedge____670kg__ASM__TV_Guided_)
+        Mk_84___2000lb_GP_Bomb_LD = (10, Weapons.Mk_84___2000lb_GP_Bomb_LD)
+        MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD = (10, Weapons.MER2_with_2_x_Mk_82___500lb_GP_Bombs_LD)
+        Mk_83___1000lb_GP_Bomb_LD = (10, Weapons.Mk_83___1000lb_GP_Bomb_LD)
+        BLU_107___440lb_Anti_Runway_Penetrator_Bomb = (10, Weapons.BLU_107___440lb_Anti_Runway_Penetrator_Bomb)
+#ERRR {FAAFA032-8996-42BF-ADC4-8E2C86BCE536}
+        Kh_59M__AS_18_Kazoo____930kg__ASM__IN = (10, Weapons.Kh_59M__AS_18_Kazoo____930kg__ASM__IN)
+        Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_ = (10, Weapons.Kh_58U__AS_11_Kilter____640kg__ARM__IN__Pas_Rdr_)
+        R550_Magic_2_IR_AAM = (10, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (10, Weapons.S530D)
+        M3_Fuel_Tank_625_Liter = (10, Weapons.M3_Fuel_Tank_625_Liter)
+
+    class Pylon11:
+        AIM_9M_Sidewinder_IR_AAM = (11, Weapons.AIM_9M_Sidewinder_IR_AAM)
+        AIM_9P_Sidewinder_IR_AAM = (11, Weapons.AIM_9P_Sidewinder_IR_AAM)
+        AIM_120B_AMRAAM___Active_Radar_AAM = (11, Weapons.AIM_120B_AMRAAM___Active_Radar_AAM)
+        AN_ASQ_T50_TCTS_Pod___ACMI_Pod = (11, Weapons.AN_ASQ_T50_TCTS_Pod___ACMI_Pod)
+        Smokewinder___red = (11, Weapons.Smokewinder___red)
+        Smokewinder___green = (11, Weapons.Smokewinder___green)
+        Smokewinder___blue = (11, Weapons.Smokewinder___blue)
+        Smokewinder___white = (11, Weapons.Smokewinder___white)
+        Smokewinder___yellow = (11, Weapons.Smokewinder___yellow)
+        Smokewinder___orange = (11, Weapons.Smokewinder___orange)
+        R550_Magic_2_IR_AAM = (11, Weapons.R550_Magic_2_IR_AAM)
+        S530D = (11, Weapons.S530D)
+#ERRR <CLEAN>
+
+    pylons: Set[int] = {1, 2, 3, 5, 6, 7, 9, 10, 11}
+
+    tasks = [task.CAP, task.Escort, task.FighterSweep, task.Intercept, task.Reconnaissance, task.GroundAttack, task.CAS, task.AFAC, task.RunwayAttack]
+    task_default = task.FighterSweep
+
+
 class VSN_Mk6(PlaneType):
     id = "VSN_Mk6"
     flyable = True
@@ -35685,6 +36076,9 @@ plane_map = {
     "VSN_RF80A": VSN_RF80A,
     "VSN_F9F": VSN_F9F,
     "VSN_Harrier": VSN_Harrier,
+    "VSN_MirageIIIC": VSN_MirageIIIC,
+    "VSN_MirageIIIC_AG": VSN_MirageIIIC_AG,
+    "VSN_MirageIIIS": VSN_MirageIIIS,
     "VSN_Mk6": VSN_Mk6,
     "VSN_TMk68": VSN_TMk68,
     "VSN_TornadoIDS": VSN_TornadoIDS,

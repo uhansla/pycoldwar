@@ -19,17 +19,17 @@ BLUE = [
 ]
 
 RED = [
-    'F_14A_135_GR',
+    # 'F_14A_135_GR',
     'Mirage_F1CE',
     # 'Mirage_F1EE',
     'F_4E_45MC',
     # 'Su_17M4',
     # 'Su_24M',
-    # 'MiG_23MLD',
-    # 'MiG_27K',
+    'MiG_23MLD',
+    'MiG_27K',
     'MiG_21Bis',
     'MiG_19P',
-    # 'MiG_15bis',
+    'MiG_15bis',
     # 'Su_25',
     # 'F_5E',
     # 'F_5E_3',
@@ -232,4 +232,64 @@ planes_map = {
             }
         },
     ],
+
+    'MiG_15bis': [
+        {
+            "type": planes.MiG_15bis,
+            "id": planes.MiG_15bis.id,
+            "fuel": planes.MiG_15bis.fuel_max,
+            "chaff": planes.MiG_15bis.chaff,
+            "flare": planes.MiG_15bis.flare,
+            "payload": {
+                "pylons": [
+                    None,
+                    None
+                ]
+            }
+        }
+    ],
+
+    'MiG_23MLD': [
+        {
+            "type": planes.MiG_23MLD,
+            "id": planes.MiG_23MLD.id,
+            "fuel": planes.MiG_23MLD.fuel_max,
+            "chaff": planes.MiG_23MLD.chaff,
+            "flare": planes.MiG_23MLD.flare,
+            "payload": {
+                "pylons": [
+                    None,
+                    planes.MiG_23MLD.Pylon2.R_24R__AA_7_Apex_SA____Semi_Act_Rdr,
+                    planes.MiG_23MLD.Pylon3.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM__,
+                    planes.MiG_23MLD.Pylon4.Fuel_tank_800L,
+                    planes.MiG_23MLD.Pylon5.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM___,
+                    planes.MiG_23MLD.Pylon6.R_24R__AA_7_Apex_SA____Semi_Act_Rdr,
+                ]
+            }
+        }
+    ],
+
+    'MiG_27K': [
+        {
+            "type": planes.MiG_27K,
+            "id": planes.MiG_27K.id,
+            "fuel": planes.MiG_27K.fuel_max,
+            "chaff": planes.MiG_27K.chaff,
+            "flare": planes.MiG_27K.flare,
+            "payload": {
+                "pylons": [
+                    None,
+                    planes.MiG_27K.Pylon2.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM__,
+                    planes.MiG_27K.Pylon3.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM__,
+                    None,
+                    planes.MiG_27K.Pylon5.Fuel_tank_800L,
+                    None,
+                    planes.MiG_27K.Pylon7.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM___,
+                    planes.MiG_27K.Pylon8.APU_60_2M_with_2_x_R_60M__AA_8_Aphid_B____IR_AAM___
+                ]
+            }
+        }
+    ],
+
+
 }

@@ -489,6 +489,9 @@ def apply_helicopter_templates(mission_data):
                 heli_template = random.choice(valid_templates)
                 selected_type = heli_template["id"]
                 selected_pylons = heli_template["payload"]["pylons"]
+                selected_fuel = heli_template.get("fuel")
+                selected_chaff = heli_template.get("chaff")
+                selected_flare = heli_template.get("flare")
 
                 selected_livery_id = ""
                 if side == "blue":
@@ -511,6 +514,10 @@ def apply_helicopter_templates(mission_data):
                     unit["livery_id"] = selected_livery_id
                     unit["payload"] = {
                         "pylons": {(i + 1): {"CLSID": clsid} for i, clsid in enumerate(clsids)},
+                        "fuel": selected_fuel,
+                        "chaff": selected_chaff,
+                        "flare": selected_flare,
+                        "gun": 100
                     }
                     unit.pop("pylons", None)
                     mod_count += 1
